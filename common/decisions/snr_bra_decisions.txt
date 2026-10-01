@@ -1,0 +1,369 @@
+snr_bra_common_decisions = {	
+	
+	snr_bra_join_decision = {
+		icon = generic_prepare_civil_war
+		priority = 200
+		allowed = {
+			
+		}
+		available = {
+		 has_government = national_populist
+		 or = {
+		 CAN = { 
+		   has_opinion = {
+	             target = BRA
+	             value > 149 } }
+		 is_ai = yes
+		  }
+		 }
+		visible = {
+		 has_government = national_populist		
+		}
+		targets = { CAN }
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 add_political_power = 100
+		 CAN = {
+				country_event = brazil_events.717
+			}		 
+		
+	  }
+  }
+
+	snr_bra_win_decision = {
+		icon = eng_blackshirt_march
+		allowed = {
+			
+		}
+		available = {
+		 date > 1938.6.1
+		 not = {country_exists = GOY}
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 add_ideas = snr_bra_win_idea	 
+		
+	  }
+  }
+
+
+	snr_new_country_decision = {
+		icon = cat_hun_arrow_cross_party
+		allowed = {
+			
+		}
+		available = {
+		 has_stability > 0.9
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+	            }
+	    }
+         random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+	            }
+	    }
+         501 = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+	            }
+	    }		
+		
+	  }
+  }
+
+	snr_bra_victory_decision = {
+		icon = generic_intelligence_operation
+		allowed = {
+			
+		}
+		available = {
+		 national_populist > 0.8
+		 }
+		visible = {
+		 has_government = national_populist		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 add_ideas = war_economy
+		
+	  }
+  }
+  
+	snr_bra_rubber_decision = {
+		icon = rubber
+		allowed = {
+			
+		}
+		available = {
+		 rubber > 199
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		855 = {
+	           add_resource = {
+		       type = rubber
+		       amount = 200
+	        }
+		}
+		 add_ideas = snr_bra_rubber_idea
+		
+	  }
+  }  
+
+	snr_bra_army_decision = {
+		icon = SWE_set_army_budget
+		allowed = {
+			
+		}
+		available = {
+		 date > 1939.1.1
+		 has_army_manpower = {
+            size > 750000
+            }
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+		
+	   }
+     }
+   }
+ }
+
+	snr_bra_ranger_decision = {
+		icon = binoculars
+		allowed = {
+			
+		}
+		available = {
+		 has_tech = rangers_tech2
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		set_technology = { rangers_jaegers_training =1 }
+		set_technology = { rangers_jungle_training =1 }
+		set_technology = { rangers_recon_terrain_training =1 }
+		set_technology = { rangers_fire_support_integration =1 }
+		set_technology = { elite_rangers_doctrine =1 }
+		set_technology = { rangers_backbone_doctrine =1 }
+		 add_ideas = snr_bra_ranger_idea
+		
+	  }
+  } 
+
+	snr_bra_por_decision = {
+		icon = category_generic_monarchism
+		allowed = {
+			
+		}
+		available = {
+		 has_completed_focus = BRA_i_am_the_senate
+		 or = {
+		 POR = { 
+		   has_opinion = {
+	             target = BRA
+	             value > 149 
+				} 
+		}
+		 is_ai = yes
+		  }
+		 }
+		visible = {
+		 has_government = national_populist		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		every_state = {
+				limit = {
+					OR = {
+						is_owned_by = POR
+					}
+				}
+				add_core_of = BRA
+			}
+		annex_country = { target = POR }
+		POR = {
+		      every_unit_leader = {
+				set_nationality = BRA
+			}
+			  every_scientist = {
+				set_nationality = BRA
+			}
+		}
+		every_state = {
+				limit = {
+					OR = {
+						state = 180
+						state = 181
+						state = 112
+						state = 939
+						state = 179
+					}
+				}
+			add_core_of = BRA
+			}
+		set_cosmetic_tag = BRA_por
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 10
+					instant_build = yes
+	            }
+	    }
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 10
+					instant_build = yes
+	            }
+	    }
+	  }
+  }  

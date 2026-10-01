@@ -1,0 +1,230 @@
+snr_jap2_common_decisions = {
+	
+	snr_jap_naa_decision = {
+		icon = generic_merge_plant_ship
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = JAP_start_the_third_circle_plan
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+	      set_technology = { improved_ship_hull_cruiser = 1 }
+		  set_technology = { improved_ship_hull_light  = 1 }
+	   }
+	}
+	
+	snr_jap_etajima_decision = {
+		icon = eng_blackshirt_march
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = JAP_start_the_third_circle_plan
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+	      add_ideas = { 
+		      snr_jap_etajima_idea
+		  }
+	   }
+	}
+	
+	snr_jap_97_decision = {
+		icon = tank
+		allowed = {
+			
+		}
+		available = {
+		 has_completed_focus = JAP_revise_imperial_defence_policy
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		 set_technology = { basic_medium_tank_chassis =1 }
+	      add_ideas = { 
+		      snr_jap_97_idea
+		  }
+	   }
+	}
+	
+	snr_jap_banzai_decision = {
+		icon = generic_civil_support
+		allowed = {
+			
+		}
+		available = {
+          longest_war_length > 6
+         }		  
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+	      add_ideas = { 
+		      snr_jap_banzai_idea
+		  }
+	   }
+	}	
+	
+	snr_jap_will_supremacy_decision = {
+		icon = soldierly_discipline
+		allowed = {
+			
+		}
+		available = {
+		 longest_war_length > 12
+         }		  
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		set_technology = { attritional_containment = 1 }
+		set_technology = { infiltration_in_depth = 1 }
+	      add_ideas = { 
+		      snr_jap_will_supremacy_idea
+		    }
+		}
+	}
+	
+	snr_jap_41_decision = {
+		icon = artillery
+		allowed = {
+			
+		}
+		available = { 
+		   has_completed_focus = JAP_agile_and_indomitable
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		set_technology = { interwar_artillery = 1 }
+		set_technology = { artillery1 = 1 } 
+		set_technology = { artillery2 = 1 } 
+	   }
+	}
+	
+	snr_jap_zero_decision = {
+		icon = bomber
+		allowed = {
+			
+		}
+		available = { 
+		   has_completed_focus = JAP_naval_aviation_department
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_tech_bonus = {
+	           name = CCC
+	           bonus = 1.0
+	           uses = 1
+	           category = air_equipment
+		}
+	  }
+	}
+	
+	snr_jap_kamikaze_decision = {
+		icon = jap_pacific_guardian
+		allowed = {
+			
+		}
+		available = { 
+		   has_completed_focus = JAP_naval_aviation_department
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 180
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+          add_ideas = { 
+		      snr_jap_kamikaze_idea
+		  }
+	   }
+	}	

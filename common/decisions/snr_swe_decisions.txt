@@ -1,0 +1,77 @@
+# ===== 改动 8 新增：瑞典「北欧霸权」决议组 =====
+# 归入新建分类 snr_swe_common_decisions（original_tag = SWE）
+# 两条决议均不做 AI 相关设定：available 内 is_ai = no、ai_will_do factor = 0
+# （延续本模组全模组禁用 AI 的既有设定）
+snr_swe_common_decisions = {
+
+	# -------- 决议一：统合北欧 --------
+	snr_swe_unify_nordics = {
+		icon = generic_prepare_civil_war
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			date > 1938.1.1
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		complete_effect = {
+			# 先把四国地块挂上瑞典核心，避免吞并后地块易主导致漏挂
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = NOR
+						is_owned_by = DEN
+						is_owned_by = FIN
+						is_owned_by = ICE
+					}
+				}
+				add_core_of = SWE
+			}
+			annex_country = { target = NOR }
+			annex_country = { target = DEN }
+			annex_country = { target = FIN }
+			annex_country = { target = ICE }
+		}
+	}
+
+	# -------- 决议二：加入帝国公约 --------
+	# 按需求：无任何前提条件（available 留空）
+	snr_swe_join_reichspakt = {
+		icon = generic_monarchy
+		allowed = {
+
+		}
+		available = {
+
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		complete_effect = {
+			# ===== 改动：触发 KR 本体事件「瑞典请求加入帝国公约」=====
+			# 该事件为德国视角，选项内 add_to_faction = FROM（FROM = 瑞典）
+			GER = { country_event = { id = sweden_events.46 } }
+		}
+	}
+}

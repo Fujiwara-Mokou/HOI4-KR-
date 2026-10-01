@@ -1,0 +1,291 @@
+snr_can2_common_decisions = {
+
+CAN_fight_on_beach_dicision = {
+		icon = eng_propaganda_campaigns
+		allowed = {
+			
+		}
+		available = {
+			has_completed_focus = CAN_imperial_conference  
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = CAN_fight_on_beach_idea
+		}
+	}
+
+    CAN_royalnavy_decision = {
+		icon = category_ITA_cooperation_programs
+		allowed = {
+			
+		}
+		available = {
+			has_completed_focus = CAN_imperial_conference
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+          464 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  465 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  468 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  466 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  331 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  473 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+		  740 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes }
+		}
+        add_ideas = CAN_royalnavy_idea}
+}
+	
+    CAN_support_raj_decision = {
+		icon = give_cash
+		allowed = {
+			
+		}
+		available = {
+	         or = {
+			 and = { not = { is_ai = yes } has_completed_focus = CAN_imperial_conference } 
+                and = { is_ai = yes date > 1938.1.1   }		 
+		   }
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		add_political_power = 100
+		add_ideas = CAN_support_raj_idea
+				declare_war_on = { 
+                target = HND 
+				type = annex_everything
+		}
+		RAJ = { 
+				declare_war_on = { 
+                target = HND 
+				type = annex_everything
+		}
+	}
+	    CAN = {
+		  add_to_faction = BRM
+	  }
+  }
+}
+
+    CAN_toronto_decision = {
+		icon = us_flag
+		allowed = {
+			
+		}
+		available = {
+		  WCA = {
+             is_ai = yes
+			}
+	      has_completed_focus = CAN_imperial_conference
+          has_global_flag = USA_civil_war_begun_flag
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 5
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		add_political_power = 100
+		  USA = {
+		      add_equipment_to_stockpile = {
+				     type = infantry_equipment
+				     amount = 100000
+				     producer = CAN 
+			   }
+		      add_timed_idea = {
+			         idea = USA_toronto_idea
+					 days = 720
+				}		
+		      add_ideas = CAN_toronto_idea
+		  }
+        }
+	}
+
+CAN_new_england_decision = {
+		icon = trumpet
+		allowed = {
+			
+		}
+		available = {
+			has_completed_focus = CAN_imperial_conference
+            has_global_flag = USA_civil_war_begun_flag	  
+			}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+          every_state = {
+				limit = {
+					OR = {
+						state = 357
+						state = 934
+						state = 933
+						state = 796
+						state = 930
+						state = 932
+						state = 931
+						state = 935
+						state = 463
+					}
+				}
+			add_core_of = CAN
+			}
+		USA = { 
+		remove_state_claim = 357
+		remove_state_claim = 934
+		remove_state_claim = 933
+		remove_state_claim = 796
+		remove_state_claim = 930
+		remove_state_claim = 932
+		remove_state_claim = 931
+		remove_state_claim = 935
+		remove_state_claim = 463
+		}
+	   add_ideas = CAN_new_england_idea
+	}
+}
+	
+	
+	CAN_imperial_federation_decision = {
+		icon = eng_imperial_federation
+		allowed = {
+			
+		}
+		available = {
+			has_completed_focus = CAN_imperial_conference
+			date > 1939.6.1
+			
+	}
+
+		fire_only_once = yes
+		cost = 200
+		days_remove = 5
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		set_cosmetic_tag = GBR_united
+		  every_state = {
+				limit = {
+					OR = {
+						is_owned_by = AST
+						is_owned_by = WIF
+						is_owned_by = SAF
+					}
+				}
+				add_core_of = CAN
+			}
+          every_state = {
+				limit = {
+					OR = {
+						is_owned_by = RAJ
+						is_owned_by = BRM
+					}
+				}
+				add_claim_by = CAN
+			}			
+			annex_country = { target = RAJ }
+		    annex_country = { target = AST }
+			annex_country = { target = WIF }
+		    annex_country = { target = SAF }
+			annex_country = { target = BRM }
+			add_timed_idea = { idea = snr_uk_idea days = 400 }
+		    every_country = { 
+			   news_event = {
+				id = bhutan_events.1
+				}
+			}			
+	    }	  		
+	}
+}

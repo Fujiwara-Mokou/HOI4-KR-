@@ -1,0 +1,23 @@
+	sys_ultravision_dynamic_modifiers = {
+		enable = {
+			always = yes
+		}
+		icon = GFX_idea_sys_ultravision_organisation
+		special_project_speed_factor = sys_sp_tech_speed
+		production_speed_air_facility_factor = sys_sp_air_speed
+		production_speed_land_facility_factor = sys_sp_land_speed
+		production_speed_nuclear_facility_factor = sys_sp_nuclear_speed
+		production_speed_naval_facility_factor = sys_sp_naval_speed
+		production_speed_mega_gun_emplacement_factor = sys_sp_megagun_speed
+		production_speed_nuclear_reactor_heavy_water_factor = sys_sp_hwater_speed
+		production_speed_commercial_nuclear_reactor_factor = sys_sp_commercial_speed
+		production_speed_rocket_site_factor = sys_sp_rocket_speed
+		production_speed_radar_station_factor = sys_sp_rader_speed
+		production_speed_stronghold_network_factor = sys_sp_stronghold_speed
+		production_speed_coastal_bunker_factor = sys_sp_coastal_speed
+		production_speed_bunker_factor = sys_sp_bunker_speed
+		production_speed_industrial_complex_factor = sys_sp_civ_speed
+		production_speed_arms_factory_factor = sys_sp_mil_speed
+		consumer_goods_factor = sys_sp_goods
+		consumer_goods_expected_value = sys_sp_gev
+	}

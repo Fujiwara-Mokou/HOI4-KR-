@@ -1,0 +1,36 @@
+snr_d04_common_decisions = {
+	snr_spr_sector_decision = {
+		icon = 1
+		allowed = {
+			
+		}
+		available = {
+          or = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+		   }
+		  not = { country_exists = D05 }
+		}         
+		
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+			 FRA = { puppet = D04}		
+             set_cosmetic_tag = SPR_commue
+			}
+			
+		}
+	}
+}

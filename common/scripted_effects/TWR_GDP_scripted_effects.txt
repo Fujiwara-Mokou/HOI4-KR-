@@ -1,0 +1,82 @@
+calculate_GDP = {
+	set_temp_variable = { actual_core_manpower_k = 0 }
+
+	every_owned_state = {
+		limit = { is_core_of = PREV }
+		add_to_temp_variable = { PREV.actual_core_manpower_k = state_population_k }
+	}
+
+	set_temp_variable = { temp_civ = num_of_civilian_factories }
+	set_temp_variable = { temp_mil = num_of_military_factories }
+	set_temp_variable = { temp_nav = num_of_naval_factories }
+
+	set_variable = { country_civ = num_of_civilian_factories }
+	set_variable = { country_mil = num_of_military_factories }
+	set_variable = { country_nav = num_of_naval_factories }
+
+	set_variable = { country_GDP = temp_civ }
+	clamp_temp_variable = { var = temp_civ min = 1 max = 100 }
+
+	set_temp_variable = { temp = temp_mil }
+	add_to_variable = { country_GDP = temp }
+
+	set_temp_variable = { temp = temp_nav }
+	add_to_variable = { country_GDP = temp }
+
+	
+	set_variable={num_oil = resource_produced@oil}
+	set_variable={num_aluminium = resource_produced@aluminium}
+	set_variable={num_rubber = resource_produced@rubber}
+	set_variable={num_tungsten = resource_produced@tungsten}
+	set_variable={num_steel = resource_produced@steel}
+	set_variable={num_chromium = resource_produced@chromium}
+
+	set_variable = { country_GDP_per_capita = num_of_civilian_factories }
+	add_to_variable = { country_GDP_per_capita = num_of_military_factories }
+	add_to_variable = { country_GDP_per_capita = num_of_naval_factories }
+
+	if = {
+		limit = {
+			all_country = {
+				is_in_array = { global.GDP_list_array = THIS }
+			}
+		}
+		update_position = yes
+	}
+}
+
+update_position = {
+	clear_array = global.top_ten_GDP_array
+	clear_variable = global.GDP_total
+	clear_variable = global.GDP_per_capita_total
+	
+	set_temp_variable = { position = 0 }
+	set_variable = { sort_var = 1 }
+	set_variable = { last_sort_var = 0 }
+	create_GDP_sorted_array = yes
+
+	for_each_scope_loop = {
+		array = global.GDP_list_array
+
+		add_to_temp_variable = { position = 1 }
+		set_variable = { THIS.GDP_position = position }
+
+		if = {
+			limit = {
+				check_variable = { THIS.GDP_position < 11 }
+			}
+			add_to_array = { global.top_ten_GDP_array = THIS }
+		}
+		add_to_variable = { global.GDP_total = country_GDP }
+		add_to_variable = { global.GDP_per_capita_total = country_GDP_per_capita }
+	}
+
+	set_variable = { global.average_GDP = global.GDP_total }
+	divide_variable = { global.average_GDP = global.GDP_list_array^num }
+	set_variable = { global.average_GDP_per_capita = global.GDP_per_capita_total }
+
+	force_update_map_mode = { mapmode = TWR_GDP_map_mode }
+	force_update_map_mode = { mapmode = TWR_GDP_per_capita_map_mode }
+	force_update_map_mode = { mapmode = TWR_GDP_civ_map_mode }
+}
+

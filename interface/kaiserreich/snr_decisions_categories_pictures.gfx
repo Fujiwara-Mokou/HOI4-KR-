@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "RUS_savinkov3"
+		texturefile = "gfx/interface/decisions/decisions_categories_pictures/RUS_savinkov.png"
+	}
+	spriteType = {
+		name = "GER_heavy_tank3"
+		texturefile = "gfx/interface/decisions/decisions_categories_pictures/GER_heavy_tank.png"
+	}
+}
+

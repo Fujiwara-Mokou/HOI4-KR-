@@ -1,0 +1,311 @@
+#机动装备
+motorize = {
+    icon = GFX_idea_motorize
+	allowed = {always = yes}
+	available = {
+	   owner = {  original_tag = TUR }  
+	}
+	
+	visible = { owner = {  original_tag = TUR }  }
+    equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		amphibious_mechanized_equipment
+        train_equipment
+		railway_gun_equipment
+		super_heavy_railway_gun_equipment
+        helicopter_equipment
+    }
+    research_categories = {
+        mio_cat_tech_all_motorized_mechanized
+        train_tech
+        helicopter_tech
+    }
+	tree_header_text = {
+		text = 高速装备
+		x = 1
+	}
+	tree_header_text = {
+		text = 机械化装备
+		x = 4
+	}
+	tree_header_text = {
+		text = 铁路装备
+		x = 7
+	}
+
+	initial_trait = {#自带属性
+		organization_modifier =	{
+			military_industrial_organization_research_bonus	= 0.10	#研究加成
+			military_industrial_organization_size_up_requirement = -0.10
+		}
+		production_bonus = {
+			production_capacity_factor = 0.08
+			production_resource_need_factor = -0.2
+		}
+	}
+
+	trait = {
+		token = motorize_0
+		name = 成立中国重汽研究所
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 4 y = 0 }
+		equipment_bonus = {
+			build_cost_ic = -0.25
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+			military_industrial_organization_size_up_requirement = -0.10
+		}
+	}
+
+	trait = {
+		token = motorize_11
+		name = 大规模生产效率
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		limit_to_equipment_type = { 
+			motorized_equipment
+			helicopter_equipment
+		}
+		position = { x = 2 y = 1 }
+		any_parent = { motorize_0 }
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+trait = {
+		token = motorize_12
+		name = 扩大生产线
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		limit_to_equipment_type = { 
+			motorized_equipment
+			helicopter_equipment
+		}
+		position = { x = 1 y = 3 }
+		any_parent = { motorize_11 }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+		}
+	}
+
+trait = {
+		token = motorize_131
+		name = 钢制货架
+		icon = GFX_generic_mio_department_icon_motorized_production
+		limit_to_equipment_type = { 
+			motorized_equipment
+			helicopter_equipment
+		}
+		position = { x = 0 y = 4 }
+		any_parent = { motorize_12 }
+		equipment_bonus = {
+			reliability = 0.10
+		}
+	}
+
+trait = {
+		token = motorize_132
+		name = 大功率发动机
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		limit_to_equipment_type = { 
+			motorized_equipment
+			helicopter_equipment
+		}
+		position = { x = 2 y = 4 }
+		any_parent = { motorize_12 }
+		equipment_bonus = {
+			maximum_speed = 0.15
+		}
+	}
+
+trait = {
+		token = motorize_21
+		name = 大规模生产效率
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_technology
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 4 y = 1 }
+		any_parent = { motorize_0 }
+		production_bonus = {
+			production_capacity_factor = 0.07
+			production_efficiency_cap_factor = 0.08
+		}
+	}
+
+trait = {
+		token = motorize_221
+		name = 防弹镶板
+		icon = GFX_generic_mio_trait_icon_hardness
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 3 y = 2 }
+		any_parent = { motorize_21 }
+        mutually_exclusive = { motorize_222 }
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+
+trait = {
+		token = motorize_222
+		name = 封闭式底盘
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 5 y = 2 }
+		any_parent = { motorize_21 }
+        mutually_exclusive = { motorize_221 }
+		equipment_bonus = {
+			defense = 0.10
+		}
+	}
+
+trait = {
+		token = motorize_231
+		name = 装甲操纵台仓
+		icon = GFX_generic_mio_trait_icon_hardness
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 3 y = 3 }
+		any_parent = { motorize_221 motorize_222 }
+        mutually_exclusive = { motorize_232 }
+		equipment_bonus = {
+			hardness = 0.1
+		}
+	}
+
+trait = {
+		token = motorize_232
+		name = 开放式底盘
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 5 y = 3 }
+		any_parent = { motorize_221 motorize_222 }
+        mutually_exclusive = { motorize_231 }
+		equipment_bonus = {
+			build_cost_ic = -0.075
+            fuel_consumption_factor = -0.25
+		}
+	}
+
+trait = {
+		token = motorize_241
+		name = 优质材料
+		icon = GFX_generic_mio_department_icon_mechanized_production
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 3 y = 4 }
+		any_parent = { motorize_231 motorize_232 }
+		equipment_bonus = {
+			reliability = 0.5
+		}
+	}
+
+trait = {
+		token = motorize_242
+		name = 复式装甲
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 4 y = 4 }
+		any_parent = { motorize_231 motorize_232 }
+		equipment_bonus = {
+			defense = 0.08
+		}
+	}
+
+trait = {
+		token = motorize_243
+		name = 侧载重机枪
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		limit_to_equipment_type = { 
+			mechanized_equipment
+			amphibious_mechanized_equipment
+		}
+		position = { x = 5 y = 4 }
+		any_parent = { motorize_231 motorize_232 }
+		equipment_bonus = {
+			breakthrough = 0.10
+		}
+	}
+
+trait = {
+		token = motorize_31
+		name = 大规模生产效率
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		limit_to_equipment_type = { 
+			train_equipment
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		position = { x = 6 y = 1 }
+		any_parent = { motorize_0 }
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+trait = {
+		token = motorize_32
+		name = 扩大生产线
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		limit_to_equipment_type = { 
+			train_equipment
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		position = { x = 7 y = 3 }
+		any_parent = { motorize_31 }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+		}
+	}
+
+trait = {
+		token = motorize_331
+		name = 坦克比火车跑得快很不合理对吧
+		icon = GFX_generic_mio_department_icon_tank_general_aa
+		limit_to_equipment_type = { 
+			train_equipment
+		}
+		position = { x = 6 y = 4 }
+		any_parent = { motorize_32 }
+		equipment_bonus = {
+			maximum_speed = 2
+			armor_value = 0.1
+			air_attack = 0.25
+		}
+	}
+
+trait = {
+		token = motorize_332
+		name = 地狱炮管
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		limit_to_equipment_type = { 
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		position = { x = 8 y = 4 }
+		any_parent = { motorize_32 }
+		equipment_bonus = {
+			railway_gun_attack = 0.2
+			maximum_speed = 0.25
+		}
+	}
+}

@@ -1,0 +1,266 @@
+snr_common_decisions = {
+	allowed = {
+		always = yes
+	}
+	
+}
+
+snr_ger1_common_decisions = {
+                icon = ger_reichskommissariats
+				priority = -2
+	allowed = {
+		original_tag = GER
+	}
+	
+}
+
+snr_ger2_common_decisions = {
+                icon = generic_crisis
+	allowed = {
+		original_tag = GER
+	}
+	
+}
+
+# ===== 【已注释】德国「研究项目：虎式重型坦克」分类 =====
+# snr_ger3_common_decisions = {
+#                 icon = ger_military_buildup
+# 				priority = -3
+# 				picture = GER_heavy_tank3
+# 	allowed = {
+# 		original_tag = GER
+# 	}
+# 	
+# }
+# ===== 注释结束 =====
+
+# ===== 【已移除】德国「萨克森地下工程」分类 =====
+# snr_ger4_common_decisions = {
+#                 icon = SOV_merge_designers
+# 				priority = 0
+# 	allowed = {
+# 		original_tag = GER
+# 	}
+# 	
+# }
+# ===== 移除结束 =====
+
+snr_gea_common_decisions = {
+                icon = generic_crisis
+	allowed = {
+		original_tag = GEA
+	}
+	
+}
+
+snr_aus_common_decisions = {
+                icon = ITA_reggianes_exports
+	allowed = {
+		original_tag = AUS
+	}
+	
+}
+
+snr_aus2_common_decisions = {
+                icon = AUS_becoming_grossosterreich_category
+	allowed = {
+		original_tag = AUS
+	}
+	
+}
+
+# ===== 改动：新增保加利亚「巴尔干的守护者」分类（由奥地利转移而来）=====
+snr_bul_common_decisions = {
+                icon = AUS_becoming_grossosterreich_category
+	allowed = {
+		original_tag = BUL
+	}
+	
+}
+
+# ===== 改动：新增瑞典「北欧霸权」分类 =====
+snr_swe_common_decisions = {
+                icon = SWE_varnplikt
+	allowed = {
+		original_tag = SWE
+	}
+	
+}
+
+snr_eng_common_decisions = {
+                icon = generic_political_actions
+	allowed = {
+		original_tag = ENG
+	}
+	
+}
+
+snr_eng2_common_decisions = {
+                icon = generic_propaganda
+	allowed = {
+		original_tag = ENG
+	}
+	
+}
+
+snr_fra_common_decisions = {
+                icon = generic_communism
+	allowed = {
+		original_tag = FRA
+	}
+	
+}
+
+snr_fra2_common_decisions = {
+                icon = SOV_civil_puppet_interaction
+	allowed = {
+		original_tag = FRA
+	}
+	
+}
+
+snr_can_common_decisions = {
+                icon = eng_imperial_conference
+	allowed = {
+		original_tag = CAN
+	}
+	
+}
+
+snr_can2_common_decisions = {
+                icon = GFX_decision_cat_canada
+	allowed = {
+		original_tag = CAN
+	}
+	
+}
+
+snr_rus_common_decisions = {
+                icon = border_war			
+	allowed = {
+		original_tag = RUS
+	}
+	
+}
+
+snr_rus2_common_decisions = {
+                priority = 200
+                icon = russia
+				picture = RUS_savinkov3
+	allowed = {
+		original_tag = RUS
+	}	
+	
+}
+
+snr_d04_common_decisions = {
+                icon = 1
+	allowed = {
+		original_tag = D04
+	}
+	
+}
+
+snr_sri_common_decisions = {
+                icon = generic_communist_revolution
+	allowed = {
+		original_tag = SRI
+	}
+	
+}
+
+snr_sri2_common_decisions = {
+                icon = SOV_merge_designers
+	allowed = {
+		original_tag = SRI
+	}
+	
+}
+
+snr_pol_common_decisions = {
+                icon = SOV_merge_designers
+	allowed = {
+		original_tag = POL
+	}
+	
+}
+
+snr_pol2_common_decisions = {
+                icon = NOR_fascist_preparation
+	allowed = {
+		original_tag = POL
+	}
+	
+}
+
+snr_ukr_common_decisions = {
+                icon = SOV_merge_designers
+	allowed = {
+		original_tag = UKR
+	}
+	
+}
+
+snr_hol_common_decisions = {
+                icon = generic_monarchism
+	allowed = {
+		original_tag = HOL
+	}
+	
+}
+
+snr_nfa_common_decisions = {
+                icon = intervention_overseas
+	allowed = {
+		original_tag = NFA
+	}
+	
+}
+
+snr_jap_common_decisions = {
+                icon = jap_pacific_guardian
+	allowed = {
+		original_tag = JAP
+	}
+	
+}
+
+snr_jap2_common_decisions = {
+                icon = generic_naval
+				picture = GFX_decision_cat_picture_generic_shipbuilding
+	allowed = {
+		original_tag = JAP
+	}
+	
+}
+
+snr_mex_common_decisions = {
+                icon = spr_carlism
+	allowed = {
+		original_tag = MEX
+	}
+	
+}
+
+snr_bra_common_decisions = {
+                icon = foreign_policy
+	allowed = {
+		original_tag = BRA
+	}
+	
+}
+
+snr_bhu_common_decisions = {
+                icon = intervention_overseas
+	allowed = {
+		original_tag = BHU
+	}
+	
+}
+
+snr_error_decisions = {
+                icon = foreign_policy
+	visible = {
+		is_ai = no
+	}
+}

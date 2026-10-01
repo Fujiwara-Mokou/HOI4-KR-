@@ -1,0 +1,50 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_tank"
+		texturefile = "gfx/interface/MIO/idea_tank.png"
+	}
+	spriteType = {
+		name = "GFX_idea_plane"
+		texturefile = "gfx/interface/MIO/idea_plane.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ship"
+		texturefile = "gfx/interface/MIO/idea_ship.png"
+	}
+	spriteType = {
+		name = "GFX_idea_base"
+		texturefile = "gfx/interface/MIO/idea_base.png"
+	}
+	spriteType = {
+		name = "GFX_idea_motorize"
+		texturefile = "gfx/interface/MIO/idea_motorize.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_idea_zggcxyjy"
+		texturefile = "gfx/interface/MIO/idea_zggcxyj.png"
+	}
+	spriteType = {
+		name = "GFX_idea_gytcghj"
+		texturefile = "gfx/interface/MIO/idea_gytcghj.png"
+	}
+	spriteType = {
+		name = "GFX_idea_zgsh"
+		texturefile = "gfx/interface/MIO/idea_zgsh.png"
+	}
+	spriteType = {
+		name = "GFX_idea_zcxjjt"
+		texturefile = "gfx/interface/MIO/idea_zcxjjt.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_military_industrial_organization_super_heavy_railway_gun_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_general_spg.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_super_heavy_artillery_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket.dds"
+	}	
+}

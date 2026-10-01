@@ -1,0 +1,363 @@
+# ===== 【已移除】德国「萨克森地下工程」决议组（原 359 行）=====
+# 理念 snr_sachsen*_idea 保留在 common/ideas/snr_ideas.txt ——
+# 不丹决议 snr_bhu_decisions.txt 仍在引用它们。
+# snr_ger4_common_decisions = {
+# 
+# 	snr_sachsen1_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+# 		 NOT = { has_idea = snr_sachsen1_idea
+# 		         has_idea = snr_sachsen2_idea
+# 				 has_idea = snr_sachsen3_idea
+# 				 has_idea = snr_sachsen4_idea
+# 				 has_idea = snr_sachsen5_idea
+# 		  }
+# 		}
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { 
+# 		     remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	         } 
+# 		add_dynamic_modifier = {
+# 			     modifier = GER_engineer
+# 				}	 
+# 		}			
+# 		add_ideas = snr_sachsen1_idea
+# 	  }
+#    }
+#    
+#  	snr_sachsen2_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen1_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen1_idea
+# 		add_idea = snr_sachsen2_idea
+# 		}
+# 	  }
+#     } 
+# 
+#  	snr_sachsen3_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen2_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen2_idea
+# 		add_idea = snr_sachsen3_idea
+# 		}
+# 	  }
+#     }  	
+# 	
+#  	snr_sachsen4_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen3_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen3_idea
+# 		add_idea = snr_sachsen4_idea
+# 		}
+# 	  }
+#     }
+# 
+#  	snr_sachsen5_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen4_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen4_idea
+# 		add_idea = snr_sachsen5_idea
+# 		}
+# 	  }
+#     }  	
+# 
+#  	snr_sachsen6_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen5_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen5_idea
+# 		add_idea = snr_sachsen6_idea
+# 		}
+# 	  }
+#     }
+# 
+#  	snr_sachsen7_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen6_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen6_idea
+# 		add_idea = snr_sachsen7_idea
+# 		}
+# 	  }
+#     }
+# 
+#  	snr_sachsen8_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen7_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen7_idea
+# 		add_idea = snr_sachsen8_idea
+# 		}
+# 	  }
+#     }
+# 
+#  	snr_sachsen9_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen8_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen8_idea
+# 		add_idea = snr_sachsen9_idea
+# 		}
+# 	  }
+#     }
+# 
+# 	
+#  	snr_sachsen10_decision = {
+# 		icon = ger_military_buildup
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   65 = { arms_factory > 19 }
+# 		 }
+# 		visible = {
+#           has_idea = snr_sachsen9_idea
+#         }
+# 		fire_only_once = yes
+# 		cost = 0
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 65 = { remove_building = {
+# 					type = arms_factory
+# 					level = 20
+# 					instant_build = yes
+# 	      }
+# 		}
+# 		swap_ideas = {
+# 		remove_idea = snr_sachsen9_idea
+# 		add_idea = snr_sachsen10_idea
+# 		}
+# 	  }
+#     }
+# }	
+# ===== 移除结束 =====

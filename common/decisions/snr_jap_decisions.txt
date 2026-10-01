@@ -1,0 +1,133 @@
+snr_jap_common_decisions = {
+	
+	snr_jap_77_decision = {
+		icon = jap_conquer_china
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = JAP_rising_sun
+			FNG = {
+                 is_ai = yes
+			}
+			date > 1937.7.7
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		     declare_war_on = { 
+                target = QIE
+                type = annex_everything
+			}
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 30000
+				producer = JAP }
+			add_ideas = tot_economic_mobilisation
+			add_ideas = extensive_conscription
+			puppet = FNG
+			FNG = { add_ideas = snr_eco_control
+	      }
+		add_ideas = snr_jap_77_idea
+	   }
+	 }
+	 
+	snr_disaster_reliefdecision = {
+		icon = POL_looming_peasants_strike
+		allowed = {
+			
+		}
+		available = {
+             has_idea = JAP_great_drought_worse 			
+		}
+                 			 
+		visible = {	
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 remove_ideas = JAP_great_drought_worse 
+	   }
+	 }
+	 
+	snr_jap_south_plan_decision = {
+		icon = continent_oceania
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = JAP_rising_sun
+			has_war_with = GEA
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		add_timed_idea = { idea = snr_jap_south_plan_idea days = 180 }
+		GER = { add_timed_idea = { idea = snr_jap2_south_plan_idea days = 180 } }
+		GEA = { add_timed_idea = { idea = snr_jap2_south_plan_idea days = 180 } }
+	   }
+	 }
+
+	snr_jap_target_india_decision = {
+		icon = oasis
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = JAP_rising_sun
+			has_war_with = GEA
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+	    remove_effect = {
+		  declare_war_on = { 
+                target = CAN
+                type = annex_everything
+			}
+		 declare_war_on = { 
+                target = RAJ
+                type = annex_everything
+			}
+	   }
+	 }	 

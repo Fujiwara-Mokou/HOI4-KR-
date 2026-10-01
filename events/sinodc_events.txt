@@ -1,0 +1,116 @@
+add_namespace = sinodc_event
+
+#开局设置
+country_event = {
+	id = sinodc_event.1
+	title = sinodc_event.1.t
+	desc = sinodc_event.1.desc
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	visible = {original_tag = TUR}
+	option = {
+		name = sinodc_event.1.a
+		set_global_flag = sinodc_fla_pp_ai_all
+		set_global_flag = sinodc_fla_factory_ai_all
+		set_global_flag = sinodc_fla_mp_ai_all
+		set_global_flag = sinodc_fla_resources_ai_all
+		set_global_flag = sinodc_fla_type_ai_all
+		clr_global_flag = sinodc_fla_pp_ai_only_subject
+		clr_global_flag = sinodc_fla_factory_ai_only_subject
+		clr_global_flag = sinodc_fla_mp_ai_only_subject
+		clr_global_flag = sinodc_fla_resources_ai_only_subject
+		clr_global_flag = sinodc_fla_type_ai_only_subject
+		if = {
+			limit = {
+				is_in_array = {
+					array = global.china_tags_array 
+					value = QIE
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_kr #识别kr
+		}
+		else_if = {
+			limit = { 
+				or = {
+					has_global_flag = ofn_cps_embargo
+					has_global_flag = ofn_pakt_embargo
+					has_global_flag = pakt_cps_embargo
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_tno #识别tno
+		}
+		else = {
+			
+		}
+	}
+	option = {
+		name = sinodc_event.1.b
+		set_global_flag = sinodc_fla_pp_ai_only_subject
+		set_global_flag = sinodc_fla_factory_ai_only_subject
+		set_global_flag = sinodc_fla_mp_ai_only_subject
+		set_global_flag = sinodc_fla_resources_ai_only_subject
+		set_global_flag = sinodc_fla_type_ai_only_subject
+		clr_global_flag = sinodc_fla_pp_ai_all
+		clr_global_flag = sinodc_fla_factory_ai_all
+		clr_global_flag = sinodc_fla_mp_ai_all
+		clr_global_flag = sinodc_fla_resources_ai_all
+		clr_global_flag = sinodc_fla_type_ai_all
+		if = {
+			limit = {
+				is_in_array = {
+					array = global.china_tags_array 
+					value = QIE
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_kr #识别kr
+		}
+		else_if = {
+			limit = { 
+				or = {
+					has_global_flag = ofn_cps_embargo
+					has_global_flag = ofn_pakt_embargo
+					has_global_flag = pakt_cps_embargo
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_tno #识别tno
+		}
+		else = {
+			
+		}
+	}
+	option = {
+		name = sinodc_event.1.c
+		clr_global_flag = sinodc_fla_pp_ai_all
+		clr_global_flag = sinodc_fla_factory_ai_all
+		clr_global_flag = sinodc_fla_mp_ai_all
+		clr_global_flag = sinodc_fla_resources_ai_all
+		clr_global_flag = sinodc_fla_type_ai_all
+		clr_global_flag = sinodc_fla_pp_ai_only_subject
+		clr_global_flag = sinodc_fla_factory_ai_only_subject
+		clr_global_flag = sinodc_fla_mp_ai_only_subject
+		clr_global_flag = sinodc_fla_resources_ai_only_subject
+		clr_global_flag = sinodc_fla_type_ai_only_subject
+		if = {
+			limit = {
+				is_in_array = {
+					array = global.china_tags_array 
+					value = QIE
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_kr #识别kr
+		}
+		else_if = {
+			limit = { 
+				or = {
+					has_global_flag = ofn_cps_embargo
+					has_global_flag = ofn_pakt_embargo
+					has_global_flag = pakt_cps_embargo
+				}
+			}
+			set_global_flag = sinodc_fla_has_mod_tno #识别tno
+		}
+		else = {
+			
+		}
+	}
+}

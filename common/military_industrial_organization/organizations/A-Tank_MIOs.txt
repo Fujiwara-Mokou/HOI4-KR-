@@ -1,0 +1,260 @@
+#通用坦克
+tank = {
+	icon = GFX_idea_tank
+	allowed = {always = yes}
+	available = {
+	   owner = {  original_tag = TUR }  
+	}
+	
+	visible = { owner = {  original_tag = TUR }  }
+	equipment_type = {
+		armor	#装甲科技
+	}
+	research_categories = {
+		armor	#装甲科技
+	}
+	tree_header_text = {
+		text = 引擎与悬挂
+		x = 1
+	}
+	tree_header_text = {
+		text = 装甲
+		x = 3
+	}
+	tree_header_text = {
+		text = 杀伤与花费
+		x = 6
+	}
+	tree_header_text = {
+		text = 生产
+		x = 9
+	}
+	initial_trait = {#自带属性
+		organization_modifier =	{
+			military_industrial_organization_research_bonus	= 0.20	#研究加成
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_resource_need_factor = -0.2
+		}
+	}
+
+	trait = {
+		token =tank_11
+		name =精密手艺提升
+		icon = GFX_generic_mio_department_icon_tank_general_production
+		position = { x = 1 y = 0 }
+		equipment_bonus = {
+			reliability = 0.05
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token =tank_12
+		name =新型发动机材料
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		position = { x = 1 y = 1 }
+		any_parent = {tank_11 }
+		equipment_bonus = {
+			fuel_capacity = 0.15
+			fuel_consumption_factor = -0.20
+		}
+		production_bonus = {
+			production_conversion_speed_factor = 0.20
+		}
+
+	}
+
+	trait = {
+		token =tank_131
+		name =装甲冗余装置
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = { x = 0 y = 2 }
+		any_parent = {tank_11 }
+		mutually_exclusive = {tank_132 }
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token =tank_132
+		name =单引擎改造
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 2 y = 2 }
+		any_parent = {tank_11 }
+		mutually_exclusive = {tank_131 }
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token =tank_14
+		name =重叠冲锋式装置
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = { x = 1 y = 3 }
+		any_parent = { tank_131 tank_132 }
+		equipment_bonus = {
+			reliability = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token =tank_151
+		name =宣扬工匠精神
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = { x = 0 y = 4 }
+		any_parent = {tank_14 }
+		mutually_exclusive = {tank_152 }
+		equipment_bonus = {
+			breakthrough = 0.10
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token =tank_152
+		name =双引擎升级
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 2 y = 4 }
+		any_parent = {tank_14 }
+		mutually_exclusive = {tank_151 }
+		equipment_bonus = {
+			maximum_speed = 0.10
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token =tank_2
+		name =战斗坦克规格
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+		position = { x = 6 y = 0 }
+		equipment_bonus = {
+			soft_attack = 0.06
+			hard_attack = 0.06
+			armor_value = 0.06
+			ap_attack = 0.06
+		}
+	}
+
+	trait = {
+		token =tank_211
+		name =加厚型装甲强化
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		position = { x = 3 y = 1 }
+		any_parent = {tank_2 }
+		equipment_bonus = {
+			armor_value = 0.20
+		}
+	}
+
+	trait = {
+		token =tank_212
+		name =极厚型装甲强化
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		position = { x = 3 y = 3 }
+		any_parent = {tank_211 }
+		equipment_bonus = {
+			armor_value = 0.20
+		}
+	}
+
+	trait = {
+		token =tank_2211
+		name =重机枪改造
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = { x = 5 y = 1 }
+		any_parent = {tank_2 }
+		equipment_bonus = {
+			soft_attack = 0.10
+		}
+	}
+
+	trait = {
+		token =tank_2212
+		name =反坦克炮升级
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = { x = 7 y = 1 }
+		any_parent = {tank_2 }
+		equipment_bonus = {
+			hard_attack = 0.10
+			ap_attack = 0.10
+		}
+	}
+
+	trait = {
+		token =tank_222
+		name =坦克专精
+		icon = GFX_generic_mio_department_icon_tank_light_tank_production
+		position = { x = 6 y = 2 }
+		any_parent = {tank_2211 tank_2212 }
+		equipment_bonus = {
+			build_cost_ic = -0.35
+		}
+	}
+
+	trait = {
+		token =tank_2231
+		name =重机枪再改造
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = { x = 5 y = 3 }
+		any_parent = {tank_222 }
+		mutually_exclusive = {tank_2232 }
+		equipment_bonus = {
+			soft_attack = 0.12
+		}
+	}
+
+	trait = {
+		token =tank_2232
+		name =反坦克炮再升级
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = { x = 7 y = 3 }
+		any_parent = {tank_222 }
+		mutually_exclusive = {tank_2231 }
+		equipment_bonus = {
+			hard_attack = 0.12
+			ap_attack = 0.12
+		}
+	}
+
+	trait = {
+		token =tank_224
+		name =废品再利用
+		icon = GFX_generic_mio_department_icon_tank_light_tank_production
+		position = { x = 6 y = 4 }
+		any_parent = {tank_2231 tank_2232 }
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+		organization_modifier =	{
+			military_industrial_organization_size_up_requirement = -0.10
+		}
+	}
+
+	trait = {
+		token =tank_23
+		name =流水化产线
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		position = { x = 9 y = 2 }
+		any_parent = {tank_2 }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.10
+			production_efficiency_gain_factor = 0.20
+		}
+	}
+
+trait = {
+		token =tank_3
+		name =坦克研究所
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 9 y = 0 }
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.20
+		}
+	}
+}

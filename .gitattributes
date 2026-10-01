@@ -1,0 +1,14 @@
+# 文本文件统一用 LF 存储，避免 Windows 的 CRLF 在仓库里产生假差异
+*.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.gfx   text eol=lf
+*.gui   text eol=lf
+*.lua   text eol=lf
+*.mod   text eol=lf
+
+# 二进制资源：不做任何换行转换，也不要用 diff 去比较
+*.tga   binary
+*.dds   binary
+*.png   binary
+*.ogg   binary

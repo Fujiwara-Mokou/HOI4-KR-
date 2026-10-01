@@ -1,0 +1,804 @@
+snr_bhu_common_decisions = {
+	
+	snr_bhu_can_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			or = {
+			  CAN = {is_ai = yes} 
+			 }
+ 			date > 1939.6.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   CAN = { add_political_power = 2000 }
+		   }
+	   }
+	   
+	snr_bhu_can2_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			CAN = {is_ai = yes}
+            WCA = {is_ai = yes}			
+			has_global_flag = USA_civil_war_begun_flag
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		   CAN = { 
+		      declare_war_on = { 
+                target = WCA 
+				type = annex_everything
+		       }
+		    }
+		}
+	}	   
+
+	snr_bhu_can3_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			CAN = { has_war_with = HND }
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+             HND = {
+		         add_timed_idea = {
+			         idea = snr_weak_idea
+				     days = 720
+			    }
+		    }
+			 PRF = {
+		         add_timed_idea = {
+			         idea = snr_weak_idea
+				     days = 720
+			    }
+		    }
+		}
+	}
+	
+	snr_bhu_ger_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			or = {
+			  GER = {is_ai = yes} 
+			 }
+ 			date > 1939.6.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = { add_political_power = 2000 		           
+		   }
+		   65 = { 
+		  remove_building = {
+					type = industrial_complex
+					level = 20
+					instant_build = yes
+	          }
+		  remove_building = {
+					type = arms_factory
+					level = 20
+					instant_build = yes
+	      }
+          add_building_construction = {
+					type = arms_factory
+					level = 20
+					instant_build = yes
+	      }
+		   
+          }
+		}
+	}
+	
+snr_bhu_ger2_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			or = {
+			  GER = {is_ai = yes} 
+			 }
+ 			date > 1940.6.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = { add_political_power = 2000
+		   		swap_ideas = {
+		          remove_idea = snr_sachsen1_idea
+		          add_idea = snr_sachsen3_idea
+		       }
+		    }
+		}
+	}
+	
+    snr_bhu_eng_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			or = {
+			  ENG = {is_ai = yes} 
+			 }
+ 			date > 1937.1.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   ENG = { add_political_power = 2000 }
+		   }
+	   }
+	   
+    snr_bhu_itaaus_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+              SRI = {is_ai = yes}
+			  AUS = {is_ai = yes}
+         SRI = {
+           has_war_with = AUs
+		   }		 
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   every_state = {
+				limit = {
+					OR = {
+						state = 488
+						state = 726
+						state = 683
+						state = 103
+						state = 103
+						state = 835
+						state = 39
+						state = 783
+						state = 759
+						state = 160
+						state = 159
+						state = 109
+						state = 163
+						state = 104
+						state = 841
+						state = 1053
+						state = 44
+						state = 766
+						state = 105
+					}
+				}
+			add_dynamic_modifier = {
+					modifier = snr_aus_defence
+					days = 720
+				}
+			}
+	   }
+    }	   
+	   
+    snr_bhu_ger3_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  GER = {
+		is_ai = yes
+		not = { 
+		     has_cosmetic_tag = GER_war
+		 }
+              }
+        }		
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = { set_cosmetic_tag = GER_war }
+		   }
+	   }
+	   
+	snr_bhu_ger4_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  GER = {
+			         is_ai = yes
+					 surrender_progress > 0.15
+					}
+            }			  
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = {
+		   set_technology = { mechanised_infantry =1 }
+		   create_equipment_variant = {
+					name = "三号突击炮F型"
+					type = medium_tank_destroyer_chassis_1
+					design_team = mio:GER_krupp_tank_organisation
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = NOR_tank_rikstanken_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = secondary_turret_small_cannon
+						special_type_slot_4 = easy_maintenance
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 0
+						tank_nsb_armor_upgrade = 4
+					}
+				}
+		    division_template = {
+			     name = "german army unit"
+				 regiments = {
+				     mechanized = { x = 0 y = 0 }
+					 mechanized = { x = 0 y = 1 }
+					 mechanized = { x = 0 y = 2 }
+					 mechanized = { x = 0 y = 3 }
+					 mechanized = { x = 1 y = 0 }
+					 mechanized = { x = 1 y = 1 }
+					 mechanized = { x = 1 y = 2 }
+					 mechanized = { x = 1 y = 3 }
+					 medium_tank_destroyer_brigade = { x = 2 y = 0 }
+					 medium_tank_destroyer_brigade = { x = 2 y = 1 }
+					 medium_tank_destroyer_brigade = { x = 2 y = 2 }
+					 medium_tank_destroyer_brigade = { x = 2 y = 3 }
+					 medium_tank_destroyer_brigade = { x = 2 y = 4 }
+					 medium_tank_destroyer_brigade = { x = 3 y = 0 }
+					 medium_tank_destroyer_brigade = { x = 3 y = 1 }
+					 medium_tank_destroyer_brigade = { x = 3 y = 2 }
+					 medium_tank_destroyer_brigade = { x = 3 y = 3 }
+					 anti_air_brigade = { x = 4 y = 0 }
+					 anti_air_brigade = { x = 4 y = 1 }
+					}
+				 support = {
+				     medium_flame_tank { x = 0 y = 0 }
+					 armored_signal = { x = 0 y = 1 }
+					 field_hospital = { x = 0 y = 2 }
+					 logistics_company = { x = 0 y = 3 }
+					 assault_engineer = { x = 0 y = 4 }
+					 
+		         }
+					}
+				 support = {
+				     engineer = { x = 0 y = 0}
+		         }
+             for_loop_effect = {
+                 start = 0
+                 end = 10
+                 add = 1
+                     capital_scope = {
+                         create_unit = { 
+						         division = "name = \"german unit\" division_template = \"german army unit\" start_experience_factor = 0.3"
+                                 owner = GER
+                        }
+                    }
+               }
+			   swap_ideas = {
+		          remove_idea = snr_sachsen3_idea
+		          add_idea = snr_sachsen5_idea
+		       }
+			 add_equipment_to_stockpile = {
+				type = medium_tank_destroyer_chassis
+				amount = 2500
+				producer = GER
+			   }
+             add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 2500
+				producer = GER
+			}			   
+	        }
+		}
+	}
+	
+	snr_bhu_ger5_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  GER = {
+			         is_ai = yes
+					 surrender_progress > 0.30
+					}
+            }			  
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = {
+             for_loop_effect = {
+                 start = 0
+                 end = 20
+                 add = 1
+                     capital_scope = {
+                         create_unit = { 
+						         division = "name = \"german unit\" division_template = \"german army unit\" start_experience_factor = 0.75"
+                                 owner = GER
+                        }
+                    }
+               }
+			   swap_ideas = {
+		          remove_idea = snr_sachsen5_idea
+		          add_idea = snr_sachsen8_idea
+		       }
+			  add_equipment_to_stockpile = {
+				type = medium_tank_destroyer_chassis
+				amount = 8000
+				producer = GER
+			} 
+             add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 8000
+				producer = GER
+			}			
+	        }
+		}
+	}
+	
+	snr_bhu_ger6_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  GER = {
+			         is_ai = yes
+					 surrender_progress > 0.60
+					}
+            }			  
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GER = {
+             for_loop_effect = {
+                 start = 0
+                 end = 40
+                 add = 1
+                     capital_scope = {
+                         create_unit = { 
+						         division = "name = \"german unit\" division_template = \"german army unit\" start_experience_factor = 1"
+                                 owner = GER
+                        }
+                    }
+               }
+			   swap_ideas = {
+		          remove_idea = snr_sachsen8_idea
+		          add_idea = snr_sachsen10_idea
+		       }
+			add_equipment_to_stockpile = {
+				type = medium_tank_destroyer_chassis
+				amount = 20000
+				producer = GER
+			}
+            add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 20000
+				producer = GER
+			}			
+	        }
+		}
+	}
+	
+	snr_bhu_fra_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			FRA = {
+              is_ai = yes			
+			  has_war_with = GER
+            }
+        }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+		
+		}
+		complete_effect = {
+		 FRA = { 
+		      add_timed_idea = {
+			      idea = snr_charge
+			      days = 90
+		    }
+		  }
+		}
+	}
+
+	snr_bhu_swe_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			or = {
+			  SWE = {is_ai = yes} 
+			 }
+ 			date > 1939.6.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   SWE = { leave_faction = yes }
+		   }
+	   }
+	   
+	snr_bhu_jap_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    JAP = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   JAP = { 
+	   		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 30000
+				producer = JAP }
+			}
+			JAP = { 
+	   		add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 4000
+				producer = JAP }
+			}
+		  }
+		}
+	  
+	snr_bhu_mex_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    MEX = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   MEX = { 
+	   		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 40000
+				producer = USA 
+			   }
+			}
+		  }
+		}
+		
+	snr_bhu_gea_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    GEA = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   GEA = { 
+	   		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 30000
+				producer = GER }
+			}
+		  }
+		}		
+		
+	snr_bhu_jap2_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    date > 1937.7.7
+		    JAP = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+           JAP = { complete_national_focus = JAP_rising_sun }
+		  }
+		}
+		
+	snr_bhu_aus_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    date > 1937.4.1
+		    AUS = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+           AUS = { complete_national_focus = AUS_protector_of_the_balkans }
+		  }
+		}
+    snr_bhu_mex2_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  MEX = {is_ai = yes} 
+ 			  date > 1939.1.1
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   MEX = { annex_country = { target = CUB } }
+		   MEX = { annex_country = { target = HAI } }
+		   MEX = { annex_country = { target = DOM } }
+		   MEX = { annex_country = { target = PAN } }
+		   MEX = { annex_country = { target = COS } }
+		   }
+	   }
+
+    snr_bhu_mex3_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+			  MEX = {is_ai = yes} 
+              country_exists = YUC
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   MEX = { annex_country = { target = YUC } }
+		   }
+	   }
+
+	snr_bhu_bra_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+		}
+		available = {
+		    date > 1940.1.1
+		    BRA = {is_ai = yes}
+          }			
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+           BRA = { complete_national_focus = BRA_i_am_the_senate }
+		  }
+		}     
+		
+	  }

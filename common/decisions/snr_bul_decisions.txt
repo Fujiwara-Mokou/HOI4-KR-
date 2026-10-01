@@ -1,0 +1,182 @@
+# ===== 改动 6 新增：保加利亚「巴尔干的守护者」决议组 =====
+# 由奥地利 sin_aus2_decisions.txt 转移而来（王冠统治系列）
+# 前置统一改为：已完成国策 BUL_balkan_war_victory（巴尔干半岛的霸主）
+# 原「已完成国策 AUS_protector_of_the_balkans」与全部好感度检查已移除
+# 保留 is_ai = no（延续全模组禁用 AI 的既有设定）
+# 已按需求剔除「与保加利亚建立王冠统治」——该国不能傀儡自己
+snr_bul_common_decisions = {
+
+	snr_bul_ser = {
+		icon = generic_monarchy
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			has_completed_focus = BUL_balkan_war_victory
+		}
+		targets = { SER }
+		visible = {
+
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+			puppet = SER
+			SER = {
+				set_cosmetic_tag = SER_king
+				add_ideas = snr_eco_control
+			}
+		}
+	}
+
+	snr_bul_rom = {
+		icon = generic_monarchy
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			has_completed_focus = BUL_balkan_war_victory
+		}
+		targets = { ROM }
+		visible = {
+
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+			puppet = ROM
+			ROM = {
+				set_cosmetic_tag = ROM_king
+				add_ideas = snr_eco_control
+			}
+			transfer_state = 83
+			transfer_state = 76
+			transfer_state = 82
+			transfer_state = 84
+			transfer_state = 875
+			transfer_state = 789
+			83 = { add_core_of = BUL }
+			76 = { add_core_of = BUL }
+			82 = { add_core_of = BUL }
+			84 = { add_core_of = BUL }
+			875 = { add_core_of = BUL }
+			789 = { add_core_of = BUL }
+		}
+	}
+
+	snr_bul_alb = {
+		icon = generic_monarchy
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			has_completed_focus = BUL_balkan_war_victory
+		}
+		targets = { ALB }
+		visible = {
+
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+			puppet = ALB
+			ALB = {
+				set_cosmetic_tag = ALB_king
+				add_ideas = snr_eco_control
+			}
+		}
+	}
+
+	snr_bul_gre = {
+		icon = generic_monarchy
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			has_completed_focus = BUL_balkan_war_victory
+		}
+		targets = { GRE }
+		visible = {
+
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+			puppet = GRE
+			GRE = {
+				set_cosmetic_tag = GRE_king
+				add_ideas = snr_eco_control
+			}
+		}
+	}
+
+	snr_bul_mnt = {
+		icon = aluminium
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			has_completed_focus = BUL_balkan_war_victory
+		}
+		targets = { MNT }
+		visible = {
+
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+			puppet = MNT
+			MNT = {
+				set_cosmetic_tag = MNT_king
+				transfer_state = 105
+				add_ideas = snr_eco_control
+			}
+			105 = {
+				add_resource = {
+					type = aluminium
+					amount = 300
+				}
+			}
+		}
+	}
+}

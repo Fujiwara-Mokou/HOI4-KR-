@@ -1,0 +1,148 @@
+snr_fra2_common_decisions = {
+
+	snr_syndicalism_decision = {
+		icon = generic_wreckers
+		allowed = {
+		}
+		available = {
+        has_completed_focus = FRA_the_congress_of_the_internationale
+		    not = { has_idea = snr_radical_socialist_idea }			
+            not = { has_idea = snr_jacobin_idea }
+			not = { has_idea = snr_saurel_idea }
+		}
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 20
+		days_remove = 365
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+		 political_power_factor = 0.15
+		 stability_weekly = 0.005
+		 research_speed_factor = 0.1
+		}
+		complete_effect = {
+		add_timed_idea = { idea = snr_syndicalism_idea days = 365 }
+		   		set_politics = {
+				  ruling_party = syndicalist
+				 }
+		   add_popularity = { ideology = syndicalist popularity = 1
+		   }
+		}
+		remove_effect = {
+         add_war_support = 0.1
+	 }
+	}
+	
+	snr_radical_socialist_decision = {
+		icon = generic_consumer_goods
+		allowed = {
+		}
+		available = {
+        has_completed_focus = FRA_the_congress_of_the_internationale		
+			not = { has_idea = snr_syndicalism_idea }			
+            not = { has_idea = snr_jacobin_idea }
+			not = { has_idea = snr_saurel_idea }
+		}
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 20
+		days_remove = 365
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+		 consumer_goods_factor = -0.1
+		 production_speed_industrial_complex_factor = 0.1
+		 production_speed_infrastructure_factor = 0.1
+		}
+		complete_effect = {
+		add_timed_idea = { idea = snr_radical_socialist_idea days = 365 }
+		   	set_politics = {
+				  ruling_party = radical_socialist
+				 }
+		   add_popularity = { ideology = radical_socialist popularity = 1
+		   }
+		}
+		remove_effect = {
+         add_war_support = 0.1
+	 }
+	}
+	
+	snr_jacobin_decision = {
+		icon = generic_merge_plant_materiel
+		allowed = {
+		}
+		available = {
+        has_completed_focus = FRA_the_congress_of_the_internationale		
+			not = { has_idea = snr_syndicalism_idea }			
+            not = { has_idea = snr_radical_socialist_idea }
+			not = { has_idea = snr_saurel_idea }
+		}
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 20
+		days_remove = 365
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+		 production_speed_arms_factory_factor = 0.1
+		 production_factory_efficiency_gain_factor = 0.15
+		 production_factory_start_efficiency_factor = 0.15
+		}
+		complete_effect = {
+		add_timed_idea = { idea = snr_jacobin_idea days = 365 }
+		   	set_politics = {
+				  ruling_party = totalist
+				 }
+		   add_popularity = { ideology = totalist popularity = 1
+		   }
+		}
+		remove_effect = {
+         add_war_support = 0.1
+	 }
+	}
+	
+	snr_saurel_decision = {
+		icon = generic_protection
+		allowed = {
+		}
+		available = {
+        has_completed_focus = FRA_the_congress_of_the_internationale		
+			not = { has_idea = snr_syndicalism_idea }			
+            not = { has_idea = snr_radical_socialist_idea }
+			not = { has_idea = snr_jacobin_idea }
+		}
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 20
+		days_remove = 365
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+		 army_org_factor = 0.2
+		 org_loss_when_moving = -0.2
+		 breakthrough_factor = 0.2
+		}
+		complete_effect = {
+		add_timed_idea = { idea = snr_saurel_idea days = 365 }
+		   	set_politics = {
+				  ruling_party = totalist
+				 }
+		   add_popularity = { ideology = totalist popularity = 1
+		   }
+		}
+		remove_effect = {
+         add_war_support = 0.1
+	 }

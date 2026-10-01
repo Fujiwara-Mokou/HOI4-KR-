@@ -1,0 +1,37 @@
+GER_warter = {
+	icon = "GFX_decision_hol_inundate_water_lines"
+	enable = { always = yes }
+	attacker_modifier = yes
+	army_attack_factor = -0.5
+	army_speed_factor_for_controller = -0.25
+	breakthrough_factor = -0.5
+	local_manpower = -0.25
+}
+
+GER_engineer = {
+	icon = "GFX_idea_GER_Peenemunde"
+	enable = { always = yes }
+	attacker_modifier = yes
+	state_production_speed_buildings_factor = 3
+}
+
+snr_aus_defence = {
+	icon = "GFX_decision_hol_inundate_water_lines"
+	enable = { always = yes }
+	attacker_modifier = yes
+	army_attack_factor = -0.99
+	breakthrough_factor = -0.99
+	air_cas_present_factor = -0.99
+	ground_attack_factor = -0.99
+	
+}
+
+snr_defence = {
+	icon = "GFX_decision_hol_inundate_water_lines"
+	enable = { always = yes }
+	attacker_modifier = yes
+	army_defence_factor = 0.30
+	air_cas_present_factor = -0.99
+	ground_attack_factor = -0.99
+	
+}

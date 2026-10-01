@@ -1,0 +1,97 @@
+# ===== 本文件由改动 3 新增：乌克兰专属决议组 =====
+# 归入已存在的分类 snr_ukr_common_decisions（见 categories/snr_common_decisions_categories.txt）
+# 需求：两个决议 AI 都不会点 —— available 内含 is_ai = no，且 ai_will_do factor = 0
+snr_ukr_common_decisions = {
+
+	# -------- 决议一：恢复1917中央拉达 --------
+	snr_ukr_restore_central_rada = {
+		icon = generic_political_actions
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			date > 1937.1.1
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			# ===== 取得 91/94/80/89/713/78/79 的宣称 =====
+			add_state_claim = 91  # Lwow 利沃夫
+			add_state_claim = 94  # Volkovysk 沃夫科维斯克
+			add_state_claim = 80  # Cernauti 切尔诺夫策
+			add_state_claim = 89  # Stanislawow 斯坦尼斯拉沃夫
+			add_state_claim = 713 # Suceava 苏恰瓦
+			add_state_claim = 78  # Bessarabia 比萨拉比亚
+			add_state_claim = 79  # Moldavia 摩尔达维亚
+			# ===== 同时取得核心 =====
+			add_state_core = 91
+			add_state_core = 94
+			add_state_core = 80
+			add_state_core = 89
+			add_state_core = 713
+			add_state_core = 78
+			add_state_core = 79
+			# ===== 改动：同时直接控制这 7 块地 =====
+			set_state_controller = 91  # Lwow 利沃夫
+			set_state_controller = 94  # Volkovysk 沃夫科维斯克
+			set_state_controller = 80  # Cernauti 切尔诺夫策
+			set_state_controller = 89  # Stanislawow 斯坦尼斯拉沃夫
+			set_state_controller = 713  # Suceava 苏恰瓦
+			set_state_controller = 78  # Bessarabia 比萨拉比亚
+			set_state_controller = 79  # Moldavia 摩尔达维亚
+		}
+	}
+
+	# -------- 决议二：成立西斯拉夫 --------
+	snr_ukr_west_slav = {
+		icon = generic_form_nation
+		allowed = {
+
+		}
+		available = {
+			is_ai = no
+			# ===== 仅需 POL / LIT / BLR / BAT 均为电脑控制 =====
+			POL = { is_ai = yes }
+			LIT = { is_ai = yes }
+			BLR = { is_ai = yes }
+			BAT = { is_ai = yes }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			# ===== 仅改国名（外观 tag，沿用乌克兰旗帜）=====
+			set_cosmetic_tag = UKR_westslav
+			# ===== 吞并四国，其地块挂上乌克兰核心 =====
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = LIT
+						is_owned_by = BLR
+						is_owned_by = BAT
+					}
+				}
+				add_core_of = UKR
+			}
+			annex_country = { target = POL }
+			annex_country = { target = LIT }
+			annex_country = { target = BLR }
+			annex_country = { target = BAT }
+		}
+	}
+}

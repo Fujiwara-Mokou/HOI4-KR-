@@ -1,0 +1,1263 @@
+ideas = {
+	country = {
+		
+		snr_total_industrilization_idea = { #全面工业化
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			
+			modifier = {
+				global_building_slots_factor = 2.0
+			}
+		}
+		
+		snr_fuel_refining_idea = { #燃油提炼
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_supply_depot
+			
+			modifier = {
+				fuel_gain_factor = 3.0
+				fuel_gain_factor_from_states = 3.0
+				factory_energy_consumption = -0.60
+			}
+		}
+		
+		snr_army_officer_school_idea = { #军官学校
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				experience_gain_army = 0.5
+				experience_gain_air = 0.5
+				experience_gain_navy = 0.5
+				conscription = 0.1
+				experience_loss_factor = -0.25
+				experience_gain_army_unit_factor = 0.25
+				special_forces_cap = 100
+				supply_consumption_factor = -0.3
+				special_forces_cap = 100
+				every_warfare_mastery_gain_factor = 0.15
+				invasion_preparation = -0.8
+				naval_invasion_plan_cap = 4
+			}
+		}
+		
+        snr_training_idea = { #军事化训练
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SWE_varnplikt
+			
+			modifier = {
+				# ===== 改动：每日 +1 陆军/海军/空军经验 =====
+				experience_gain_army = 1
+				experience_gain_navy = 1
+				experience_gain_air = 1
+			   training_time_factor = -0.85
+			}
+		}		
+		
+		FRA_communard = { #保卫革命
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				army_core_attack_factor = 0.25
+			}
+		}
+		
+		snr_syndicalism_idea = { #工团派主导
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NOR_secret_police
+			modifier = {			
+			}
+		}		
+
+		snr_radical_socialist_idea = { #无政府派主导
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NOR_secret_police
+			modifier = {			
+			}
+		}
+
+		snr_jacobin_idea = { #雅各宾派主导
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NOR_secret_police
+			modifier = {			
+			}
+		}
+
+		snr_saurel_idea = { #索雷尔派主导
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NOR_secret_police
+			modifier = {			
+			}
+		}		
+		
+		snr_war_of_totalization_idea = { #总体战
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_strength_factor = 0.1
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				dig_in_speed_factor = 0.2
+			}
+		}
+		
+		snr_attention_panzer_idea = { #注意，坦克
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_armor_attack_factor = 0.10
+			}
+		}
+		
+		snr_expand_information_department_idea = { #扩建情报部门
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_spy_intel
+			
+			modifier = {
+				civilian_intel_to_others  = -60
+				army_intel_to_others = -60
+				airforce_intel_to_others = -60
+				navy_intel_to_others = -60
+			}
+		}
+		
+		snr_for_Deutschland_idea = { #为了德意志
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_fan_prussian_militarism
+			
+			modifier = {
+				army_attack_factor = 0.20
+				breakthrough_factor = 0.20
+			}
+		}
+		
+		snr_armor_idea = { #虎式坦克
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = man_five_year_plan_tank
+			
+			equipment_bonus = {
+		      heavy_tank_chassis  = {
+					build_cost_ic = -0.45
+					armor_value = 0.4
+					instant = yes
+				 }
+			   }
+				modifier = {
+				army_armor_defence_factor = 0.2
+			  }
+	    }
+		
+		snr_propaganda_machine_idea = { #宣传机器
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_intel_bonus
+            modifier = {
+			   political_power_gain = 0.2
+			   stability_weekly = 0.002
+			   war_support_weekly = 0.002
+			}
+	    }
+		
+		snr_panzergrenadier_idea = { #装甲掷弹兵
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_army
+			
+			equipment_bonus = {
+		      mechanized_equipment = {
+					build_cost_ic = -0.15
+					soft_attack = 0.2
+					hard_attack = 0.2
+					instant = yes
+				 }
+			   }
+	         }
+
+		snr_seig_idea = { #保卫祖国
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_reserve_divisions
+            modifier = {
+			army_core_defence_factor = 0.2
+			}
+	    }
+		
+		snr_sachsen1_idea = { #萨克森地下工程：1级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 20
+			}
+	    }		
+		
+		snr_sachsen2_idea = { #萨克森地下工程：2级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 40
+			}
+	    }	
+		
+		snr_sachsen3_idea = { #萨克森地下工程：3级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 60
+			}
+	    }	
+
+		snr_sachsen4_idea = { #萨克森地下工程：4级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 80
+			}
+	    }
+
+		snr_sachsen5_idea = { #萨克森地下工程：5级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 100
+			}
+	    }
+
+		snr_sachsen6_idea = { #萨克森地下工程：6级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 120
+			}
+	    }
+
+		snr_sachsen7_idea = { #萨克森地下工程：7级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 140
+			}
+	    }
+
+		snr_sachsen8_idea = { #萨克森地下工程：8级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 160
+			}
+	    }
+
+		snr_sachsen9_idea = { #萨克森地下工程：9级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 180
+			}
+	    }
+
+		snr_sachsen10_idea = { #萨克森地下工程：10级
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GER_recovering_economy
+            modifier = {
+			military_factory_donations = 200
+			}
+	    }		
+		
+		snr_final_strik_of_habsburg_idea = { #哈布斯堡的最后一战
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AUS_empire_restored
+			
+			modifier = {
+				war_support_factor = 0.5
+				production_speed_arms_factory_factor = 0.3
+			}
+		}
+		
+		snr_phoenix_in_flame_idea = { #浴火凤凰
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_phoenix
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				cv_small_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+			modifier = {
+				
+			}
+		}
+		
+	snr_air_plan_idea = { #涡轮引擎推进器
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_air_research
+			
+			modifier = {
+				air_range_factor = 0.25
+			}
+		}
+		
+	CAN_royalnavy_idea = { #重建皇家海军
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_navy_bonus
+			
+			modifier = {
+				industrial_capacity_dockyard = 3
+			}
+		}
+	
+	CAN_fight_on_beach_idea = { #丘吉尔的演讲
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_imperial_conscription
+			
+			modifier = {
+			    max_planning = 0.15
+				special_forces_attack_factor = 0.2
+				naval_invasion_capacity = 36
+				amphibious_invasion_defence = 0.5
+				naval_invasion_planning_bonus_speed = 0.8
+			}
+		}
+		
+	CAN_support_raj_idea = { #东印度公司
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = free_trade
+			
+			modifier = {
+			    political_power_factor = 0.3
+				consumer_goods_factor = -0.20
+			}
+		}
+
+	CAN_toronto_idea = { #多伦多协议
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CAN_imperial_trade
+			
+			targeted_modifier = {
+				tag = CAN
+				trade_cost_for_target_factor = -0.5
+				cic_to_target_factor = 0.05
+			}
+		}
+		
+	USA_toronto_idea = { #加拿大援助
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_infantry_equipment_manufacturer_3
+			modifier = {
+				army_attack_factor = 0.30
+				breakthrough_factor = 0.30
+			}			
+			targeted_modifier = {
+				tag = WCA
+				  attack_bonus_against = 0.5
+				  defense_bonus_against = 0.5
+			}
+		}
+    snr_weak_idea = { #军队腐败
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_army_corruption
+			modifier = {
+				army_attack_factor = -0.90
+			}			
+		}		
+		
+	CAN_new_england_idea = { #征召新英格兰人
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GBR_new_military
+			
+			modifier = {
+			    conscription = 0.1
+				combat_width_factor = -0.2
+			}
+		}
+	
+	snr_LCT_idea = { #陆上军舰
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_preparing_the_second_front
+			equipment_bonus = {
+			  amphibious_mechanized_equipment = { 
+			    build_cost_ic = -0.70
+				instant = yes
+			 }
+		  }
+		}
+	snr_uk_idea = { #联邦之要
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CAN_imperial_investment
+			modifier = { 
+			production_factory_max_efficiency_factor = -0.2
+			consumer_goods_factor = 0.7
+			}
+		  }
+	snr_rus_power_idea = { #权力集中
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_intel_bonus
+			
+			modifier = { political_power_factor = 0.15
+			
+	      }
+       }
+	rus_order_34_idea = { #统一且不可分割的俄罗斯万岁
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			stability_weekly = 0.01
+			political_power_factor = 0.10
+			
+	      }
+       }
+	 
+	 rus_order_20_idea = { #全国报刊社：苍白战马
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -2
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			war_support_weekly = 0.02
+			mobilization_laws_cost_factor = -0.5
+			trade_laws_cost_factor = -0.5
+			economy_cost_factor = -0.5
+	      }
+       }
+	   
+	rus_order_7_idea = { #国民企业
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			production_speed_industrial_complex_factor = 0.15
+	      }
+       }
+	   
+	rus_order_101_idea = { #拖拉机格勒
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			production_speed_arms_factory_factor = 0.15
+	      }
+       }
+	   
+	rus_order_69_idea = { #生产线上的英雄
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+	      }
+       }
+
+	rus_order_1_idea = { #以剑之名
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			army_attack_factor = 0.05
+			army_morale_factor = 0.15
+		    supply_consumption_factor = -0.15
+	      }
+       }
+
+    rus_order_81_idea = { #推进
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			breakthrough_factor = 0.1
+			max_planning = 0.15
+			planning_speed = -0.15
+	      }
+       }
+
+    rus_order_147_idea = { #作战艺术
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_the_true_tsars
+			
+			modifier = {
+			air_attack_factor = 0.15
+			air_maximum_speed_factor = 0.15
+			enemy_army_bonus_air_superiority_factor = -0.3
+	      }
+       }
+
+	snr_sri_chasseur_idea = { #意大利山地猎兵战斗群
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ETH_peacekeeping_forces
+			
+			modifier = {
+			special_forces_attack_factor = 0.2
+			supply_consumption_factor = -0.15
+			org_loss_when_moving = -0.2
+	      }
+       }
+	   
+	snr_sri_alps_idea = { #阿尔卑斯攻势
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HUN_the_rakosi_battalion_idea
+			
+			modifier = {
+			combat_width_factor = -0.3
+			}
+			targeted_modifier = { 
+			tag = AUS 
+			attack_bonus_against = 0.1
+	      }
+       }
+	   
+	snr_coastal_defense_idea = { #意大利海岸防卫战斗群
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = NORDIC_navy_democratic
+			equipment_bonus = { 
+			    light_tank_chassis  = {
+					build_cost_ic = -0.1
+					instant = yes
+				 }
+			}
+			modifier = {
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			max_dig_in = 10
+			enemy_army_bonus_air_superiority_factor = -0.15
+       }
+ }		   
+	
+	snr_extreme_revolution_idea = { #向极限革命
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_stakhanovite_movement
+			modifier = {
+			production_factory_max_efficiency_factor = 0.25
+       }
+ }
+ 
+ 	snr_intermarium_federation_idea = { #利沃尼亚骑士团
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BAT_Baltische_Landeswehr
+			modifier = {
+			max_dig_in = 15
+       }
+ }	
+ 
+ 	snr_polish_lithuanian_commonwealth_idea = { #现代翼骑兵
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = POL_april_constitution
+			modifier = {
+			max_planning = 0.30
+       }
+ }	
+ 
+	snr_break_dam_idea = { #核心工业区受损
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_hyper_inflation
+			
+			modifier = { 
+			    industrial_capacity_factory = -0.3
+				consumer_goods_factor = 0.3
+			
+	      }
+       }
+	   
+    snr_break_dam2_idea = { #洪水泛滥
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_incompetent_officers
+			
+			modifier = { 
+				army_attack_factor = -0.25
+				breakthrough_factor = -0.25
+			
+	      }
+       }
+	   
+	snr_syndicalism_down_idea = { #反工团主义堡垒
+	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = anti_soviet_pact 
+			      targeted_modifier = {
+				  tag = FRA 
+				  attack_bonus_against = 0.1
+				  defense_bonus_against = 0.1
+		}
+			      targeted_modifier = {
+				  tag = ENG
+				  attack_bonus_against = 0.1
+				  defense_bonus_against = 0.1
+			}
+      }
+	  
+	snr_mi6_decision_idea = { #R.E.D
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_shield_against_communism
+			modifier = { 
+				operative_slot = 2
+				intelligence_agency_defense = 1
+				civilian_intel_to_others  = -15
+				army_intel_to_others = -15
+				airforce_intel_to_others = -15
+				navy_intel_to_others = -15
+			
+	      }
+      }
+	  
+	snr_labour_party_idea = { #劳动标兵
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = PRC_factory_617
+			modifier = { 
+			     industrial_factory_donations = 15
+			     military_factory_donations = 15
+				 
+			}
+      }	  
+	  
+	snr_decode_idea = { #渗透德军参谋部
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ger_the_great_red_menace
+			targeted_modifier = {
+				  tag = GER
+				  attack_bonus_against = 0.15
+				  brea1kthrough_bonus_against = 0.15
+	      }
+      }
+	snr_charge = { #冲锋！
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_communist_army
+			modifier = {
+				 army_attack_factor = 0.40
+				 breakthrough_factor = 0.40
+	      }
+      }	 
+	snr_leaflet_idea = { #士兵溃逃
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_army_corruption 
+			modifier = {
+				   army_org_factor = -0.5
+				   air_mission_efficiency = -0.5
+	      }
+      }
+	  
+	snr_blood_in_sky_idea = { #血洒长空
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_special_air_service
+			rule = { can_use_kamikaze_pilots = yes }
+			modifier = {
+			      air_cas_efficiency = 0.10
+	      }
+      }
+	  
+	FRA_last_man_idea = { #至死方休
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AFG_adopt_nufus
+			modifier = {
+			      army_org_factor = 0.4
+			      army_attack_factor = 0.4
+				  stability_weekly = -0.05
+				  conscription = 1
+				  surrender_limit = 1
+	      }
+      }
+	 
+	FRA_passion_idea = { #过度动员的工业
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = totaler_krieg_economy
+			modifier = {
+			      industrial_capacity_factory = 5
+				  weekly_manpower = -10000
+	      }
+      }
+	  
+	FRA_economic_collapse_idea = { #经济崩溃
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_economic_crisis
+			modifier = {
+			      consumer_goods_factor = 0.5
+				  production_factory_max_efficiency_factor = -0.5
+				  production_factory_start_efficiency_factor = -0.5
+				  line_change_production_efficiency_factor = -0.5
+				  industrial_capacity_dockyard = -0.5
+	      }
+      }
+	  
+	snr_free_nfa_idea = { #高卢雄鸡
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FRA_undividable
+			modifier = {
+			      stability_weekly = 0.005
+				  political_power_gain = 0.5
+	      }
+      }
+	  
+	snr_save_idea = { #勤俭节约
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			modifier = {
+			      local_resources_factor = 0.30
+				  min_export = -0.3
+	      }
+      }  
+	
+	snr_awakening_of_France_idea = { #法兰西觉醒
+   	  allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FRA_la_deluge
+			modifier = {
+			      army_attack_factor = 0.05
+				  army_defence_factor = 0.05
+				  army_infantry_attack_factor = 0.05
+				  army_infantry_defence_factor = 0.05
+				  mechanized_attack_factor = 0.05
+				  mechanized_defence_factor = 0.05
+				  special_forces_attack_factor = 0.05
+				  special_forces_defence_factor = 0.05
+				  army_armor_attack_factor = 0.05
+				  army_armor_defence_factor = 0.05
+				  army_org_factor = 0.05
+				  army_morale_factor = 0.05
+				  army_morale_factor = 0.05
+				  breakthrough_factor = 0.05
+				  supply_consumption_factor = -0.05
+				  attrition = -0.05
+				  combat_width_factor = -0.05
+				  dig_in_speed_factor  = 0.05
+				  max_dig_in = 5
+				  max_planning = 0.05
+				  planning_speed = 0.05
+				  consumer_goods_factor = -0.05
+				  industrial_capacity_factory = 0.05
+				  production_factory_max_efficiency_factor = 0.05
+				  production_factory_efficiency_gain_factor = 0.05
+				  production_factory_start_efficiency_factor = 0.05
+				  line_change_production_efficiency_factor = 0.05
+	      }
+      }
+	
+	snr_jap_77_idea = { #一号作战
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = jap_ichi_go
+			targeted_modifier = {
+				  tag = QIE
+				  attack_bonus_against = 0.3
+			}
+			modifier = {
+			}
+		}	
+
+	snr_jap_south_plan_idea = { #南进计划
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_armor
+			targeted_modifier = {
+				  tag = GER
+				  attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				  tag = GEA
+				  attack_bonus_against = 0.1
+			}
+			modifier = {
+		   }
+		}	
+	
+	snr_jap2_south_plan_idea = { #南进计划2
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_armor
+			targeted_modifier = {
+				  tag = JAP
+				  attack_bonus_against = -0.1
+			}
+			modifier = {
+		   }
+		}
+		
+	snr_jap_etajima_idea = { #江田岛海军兵学校
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_coastal_defense_ships2
+			equipment_bonus = {
+			  ship_hull_cruiser = {
+					lg_attack = 0.25
+					instant = yes
+				}
+			  ship_hull_light = {
+					lg_attack = 0.25
+					instant = yes
+				}
+			  }
+			modifier = {
+		   }
+		}
+		
+	snr_jap_97_idea = { #九七式中战车军工厂
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ETH_conservative_high_command
+			equipment_bonus = {
+			  medium_tank_chassis = {
+                build_cost_ic = -0.1
+				 instant = yes
+				}
+			  }
+			modifier = {
+			industrial_capacity_factory = 0.1
+		   }
+		}
+
+	snr_jap_banzai_idea = { #万岁冲锋
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = RAJ_private_military_complex
+			modifier = {
+			army_infantry_attack_factor = 0.25
+			army_speed_factor = 0.25
+		   }
+		}		
+		
+	snr_jap_will_supremacy_idea = { #意志至上
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = jap_militarism_showa
+			modifier = {
+			army_attack_factor = 0.15
+		   }
+		}
+		
+	snr_jap_kamikaze_idea = { #神风特攻队
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = state_shintoism
+			equipment_bonus = {
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = -0.5 instant = yes
+				}
+			modifier = {
+		   }
+		}
+     }
+
+	snr_grandes_ideales_idea = { #国家至上
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_forced_conscription
+			rule = {
+			can_use_kamikaze_pilots = yes
+		   }
+		   modifier = {
+		   }
+		}
+
+	snr_exile_spain_idea = { #西班牙大方阵的遗产
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = john_brown_company
+			modifier = {
+			  max_dig_in = 5
+			  max_planning = 0.15
+			}
+		}
+    snr_guatemala_idea = { #玛雅文明之地
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CHL_pan_hispanic_rhetoric
+			modifier = {
+			  stability_factor = 0.1
+			}
+		}
+		
+    snr_salvador_idea = { #咖啡出口
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_departamento_nacional_do_cafe
+			modifier = {
+			  consumer_goods_factor = -0.2
+			}
+		}
+
+    snr_honduras_idea = { #热带农产品
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ETH_coffee_exports
+			modifier = {
+			  production_speed_buildings_factor = 0.15
+			}
+		}		
+
+    snr_nicaragua_idea = { #桑地诺精神
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CHL_ligas_patrioticas
+			modifier = {
+			  army_morale_factor = 0.2
+			  supply_consumption_factor = -0.2
+			}
+		}
+
+    snr_costarica_idea = { #工业模范
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ARG_construction_guilds
+			modifier = {
+			  industrial_capacity_factory = 0.05
+			  production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+    snr_panama_idea = { #巴拿马突击队
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Cockatoo_doe
+			modifier = {
+			  naval_invasion_capacity = 10
+			  enemy_army_bonus_air_superiority_factor = -0.2
+			}
+		}
+
+    snr_cuba_idea = { #对外安全局
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = PAR_president_carlos_antonio_lopez_railways
+			modifier = {
+			  operative_slot = 2
+			  agency_upgrade_time = -0.3
+			  decryption_power = 2
+			}
+		}		
+		
+    snr_ayiti_idea = { #黑市枪支生产
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = RAJ_tenancy_reforms
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.3
+					instant = yes
+				}
+           }				
+			modifier = {
+			}
+		}
+		
+    snr_dominicana_idea = { #多米尼加之鹰
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SWE_marauder_bombers	
+			modifier = {
+			army_bonus_air_superiority_factor = 0.1
+			air_bombing_targetting = 0.1
+			}
+		}
+	
+	snr_bra_win_idea = { #内战的教训
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_stability_and_unity
+			
+			modifier = {
+				army_defence_factor = 0.30
+				army_org_factor = 0.30
+			}
+		}
+		
+	snr_bra_rubber_idea = { #橡胶出口
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_flexible_foreign_policy2
+			modifier = {
+			  consumer_goods_factor = -0.2
+			}
+		}
+
+    snr_bra_ranger_idea = { #丛林之鼠
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_us_of_brazil
+			modifier = {
+			special_forces_attack_factor = 0.10
+			heat_attrition_factor = -0.3
+			}
+		}		
+		
+		
+	snr_i_am_idea = { 我是主机
+	allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_monarchist_uprising
+        }
+		
+	snr_error_idea = { #违规
+	allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_tackle_capitalism
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = 1145.14
+					instant = yes
+	          }
+			 }
+			  modifier = {
+				  air_nav_efficiency = -1145.14
+				  air_strategic_bomber_bombing_factor = -1145.14
+	      }
+        }
+	  }
+    }
+  }

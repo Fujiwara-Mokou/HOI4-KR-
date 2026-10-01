@@ -1,0 +1,1264 @@
+form_european_union_category1 = {
+
+	form_european_union1 = {
+		icon = generic_form_nation
+		cost = 0  days_re_enable = 0
+		visible = {
+			has_country_flag = ouzhou1
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+		}
+		available = {
+			is_subject = no
+			# Lux
+			# Belgium
+			# Netherlands
+			custom_trigger_tooltip = {
+			tooltip = didisanguo1
+			OR = {
+				AND = {	
+				controls_state = 8
+				controls_state = 7
+				controls_state = 35
+				controls_state = 36
+				controls_state = 6
+				controls_state = 34
+			}
+			AND = {
+				is_debug = yes
+				is_ai = no
+			        }
+			    }
+		    }
+			# France
+			custom_trigger_tooltip = {
+				tooltip = form_eu_france_required_states_tt
+			OR = {
+				AND = {	
+				controls_state = 29
+				controls_state = 18
+				controls_state = 17
+				controls_state = 28
+				controls_state = 15
+				controls_state = 16
+				controls_state = 27
+				controls_state = 14
+				controls_state = 30
+				controls_state = 24
+				controls_state = 23
+				controls_state = 33
+				controls_state = 26
+				controls_state = 20
+				controls_state = 32
+				controls_state = 735
+				controls_state = 25
+				controls_state = 22
+				controls_state = 21
+				controls_state = 851
+				controls_state = 19
+				controls_state = 20
+				controls_state = 1
+				controls_state = 785
+				controls_state = 31
+			}
+			AND = {
+				is_debug = yes
+				is_ai = no
+					}
+				}
+			}
+			# Italy
+			custom_trigger_tooltip = {
+				tooltip = form_eu_italy_required_states_tt
+			OR = {
+				AND = {	
+				controls_state = 158
+				controls_state = 159
+				controls_state = 39
+				controls_state = 160
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 114
+				controls_state = 736
+				controls_state = 849
+				controls_state = 850
+				controls_state = 852
+			}
+			AND = {
+				is_debug = yes
+				is_ai = no
+					}
+				}
+			}
+			# Germany
+			custom_trigger_tooltip = {
+				tooltip = form_country_germany_required_states_tt
+			OR = {
+				AND = {
+				controls_state = 51
+				controls_state = 42
+				controls_state = 56
+				controls_state = 57
+				controls_state = 55
+				controls_state = 50
+				controls_state = 59
+				controls_state = 58
+				controls_state = 60
+				controls_state = 54
+				controls_state = 52
+				controls_state = 53
+				controls_state = 61
+				controls_state = 64
+				controls_state = 65
+				controls_state = 62
+				controls_state = 68
+				controls_state = 66
+				controls_state = 67
+				controls_state = 63
+				controls_state = 5
+				controls_state = 763
+			}
+			AND = {
+				is_debug = yes
+				is_ai = no
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = unform_available
+			add_stability = 0.2
+			if = {
+				limit = {
+					NOT = { original_tag = ENG }
+				}
+			set_cosmetic_tag = EUR_UNIFIED
+			}
+			else = {
+				set_cosmetic_tag = ENG_imperial_federation_unified #Europe-a-Nation
+			}
+			custom_effect_tooltip = lux1 
+			hidden_effect = {
+				8 = { add_core_of = ROOT }
+			}
+			# Netherlands
+			custom_effect_tooltip = form_eu_netherlands_coring_states_tt 
+			hidden_effect = {
+				7 = { add_core_of = ROOT }
+				35 = { add_core_of = ROOT }
+				36 = { add_core_of = ROOT }
+			}
+			# Belgium
+			custom_effect_tooltip = form_eu_belgium_coring_states_tt
+			hidden_effect = {
+				6 = { add_core_of = ROOT }
+				34 = { add_core_of = ROOT }
+			}
+			# France
+			custom_effect_tooltip = form_eu_france_coring_states_tt
+			hidden_effect = {
+				29 = { add_core_of = ROOT }
+				18 = { add_core_of = ROOT }
+				17 = { add_core_of = ROOT }
+				28 = { add_core_of = ROOT }
+				15 = { add_core_of = ROOT }
+				16 = { add_core_of = ROOT }
+				27 = { add_core_of = ROOT }
+				14 = { add_core_of = ROOT }
+				30 = { add_core_of = ROOT }
+				24 = { add_core_of = ROOT }
+				23 = { add_core_of = ROOT }
+				33 = { add_core_of = ROOT }
+				26 = { add_core_of = ROOT }
+				20 = { add_core_of = ROOT }
+				32 = { add_core_of = ROOT }
+				735 = { add_core_of = ROOT }
+				25 = { add_core_of = ROOT }
+				22 = { add_core_of = ROOT }
+				21 = { add_core_of = ROOT }
+				851 = { add_core_of = ROOT }
+				19 = { add_core_of = ROOT }
+				20 = { add_core_of = ROOT }
+				1 = { add_core_of = ROOT }
+				785 = { add_core_of = ROOT }
+				31 = { add_core_of = ROOT }
+			}
+			# Italy
+			custom_effect_tooltip = form_eu_italy_coring_states_tt
+			hidden_effect = {
+				158 = { add_core_of = ROOT }
+				159 = { add_core_of = ROOT }
+				39 = { add_core_of = ROOT }
+				160 = { add_core_of = ROOT }
+				161 = { add_core_of = ROOT }
+				162 = { add_core_of = ROOT }
+				157 = { add_core_of = ROOT }
+				2 = { add_core_of = ROOT }
+				117 = { add_core_of = ROOT }
+				156 = { add_core_of = ROOT }
+				115 = { add_core_of = ROOT }
+				114 = { add_core_of = ROOT }
+				736 = { add_core_of = ROOT }
+				849 = { add_core_of = ROOT }
+				850 = { add_core_of = ROOT }
+				852 = { add_core_of = ROOT }
+			}
+			# Germany
+			custom_effect_tooltip = form_country_germany_coring_states_tt
+			hidden_effect = {
+				51 = { add_core_of = ROOT }
+				42 = { add_core_of = ROOT }
+				56 = { add_core_of = ROOT }
+				57 = { add_core_of = ROOT }
+				55 = { add_core_of = ROOT }
+				50 = { add_core_of = ROOT }
+				59 = { add_core_of = ROOT }
+				58 = { add_core_of = ROOT }
+				60 = { add_core_of = ROOT }
+				54 = { add_core_of = ROOT }
+				52 = { add_core_of = ROOT }
+				53 = { add_core_of = ROOT }
+				61 = { add_core_of = ROOT }
+				64 = { add_core_of = ROOT }
+				65 = { add_core_of = ROOT }
+				62 = { add_core_of = ROOT }
+				68 = { add_core_of = ROOT }
+				66 = { add_core_of = ROOT }
+				67 = { add_core_of = ROOT }
+				63 = { add_core_of = ROOT }
+				5 = { add_core_of = ROOT }
+				763 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				sound_effect = complete_focus
+				news_event = { id = wtt_news.62 hours = 6 }
+			}
+		}
+	}
+}
+
+formable_nations_greater_russia_category1 = {
+	formable_nations_greater_russia1 = {
+		icon = generic_form_nation
+		cost = 0  days_re_enable = 0
+		visible = {
+			has_country_flag = bieou1
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = { 
+				tooltip = russia_requirement_tooltip 
+				OR = {
+					AND = {	
+						40 = { is_controlled_by = ROOT }
+						137 = { is_controlled_by = ROOT }
+						192 = { is_controlled_by = ROOT }
+						193 = { is_controlled_by = ROOT }
+						194 = { is_controlled_by = ROOT }
+						195 = { is_controlled_by = ROOT }
+						196 = { is_controlled_by = ROOT }
+						197	= { is_controlled_by = ROOT }
+						198 = { is_controlled_by = ROOT }
+						199 = { is_controlled_by = ROOT }
+						200 = { is_controlled_by = ROOT }
+						201 = { is_controlled_by = ROOT }
+						202 = { is_controlled_by = ROOT }
+						203 = { is_controlled_by = ROOT }
+						204 = { is_controlled_by = ROOT }
+						205 = { is_controlled_by = ROOT }
+						206 = { is_controlled_by = ROOT }
+						207 = { is_controlled_by = ROOT }
+						208 = { is_controlled_by = ROOT }
+						209 = { is_controlled_by = ROOT }
+						210 = { is_controlled_by = ROOT }
+						217 = { is_controlled_by = ROOT }
+						218 = { is_controlled_by = ROOT }
+						219 = { is_controlled_by = ROOT }
+						220 = { is_controlled_by = ROOT }
+						221 = { is_controlled_by = ROOT }
+						222 = { is_controlled_by = ROOT }
+						223 = { is_controlled_by = ROOT }
+						224 = { is_controlled_by = ROOT }
+						225 = { is_controlled_by = ROOT }
+						226 = { is_controlled_by = ROOT }
+						227 = { is_controlled_by = ROOT }
+						228 = { is_controlled_by = ROOT }
+						232 = { is_controlled_by = ROOT }
+						233 = { is_controlled_by = ROOT }
+						234 = { is_controlled_by = ROOT }
+						235 = { is_controlled_by = ROOT }
+						236 = { is_controlled_by = ROOT }
+						237 = { is_controlled_by = ROOT }
+						238 = { is_controlled_by = ROOT }
+						239 = { is_controlled_by = ROOT }
+						240 = { is_controlled_by = ROOT }
+						241 = { is_controlled_by = ROOT }
+						242 = { is_controlled_by = ROOT }
+						243 = { is_controlled_by = ROOT }
+						244 = { is_controlled_by = ROOT }
+						245 = { is_controlled_by = ROOT }
+						246 = { is_controlled_by = ROOT }
+						247 = { is_controlled_by = ROOT }
+						248 = { is_controlled_by = ROOT }
+						249 = { is_controlled_by = ROOT }
+						250 = { is_controlled_by = ROOT }
+						251 = { is_controlled_by = ROOT }
+						252 = { is_controlled_by = ROOT }
+						253 = { is_controlled_by = ROOT }
+						254 = { is_controlled_by = ROOT }
+						255 = { is_controlled_by = ROOT }
+						256 = { is_controlled_by = ROOT }
+						257 = { is_controlled_by = ROOT }
+						258 = { is_controlled_by = ROOT }
+						259 = { is_controlled_by = ROOT }
+						260 = { is_controlled_by = ROOT }
+						263 = { is_controlled_by = ROOT }
+						264 = { is_controlled_by = ROOT }
+						265 = { is_controlled_by = ROOT }
+						351 = { is_controlled_by = ROOT }
+						398 = { is_controlled_by = ROOT }
+						399 = { is_controlled_by = ROOT }
+						400 = { is_controlled_by = ROOT }
+						401 = { is_controlled_by = ROOT }
+						402 = { is_controlled_by = ROOT }
+						403 = { is_controlled_by = ROOT }
+						404 = { is_controlled_by = ROOT }
+						405 = { is_controlled_by = ROOT }
+						406 = { is_controlled_by = ROOT }
+						407 = { is_controlled_by = ROOT }
+						408 = { is_controlled_by = ROOT }
+						409 = { is_controlled_by = ROOT }
+						560 = { is_controlled_by = ROOT }
+						561 = { is_controlled_by = ROOT }
+						563 = { is_controlled_by = ROOT }
+						564 = { is_controlled_by = ROOT }
+						565 = { is_controlled_by = ROOT }
+						566 = { is_controlled_by = ROOT }
+						567 = { is_controlled_by = ROOT }
+						568 = { is_controlled_by = ROOT }
+						569 = { is_controlled_by = ROOT }
+						570 = { is_controlled_by = ROOT }
+						571 = { is_controlled_by = ROOT }
+						572 = { is_controlled_by = ROOT }
+						573 = { is_controlled_by = ROOT }
+						578 = { is_controlled_by = ROOT }
+						582 = { is_controlled_by = ROOT }
+						583 = { is_controlled_by = ROOT }
+						584 = { is_controlled_by = ROOT }
+						585 = { is_controlled_by = ROOT }
+						586 = { is_controlled_by = ROOT }
+						587 = { is_controlled_by = ROOT }
+						588 = { is_controlled_by = ROOT }
+						589 = { is_controlled_by = ROOT }
+						590 = { is_controlled_by = ROOT }
+						651 = { is_controlled_by = ROOT }
+						652 = { is_controlled_by = ROOT }
+						653 = { is_controlled_by = ROOT }
+						654 = { is_controlled_by = ROOT }
+						655 = { is_controlled_by = ROOT }
+						657 = { is_controlled_by = ROOT }
+						732 = { is_controlled_by = ROOT }
+						742 = { is_controlled_by = ROOT }
+						826 = { is_controlled_by = ROOT }
+						231 = { is_controlled_by = ROOT }
+						229 = { is_controlled_by = ROOT }
+						230 = { is_controlled_by = ROOT }
+						406 = { is_controlled_by = ROOT }
+						407 = { is_controlled_by = ROOT }
+						402 = { is_controlled_by = ROOT }
+						584 = { is_controlled_by = ROOT }
+						585 = { is_controlled_by = ROOT }
+						587 = { is_controlled_by = ROOT }
+						583 = { is_controlled_by = ROOT }
+						590 = { is_controlled_by = ROOT }
+						588 = { is_controlled_by = ROOT }
+						404 = { is_controlled_by = ROOT }
+						589 = { is_controlled_by = ROOT }
+						586 = { is_controlled_by = ROOT }
+						881 = { is_controlled_by = ROOT }
+						882 = { is_controlled_by = ROOT }
+						823 = { is_controlled_by = ROOT }
+						831 = { is_controlled_by = ROOT }
+						585 = { is_controlled_by = ROOT }
+						830 = { is_controlled_by = ROOT }
+						405 = { is_controlled_by = ROOT }
+						584 = { is_controlled_by = ROOT }
+						832 = { is_controlled_by = ROOT }
+						742 = { is_controlled_by = ROOT }
+						732 = { is_controlled_by = ROOT }
+						199 = { is_controlled_by = ROOT }
+						201 = { is_controlled_by = ROOT }
+						198 = { is_controlled_by = ROOT }
+						202 = { is_controlled_by = ROOT }
+						203 = { is_controlled_by = ROOT }
+						226 = { is_controlled_by = ROOT }
+						193 = { is_controlled_by = ROOT }
+						259 = { is_controlled_by = ROOT }
+						225 = { is_controlled_by = ROOT }
+						196 = { is_controlled_by = ROOT }
+						200 = { is_controlled_by = ROOT }
+						227 = { is_controlled_by = ROOT }
+						221 = { is_controlled_by = ROOT }
+						228 = { is_controlled_by = ROOT }
+						192 = { is_controlled_by = ROOT }
+						197 = { is_controlled_by = ROOT }
+						834 = { is_controlled_by = ROOT }
+						204 = { is_controlled_by = ROOT }
+						206 = { is_controlled_by = ROOT }
+						207 = { is_controlled_by = ROOT }
+						194 = { is_controlled_by = ROOT }
+						241 = { is_controlled_by = ROOT }
+						827 = { is_controlled_by = ROOT }
+						828 = { is_controlled_by = ROOT }
+						821 = { is_controlled_by = ROOT }
+						829 = { is_controlled_by = ROOT }
+						833 = { is_controlled_by = ROOT }
+						213 = { is_controlled_by = ROOT }
+						215 = { is_controlled_by = ROOT }
+						216 = { is_controlled_by = ROOT }
+						879 = { is_controlled_by = ROOT }
+						214 = { is_controlled_by = ROOT }
+						880 = { is_controlled_by = ROOT }
+						825 = { is_controlled_by = ROOT }
+						262 = { is_controlled_by = ROOT }
+						397 = { is_controlled_by = ROOT }
+						581 = { is_controlled_by = ROOT }
+						579 = { is_controlled_by = ROOT }
+						580 = { is_controlled_by = ROOT }
+						577 = { is_controlled_by = ROOT }
+						824 = { is_controlled_by = ROOT }
+						516 = { is_controlled_by = ROOT }
+						576 = { is_controlled_by = ROOT }
+						878 = { is_controlled_by = ROOT }
+						575 = { is_controlled_by = ROOT }
+						876 = { is_controlled_by = ROOT }
+						877 = { is_controlled_by = ROOT }
+						574 = { is_controlled_by = ROOT }
+						562 = { is_controlled_by = ROOT }
+						644 = { is_controlled_by = ROOT }
+						874 = { is_controlled_by = ROOT }
+						822 = { is_controlled_by = ROOT }
+						637 = { is_controlled_by = ROOT }
+						929 = { is_controlled_by = ROOT }
+						927 = { is_controlled_by = ROOT }
+						930 = { is_controlled_by = ROOT }
+						926 = { is_controlled_by = ROOT }
+						928 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_ai = no
+						is_debug = yes
+					}
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = finland_requirement_tooltip 
+				OR = {
+					AND = {	
+						111 = { is_controlled_by = ROOT }
+						145 = { is_controlled_by = ROOT }
+						146 = { is_controlled_by = ROOT }
+						147 = { is_controlled_by = ROOT }
+						148 = { is_controlled_by = ROOT }
+						149 = { is_controlled_by = ROOT }
+						150 = { is_controlled_by = ROOT }
+						722 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_ai = no
+						is_debug = yes
+					}
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = poland_russia_requirement_tooltip 
+				OR = {
+					AND = {	
+						87 = { is_controlled_by = ROOT }
+						90 = { is_controlled_by = ROOT }
+						10 = { is_controlled_by = ROOT }
+						98 = { is_controlled_by = ROOT }
+						92 = { is_controlled_by = ROOT }
+						93 = { is_controlled_by = ROOT }
+						94 = { is_controlled_by = ROOT }
+						95 = { is_controlled_by = ROOT }
+						96 = { is_controlled_by = ROOT }
+						97 = { is_controlled_by = ROOT }
+						784 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_ai = no
+						is_debug = yes
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = baltic_russia_requirement_tooltip
+				OR = {
+					AND = {
+						11 = { is_controlled_by = ROOT }
+						784 = { is_controlled_by = ROOT }
+						814 = { is_controlled_by = ROOT }
+						815 = { is_controlled_by = ROOT }
+						189 = { is_controlled_by = ROOT }
+						12 = { is_controlled_by = ROOT }
+						190 = { is_controlled_by = ROOT }
+						809 = { is_controlled_by = ROOT }
+						808 = { is_controlled_by = ROOT }
+						810 = { is_controlled_by = ROOT }
+						13 = { is_controlled_by = ROOT }
+						812 = { is_controlled_by = ROOT }
+						811 = { is_controlled_by = ROOT }
+						191 = { is_controlled_by = ROOT }
+						813 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = extra_russia_requirement_tooltip 
+				OR = {
+					AND = {	
+						766 = { is_controlled_by = ROOT }
+						78 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_ai = no
+						is_debug = yes
+					}
+				}
+			}
+		}
+		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
+			set_cosmetic_tag = FORM_RUE
+			add_stability = 0.2
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				40 = { add_core_of = ROOT }
+				137 = { add_core_of = ROOT }
+				192 = { add_core_of = ROOT }
+				193 = { add_core_of = ROOT }
+				194 = { add_core_of = ROOT }
+				195 = { add_core_of = ROOT }
+				196 = { add_core_of = ROOT }
+				197	= { add_core_of = ROOT }
+				198 = { add_core_of = ROOT }
+				199 = { add_core_of = ROOT }
+				200 = { add_core_of = ROOT }
+				201 = { add_core_of = ROOT }
+				202 = { add_core_of = ROOT }
+				203 = { add_core_of = ROOT }
+				204 = { add_core_of = ROOT }
+				205 = { add_core_of = ROOT }
+				206 = { add_core_of = ROOT }
+				207 = { add_core_of = ROOT }
+				208 = { add_core_of = ROOT }
+				209 = { add_core_of = ROOT }
+				210 = { add_core_of = ROOT }
+				217 = { add_core_of = ROOT }
+				218 = { add_core_of = ROOT }
+				219 = { add_core_of = ROOT }
+				220 = { add_core_of = ROOT }
+				221 = { add_core_of = ROOT }
+				222 = { add_core_of = ROOT }
+				223 = { add_core_of = ROOT }
+				224 = { add_core_of = ROOT }
+				225 = { add_core_of = ROOT }
+				226 = { add_core_of = ROOT }
+				227 = { add_core_of = ROOT }
+				228 = { add_core_of = ROOT }
+				232 = { add_core_of = ROOT }
+				233 = { add_core_of = ROOT }
+				234 = { add_core_of = ROOT }
+				235 = { add_core_of = ROOT }
+				236 = { add_core_of = ROOT }
+				237 = { add_core_of = ROOT }
+				238 = { add_core_of = ROOT }
+				239 = { add_core_of = ROOT }
+				240 = { add_core_of = ROOT }
+				241 = { add_core_of = ROOT }
+				242 = { add_core_of = ROOT }
+				243 = { add_core_of = ROOT }
+				244 = { add_core_of = ROOT }
+				245 = { add_core_of = ROOT }
+				246 = { add_core_of = ROOT }
+				247 = { add_core_of = ROOT }
+				248 = { add_core_of = ROOT }
+				249 = { add_core_of = ROOT }
+				250 = { add_core_of = ROOT }
+				251 = { add_core_of = ROOT }
+				252 = { add_core_of = ROOT }
+				253 = { add_core_of = ROOT }
+				254 = { add_core_of = ROOT }
+				255 = { add_core_of = ROOT }
+				256 = { add_core_of = ROOT }
+				257 = { add_core_of = ROOT }
+				258 = { add_core_of = ROOT }
+				259 = { add_core_of = ROOT }
+				260 = { add_core_of = ROOT }
+				263 = { add_core_of = ROOT }
+				264 = { add_core_of = ROOT }
+				329 = { add_core_of = ROOT }
+				265 = { add_core_of = ROOT }
+				351 = { add_core_of = ROOT }
+				398 = { add_core_of = ROOT }
+				399 = { add_core_of = ROOT }
+				400 = { add_core_of = ROOT }
+				401 = { add_core_of = ROOT }
+				402 = { add_core_of = ROOT }
+				403 = { add_core_of = ROOT }
+				404 = { add_core_of = ROOT }
+				405 = { add_core_of = ROOT }
+				406 = { add_core_of = ROOT }
+				407 = { add_core_of = ROOT }
+				408 = { add_core_of = ROOT }
+				409 = { add_core_of = ROOT }
+				560 = { add_core_of = ROOT }
+				561 = { add_core_of = ROOT }
+				563 = { add_core_of = ROOT }
+				564 = { add_core_of = ROOT }
+				565 = { add_core_of = ROOT }
+				566 = { add_core_of = ROOT }
+				567 = { add_core_of = ROOT }
+				568 = { add_core_of = ROOT }
+				569 = { add_core_of = ROOT }
+				570 = { add_core_of = ROOT }
+				571 = { add_core_of = ROOT }
+				572 = { add_core_of = ROOT }
+				573 = { add_core_of = ROOT }
+				578 = { add_core_of = ROOT }
+				582 = { add_core_of = ROOT }
+				583 = { add_core_of = ROOT }
+				584 = { add_core_of = ROOT }
+				585 = { add_core_of = ROOT }
+				586 = { add_core_of = ROOT }
+				587 = { add_core_of = ROOT }
+				588 = { add_core_of = ROOT }
+				589 = { add_core_of = ROOT }
+				590 = { add_core_of = ROOT }
+				651 = { add_core_of = ROOT }
+				652 = { add_core_of = ROOT }
+				653 = { add_core_of = ROOT }
+				654 = { add_core_of = ROOT }
+				655 = { add_core_of = ROOT }
+				657 = { add_core_of = ROOT }
+				732 = { add_core_of = ROOT }
+				742 = { add_core_of = ROOT }
+				826 = { add_core_of = ROOT }
+				231 = { add_core_of = ROOT }
+				229 = { add_core_of = ROOT }
+				230 = { add_core_of = ROOT }
+				406 = { add_core_of = ROOT }
+				407 = { add_core_of = ROOT }
+				402 = { add_core_of = ROOT }
+				584 = { add_core_of = ROOT }
+				585 = { add_core_of = ROOT }
+				587 = { add_core_of = ROOT }
+				583 = { add_core_of = ROOT }
+				590 = { add_core_of = ROOT }
+				588 = { add_core_of = ROOT }
+				404 = { add_core_of = ROOT }
+				589 = { add_core_of = ROOT }
+				586 = { add_core_of = ROOT }
+				881 = { add_core_of = ROOT }
+				882 = { add_core_of = ROOT }
+				823 = { add_core_of = ROOT }
+				831 = { add_core_of = ROOT }
+				585 = { add_core_of = ROOT }
+				830 = { add_core_of = ROOT }
+				405 = { add_core_of = ROOT }
+				584 = { add_core_of = ROOT }
+				832 = { add_core_of = ROOT }
+				742 = { add_core_of = ROOT }
+				732 = { add_core_of = ROOT }
+				199 = { add_core_of = ROOT }
+				201 = { add_core_of = ROOT }
+				198 = { add_core_of = ROOT }
+				202 = { add_core_of = ROOT }
+				203 = { add_core_of = ROOT }
+				226 = { add_core_of = ROOT }
+				193 = { add_core_of = ROOT }
+				259 = { add_core_of = ROOT }
+				225 = { add_core_of = ROOT }
+				196 = { add_core_of = ROOT }
+				200 = { add_core_of = ROOT }
+				227 = { add_core_of = ROOT }
+				221 = { add_core_of = ROOT }
+				228 = { add_core_of = ROOT }
+				192 = { add_core_of = ROOT }
+				197 = { add_core_of = ROOT }
+				834 = { add_core_of = ROOT }
+				204 = { add_core_of = ROOT }
+				206 = { add_core_of = ROOT }
+				207 = { add_core_of = ROOT }
+				194 = { add_core_of = ROOT }
+				241 = { add_core_of = ROOT }
+				827 = { add_core_of = ROOT }
+				828 = { add_core_of = ROOT }
+				821 = { add_core_of = ROOT }
+				829 = { add_core_of = ROOT }
+				833 = { add_core_of = ROOT }
+				213 = { add_core_of = ROOT }
+				215 = { add_core_of = ROOT }
+				216 = { add_core_of = ROOT }
+				879 = { add_core_of = ROOT }
+				214 = { add_core_of = ROOT }
+				880 = { add_core_of = ROOT }
+				825 = { add_core_of = ROOT }
+				262 = { add_core_of = ROOT }
+				397 = { add_core_of = ROOT }
+				581 = { add_core_of = ROOT }
+				579 = { add_core_of = ROOT }
+				580 = { add_core_of = ROOT }
+				577 = { add_core_of = ROOT }
+				824 = { add_core_of = ROOT }
+				516 = { add_core_of = ROOT }
+				576 = { add_core_of = ROOT }
+				878 = { add_core_of = ROOT }
+				575 = { add_core_of = ROOT }
+				876 = { add_core_of = ROOT }
+				877 = { add_core_of = ROOT }
+				574 = { add_core_of = ROOT }
+				562 = { add_core_of = ROOT }
+				644 = { add_core_of = ROOT }
+				874 = { add_core_of = ROOT }
+				822 = { add_core_of = ROOT }
+				637 = { add_core_of = ROOT }
+				111 = { add_core_of = ROOT }
+				145 = { add_core_of = ROOT }
+				146 = { add_core_of = ROOT }
+				147 = { add_core_of = ROOT }
+				148 = { add_core_of = ROOT }
+				149 = { add_core_of = ROOT }
+				150 = { add_core_of = ROOT }
+				722 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				90 = { add_core_of = ROOT }
+				10 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				92 = { add_core_of = ROOT }
+				93 = { add_core_of = ROOT }
+				94 = { add_core_of = ROOT }
+				95 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+				97 = { add_core_of = ROOT }
+				784 = { add_core_of = ROOT }
+				11 = { add_core_of = ROOT }
+				784 = { add_core_of = ROOT }
+				814 = { add_core_of = ROOT }
+				815 = { add_core_of = ROOT }
+				189 = { add_core_of = ROOT }
+				12 = { add_core_of = ROOT }
+				190 = { add_core_of = ROOT }
+				809 = { add_core_of = ROOT }
+				808 = { add_core_of = ROOT }
+				810 = { add_core_of = ROOT }
+				13 = { add_core_of = ROOT }
+				812 = { add_core_of = ROOT }
+				811 = { add_core_of = ROOT }
+				191 = { add_core_of = ROOT }
+				813 = { add_core_of = ROOT }
+				766 = { add_core_of = ROOT }
+				78 = { add_core_of = ROOT }
+			}
+			463 = { add_core_of = ROOT }
+		}
+	}
+}
+
+formable_nations_chinese_empire_category1 = {
+	formable_nations_chinese_empire1 = {
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			has_country_flag = yazhou1
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+		}
+		
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = { 
+				tooltip = china_requirement_tooltip
+				OR = {
+					AND = {
+						615 = { is_controlled_by = ROOT }
+						621 = { is_controlled_by = ROOT }
+						746 = { is_controlled_by = ROOT }
+
+						622 = { is_controlled_by = ROOT }
+
+						283 = { is_controlled_by = ROOT }
+						604 = { is_controlled_by = ROOT }
+						616 = { is_controlled_by = ROOT }
+						756 = { is_controlled_by = ROOT }
+						755 = { is_controlled_by = ROOT }
+						754 = { is_controlled_by = ROOT }
+						753 = { is_controlled_by = ROOT }
+
+						287 = { is_controlled_by = ROOT }
+						617 = { is_controlled_by = ROOT }
+						618 = { is_controlled_by = ROOT }
+						619 = { is_controlled_by = ROOT }
+						759 = { is_controlled_by = ROOT }
+						760 = { is_controlled_by = ROOT }
+
+						325 = { is_controlled_by = ROOT }
+						591 = { is_controlled_by = ROOT }
+						592 = { is_controlled_by = ROOT }
+						593 = { is_controlled_by = ROOT }
+						594 = { is_controlled_by = ROOT }
+						598 = { is_controlled_by = ROOT }
+						599 = { is_controlled_by = ROOT }
+
+						611 = { is_controlled_by = ROOT }
+						612 = { is_controlled_by = ROOT }
+
+						328 = { is_controlled_by = ROOT }
+						610 = { is_controlled_by = ROOT }
+						714 = { is_controlled_by = ROOT }
+						715 = { is_controlled_by = ROOT }
+						716 = { is_controlled_by = ROOT }
+						717 = { is_controlled_by = ROOT }
+						745 = { is_controlled_by = ROOT }
+						761 = { is_controlled_by = ROOT }
+
+						609 = { is_controlled_by = ROOT }
+						602 = { is_controlled_by = ROOT }
+						603 = { is_controlled_by = ROOT }
+						605 = { is_controlled_by = ROOT }
+						601 = { is_controlled_by = ROOT }
+						620 = { is_controlled_by = ROOT }
+						600 = { is_controlled_by = ROOT }
+						595 = { is_controlled_by = ROOT }
+						620 = { is_controlled_by = ROOT }
+						596 = { is_controlled_by = ROOT }
+						606 = { is_controlled_by = ROOT }
+						613 = { is_controlled_by = ROOT }
+						607 = { is_controlled_by = ROOT }
+						597 = { is_controlled_by = ROOT }
+						614 = { is_controlled_by = ROOT }
+						608 = { is_controlled_by = ROOT }
+						752 = { is_controlled_by = ROOT }
+						751 = { is_controlled_by = ROOT }
+						744 = { is_controlled_by = ROOT }
+						748 = { is_controlled_by = ROOT }
+						750 = { is_controlled_by = ROOT }
+						744 = { is_controlled_by = ROOT }
+						749 = { is_controlled_by = ROOT }
+						743 = { is_controlled_by = ROOT }
+
+						594 = { is_controlled_by = ROOT }
+						599 = { is_controlled_by = ROOT }
+						592 = { is_controlled_by = ROOT }
+						593 = { is_controlled_by = ROOT }
+						326 = { is_controlled_by = ROOT }
+						729 = { is_controlled_by = ROOT }
+						728 = { is_controlled_by = ROOT }
+						591 = { is_controlled_by = ROOT }
+
+						325 = { is_controlled_by = ROOT }
+						747 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = china_expansion_requirement_tooltip
+				OR = {
+					AND = {
+						561 = { is_controlled_by = ROOT }
+						657 = { is_controlled_by = ROOT }
+						560 = { is_controlled_by = ROOT }
+						408 = { is_controlled_by = ROOT }
+						409 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tibet_requirement_tooltip
+				OR = {
+					AND = {
+						322 = { is_controlled_by = ROOT }
+						757 = { is_controlled_by = ROOT }
+						758 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mongolia_requirement_tooltip
+				OR = {
+					AND = {
+						330 = { is_controlled_by = ROOT }
+						817 = { is_controlled_by = ROOT }
+						818 = { is_controlled_by = ROOT }
+						819 = { is_controlled_by = ROOT }
+						820 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tannu_tuva_requirement_tooltip
+				OR = {
+					329 = { is_controlled_by = ROOT }
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+		}
+		icon = generic_form_nation
+		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
+			set_cosmetic_tag = FORM_QIN
+			add_stability = 0.2
+			set_capital = { state = 608 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				615 = { add_core_of = ROOT }
+				621 = { add_core_of = ROOT }
+				622 = { add_core_of = ROOT }
+				283 = { add_core_of = ROOT }
+				604 = { add_core_of = ROOT }
+				616 = { add_core_of = ROOT }
+				287 = { add_core_of = ROOT }
+				617 = { add_core_of = ROOT }
+				618 = { add_core_of = ROOT }
+				619 = { add_core_of = ROOT }
+				322 = { add_core_of = ROOT }
+				330 = { add_core_of = ROOT }
+				817 = { add_core_of = ROOT }
+				818 = { add_core_of = ROOT }
+				819 = { add_core_of = ROOT }
+				820 = { add_core_of = ROOT }
+				325 = { add_core_of = ROOT }
+				591 = { add_core_of = ROOT }
+				592 = { add_core_of = ROOT }
+				593 = { add_core_of = ROOT }
+				594 = { add_core_of = ROOT }
+				599 = { add_core_of = ROOT }
+				611 = { add_core_of = ROOT }
+				612 = { add_core_of = ROOT }
+				328 = { add_core_of = ROOT }
+				610 = { add_core_of = ROOT }
+				714 = { add_core_of = ROOT }
+				715 = { add_core_of = ROOT }
+				716 = { add_core_of = ROOT }
+				717 = { add_core_of = ROOT }
+				609 = { add_core_of = ROOT }
+				657 = { add_core_of = ROOT }
+				560 = { add_core_of = ROOT }
+				561 = { add_core_of = ROOT }
+				655 = { add_core_of = ROOT }
+				408 = { add_core_of = ROOT }
+				409 = { add_core_of = ROOT }
+				602 = { add_core_of = ROOT }
+				603 = { add_core_of = ROOT }
+				605 = { add_core_of = ROOT }
+				601 = { add_core_of = ROOT }
+				620 = { add_core_of = ROOT }
+				600 = { add_core_of = ROOT }
+				595 = { add_core_of = ROOT }
+				620 = { add_core_of = ROOT }
+				596 = { add_core_of = ROOT }
+				606 = { add_core_of = ROOT }
+				613 = { add_core_of = ROOT }
+				607 = { add_core_of = ROOT }
+				597 = { add_core_of = ROOT }
+				614 = { add_core_of = ROOT }
+				608 = { add_core_of = ROOT }
+				598 = { add_core_of = ROOT }
+				757 = { add_core_of = ROOT }
+				758 = { add_core_of = ROOT }
+			}
+			524 = { add_core_of = ROOT }
+			655 = { add_core_of = ROOT }
+			537 = { add_core_of = ROOT }
+		}
+	}
+}
+
+formable_nations_anglosphere_category1 = {
+	formable_nations_anglosphere1 = {
+	
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			has_country_flag = yingyu1
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+		}
+		
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = { 
+				tooltip = britain_requirement_tooltip 
+				OR = {
+					AND = {	
+						113 = { is_controlled_by = ROOT }
+						134 = { is_controlled_by = ROOT }
+						135 = { is_controlled_by = ROOT }
+						119 = { is_controlled_by = ROOT }
+						120 = { is_controlled_by = ROOT }
+						121 = { is_controlled_by = ROOT }
+						133 = { is_controlled_by = ROOT }
+						136 = { is_controlled_by = ROOT }
+						131 = { is_controlled_by = ROOT }
+						130 = { is_controlled_by = ROOT }
+						132 = { is_controlled_by = ROOT }
+						128 = { is_controlled_by = ROOT }
+						122 = { is_controlled_by = ROOT }
+						129 = { is_controlled_by = ROOT }
+						125 = { is_controlled_by = ROOT }
+						338 = { is_controlled_by = ROOT }
+						123 = { is_controlled_by = ROOT }
+						127 = { is_controlled_by = ROOT }
+						126 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_ai = no
+						is_debug = yes
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = canada_requirement_tooltip
+				OR = {
+					AND = {
+						276 = { is_controlled_by = ROOT }
+						464 = { is_controlled_by = ROOT }
+						465 = { is_controlled_by = ROOT }
+						466 = { is_controlled_by = ROOT }
+						467 = { is_controlled_by = ROOT }
+						468 = { is_controlled_by = ROOT }
+						469 = { is_controlled_by = ROOT }
+						865 = { is_controlled_by = ROOT }
+						866 = { is_controlled_by = ROOT }
+						867 = { is_controlled_by = ROOT }
+						860 = { is_controlled_by = ROOT }
+						862 = { is_controlled_by = ROOT }
+						863 = { is_controlled_by = ROOT }
+						470 = { is_controlled_by = ROOT }
+						471 = { is_controlled_by = ROOT }
+						864 = { is_controlled_by = ROOT }
+						472 = { is_controlled_by = ROOT }
+						473 = { is_controlled_by = ROOT }
+						682 = { is_controlled_by = ROOT }
+						683 = { is_controlled_by = ROOT }
+						739 = { is_controlled_by = ROOT }
+						740 = { is_controlled_by = ROOT }
+						332 = { is_controlled_by = ROOT }
+						331 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = usa_requirement_tooltip
+				OR = {
+					AND = {
+						261 = { is_controlled_by = ROOT }
+						357 = { is_controlled_by = ROOT }
+						358 = { is_controlled_by = ROOT }
+						359 = { is_controlled_by = ROOT }
+						360 = { is_controlled_by = ROOT }
+						361 = { is_controlled_by = ROOT }
+						362 = { is_controlled_by = ROOT }
+						363 = { is_controlled_by = ROOT }
+						364 = { is_controlled_by = ROOT }
+						365 = { is_controlled_by = ROOT }
+						366 = { is_controlled_by = ROOT }
+						367 = { is_controlled_by = ROOT }
+						368 = { is_controlled_by = ROOT }
+						369 = { is_controlled_by = ROOT }
+						370 = { is_controlled_by = ROOT }
+						371 = { is_controlled_by = ROOT }
+						372 = { is_controlled_by = ROOT }
+						373 = { is_controlled_by = ROOT }
+						374 = { is_controlled_by = ROOT }
+						375 = { is_controlled_by = ROOT }
+						376 = { is_controlled_by = ROOT }
+						377 = { is_controlled_by = ROOT }
+						378 = { is_controlled_by = ROOT }
+						379 = { is_controlled_by = ROOT }
+						380 = { is_controlled_by = ROOT }
+						381 = { is_controlled_by = ROOT }
+						382 = { is_controlled_by = ROOT }
+						383 = { is_controlled_by = ROOT }
+						384 = { is_controlled_by = ROOT }
+						385 = { is_controlled_by = ROOT }
+						386 = { is_controlled_by = ROOT }
+						387 = { is_controlled_by = ROOT }
+						388 = { is_controlled_by = ROOT }
+						389 = { is_controlled_by = ROOT }
+						390 = { is_controlled_by = ROOT }
+						391 = { is_controlled_by = ROOT }
+						392 = { is_controlled_by = ROOT }
+						393 = { is_controlled_by = ROOT }
+						394 = { is_controlled_by = ROOT }
+						395 = { is_controlled_by = ROOT }
+						396 = { is_controlled_by = ROOT }
+						816 = { is_controlled_by = ROOT }
+					}
+					AND = {
+						is_debug = yes
+						is_ai = no
+					}
+				}
+			}
+		}
+		icon = generic_form_nation
+		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
+			set_cosmetic_tag = FORM_AGL
+			add_stability = 0.2
+			if = {
+				limit = {
+					OR = {
+						original_tag = CAN
+						original_tag = USA
+					}
+				}
+				set_capital = { state = 358 }
+				else = { set_capital = { state = 126 } }
+			}
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				285 = { add_core_of = ROOT }
+				517 = { add_core_of = ROOT }
+				519 = { add_core_of = ROOT }
+				520 = { add_core_of = ROOT }
+				522 = { add_core_of = ROOT }
+				870 = { add_core_of = ROOT }
+				871 = { add_core_of = ROOT }
+				872 = { add_core_of = ROOT }
+				861 = { add_core_of = ROOT }
+				873 = { add_core_of = ROOT }
+				521 = { add_core_of = ROOT }
+				674 = { add_core_of = ROOT }
+				518 = { add_core_of = ROOT }
+				284 = { add_core_of = ROOT }
+				723 = { add_core_of = ROOT }
+				113 = { add_core_of = ROOT }
+				134 = { add_core_of = ROOT }
+				135 = { add_core_of = ROOT }
+				119 = { add_core_of = ROOT }
+				276 = { add_core_of = ROOT }
+				464 = { add_core_of = ROOT }
+				465 = { add_core_of = ROOT }
+				466 = { add_core_of = ROOT }
+				467 = { add_core_of = ROOT }
+				468 = { add_core_of = ROOT }
+				469 = { add_core_of = ROOT }
+				865 = { add_core_of = ROOT }
+				866 = { add_core_of = ROOT }
+				867 = { add_core_of = ROOT }
+				860 = { add_core_of = ROOT }
+				862 = { add_core_of = ROOT }
+				863 = { add_core_of = ROOT }
+				470 = { add_core_of = ROOT }
+				471 = { add_core_of = ROOT }
+				864 = { add_core_of = ROOT }
+				472 = { add_core_of = ROOT }
+				473 = { add_core_of = ROOT }
+				682 = { add_core_of = ROOT }
+				683 = { add_core_of = ROOT }
+				740 = { add_core_of = ROOT }
+				331 = { add_core_of = ROOT }
+				332 = { add_core_of = ROOT }
+				120 = { add_core_of = ROOT }
+				121 = { add_core_of = ROOT }
+				133 = { add_core_of = ROOT }
+				136 = { add_core_of = ROOT }
+				131 = { add_core_of = ROOT }
+				130 = { add_core_of = ROOT }
+				132 = { add_core_of = ROOT }
+				128 = { add_core_of = ROOT }
+				122 = { add_core_of = ROOT }
+				129 = { add_core_of = ROOT }
+				125 = { add_core_of = ROOT }
+				338 = { add_core_of = ROOT }
+				816 = { add_core_of = ROOT }
+				123 = { add_core_of = ROOT }
+				127 = { add_core_of = ROOT }
+				126 = { add_core_of = ROOT }
+				261 = { add_core_of = ROOT }
+				357 = { add_core_of = ROOT }
+				358 = { add_core_of = ROOT }
+				359 = { add_core_of = ROOT }
+				360 = { add_core_of = ROOT }
+				361 = { add_core_of = ROOT }
+				362 = { add_core_of = ROOT }
+				363 = { add_core_of = ROOT }
+				364 = { add_core_of = ROOT }
+				365 = { add_core_of = ROOT }
+				366 = { add_core_of = ROOT }
+				367 = { add_core_of = ROOT }
+				368 = { add_core_of = ROOT }
+				369 = { add_core_of = ROOT }
+				370 = { add_core_of = ROOT }
+				371 = { add_core_of = ROOT }
+				372 = { add_core_of = ROOT }
+				373 = { add_core_of = ROOT }
+				374 = { add_core_of = ROOT }
+				375 = { add_core_of = ROOT }
+				376 = { add_core_of = ROOT }
+				377 = { add_core_of = ROOT }
+				378 = { add_core_of = ROOT }
+				379 = { add_core_of = ROOT }
+				380 = { add_core_of = ROOT }
+				381 = { add_core_of = ROOT }
+				382 = { add_core_of = ROOT }
+				383 = { add_core_of = ROOT }
+				384 = { add_core_of = ROOT }
+				385 = { add_core_of = ROOT }
+				386 = { add_core_of = ROOT }
+				387 = { add_core_of = ROOT }
+				388 = { add_core_of = ROOT }
+				389 = { add_core_of = ROOT }
+				390 = { add_core_of = ROOT }
+				391 = { add_core_of = ROOT }
+				392 = { add_core_of = ROOT }
+				393 = { add_core_of = ROOT }
+				394 = { add_core_of = ROOT }
+				395 = { add_core_of = ROOT }
+				396 = { add_core_of = ROOT }
+				463 = { add_core_of = ROOT }
+				739 = { add_core_of = ROOT }
+			}
+			custom_effect_tooltip = aodaliya1
+			custom_effect_tooltip = xinxilan1
+			629 = { add_core_of = ROOT }
+			686 = { add_core_of = ROOT }
+		}
+	}
+}

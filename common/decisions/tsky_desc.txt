@@ -1,0 +1,1292 @@
+tskydec1 = {
+	tskydec11 = {
+		cost = 0
+		complete_effect = {
+			set_variable = { tskykyc = 1 }
+			set_country_flag = tskydec1
+			custom_effect_tooltip = hqtskykyc_tt
+		}
+	}
+}
+tskydec2 = {
+	hqtskykyc2 = {
+		cost = 150
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = hqtskykyc2
+			add_to_variable = { tskykyc = 1 }
+			custom_effect_tooltip = hqtskykyc_tt
+		}
+	}
+	hqtskykyc3 = {
+		cost = 150
+		fire_only_once = yes
+		visible = {
+			has_country_flag = hqtskykyc2
+		}
+		complete_effect = {
+			set_country_flag = hqtskykyc3
+			add_to_variable = { tskykyc = 1 }
+			custom_effect_tooltip = hqtskykyc_tt
+		}
+	}
+	hqtskykyc4 = {
+		cost = 150
+		fire_only_once = yes
+		visible = {
+			has_country_flag = hqtskykyc3
+		}
+		complete_effect = {
+			set_country_flag = hqtskykyc4
+			add_to_variable = { tskykyc = 1 }
+			custom_effect_tooltip = hqtskykyc_tt
+		}
+	}
+	zkljtsxm = {
+		cost = 0
+		visible = {
+			not = { has_country_flag = zkljtsxm }
+		}
+		complete_effect = {
+			set_country_flag = zkljtsxm
+		}
+	}
+	sqljtsxm = {
+		cost = 0
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		complete_effect = {
+			clr_country_flag = zkljtsxm
+		}
+	}
+	zkkjtsxm = {
+		cost = 0
+		visible = {
+			not = { has_country_flag = zkkjtsxm }
+		}
+		complete_effect = {
+			set_country_flag = zkkjtsxm
+		}
+	}
+	sqkjtsxm = {
+		cost = 0
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		complete_effect = {
+			clr_country_flag = zkkjtsxm
+		}
+	}
+	zkhjtsxm = {
+		cost = 0
+		visible = {
+			not = { has_country_flag = zkhjtsxm }
+		}
+		complete_effect = {
+			set_country_flag = zkhjtsxm
+		}
+	}
+	sqhjtsxm = {
+		cost = 0
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		complete_effect = {
+			clr_country_flag = zkhjtsxm
+		}
+	}
+	zkdzjxgctsxm = {
+		cost = 0
+		visible = {
+			not = { has_country_flag = zkdzjxgctsxm }
+		}
+		complete_effect = {
+			set_country_flag = zkdzjxgctsxm
+		}
+	}
+	sqdzjxgctsxm = {
+		cost = 0
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		complete_effect = {
+			clr_country_flag = zkdzjxgctsxm
+		}
+	}
+	sp_land_flamethrower_tank = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = tech_engineers
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_flamethrower_tank
+		}
+	}
+	sp_land_military_engineering_vehicles = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = tech_engineers
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_military_engineering_vehicles
+		}
+	}
+	sp_land_land_cruiser = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = super_heavy_tank_chassis
+			}
+			else = {
+				has_tech = super_heavy_tank
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_land_cruiser
+		}
+	}
+	sp_land_super_heavy_howitzer = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = gw_artillery
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_super_heavy_howitzer
+		}
+	}
+	sp_land_self_propelled_super_heavy_howitzer = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_self_propelled_super_heavy_howitzer
+		}
+	}
+	sp_land_super_heavy_railway_gun = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = railway_gun
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_super_heavy_railway_gun
+		}
+	}
+	sp_land_multi_charge_large_caliber_gun = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_multi_charge_large_caliber_gun
+		}
+	}
+	sp_land_stronghold_network = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkljtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = basic_fortification_tech
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_land_stronghold_network
+		}
+	}
+	###
+	sp_air_bouncing_bomb = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = heavy_bombs
+			}
+			else = {
+				OR = {
+					has_tech = tactical_bomber2
+					has_tech = strategic_bomber2
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_bouncing_bomb
+		}
+	}
+	sp_air_earthshaker_bomb = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			if = {
+			limit = { has_dlc = "By Blood Alone" }
+			FROM = {
+				has_tech = heavy_bombs
+			}
+		}
+		else = {
+			FROM = {
+				has_tech = strategic_bomber2
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_earthshaker_bomb
+		}
+	}
+	sp_air_intercontinental_bomber = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = { 
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = improved_large_airframe
+			}
+			else = {
+				has_tech = strategic_bomber2
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_intercontinental_bomber
+		}
+	}
+	sp_air_mothership_aircraft = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			FROM = {
+				has_tech = improved_large_airframe
+			}
+		}
+		else = {
+			FROM = { 
+				has_tech = strategic_bomber2
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_mothership_aircraft
+		}
+	}
+	sp_air_jet_engine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				has_tech = engines_2
+				OR = {
+					has_tech = improved_small_airframe
+					has_tech = improved_medium_airframe
+				}
+			}
+			else = {
+				OR = {
+					has_tech = fighter2
+					has_tech = tactical_bomber2
+				}
+			}	
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_jet_engine
+		}
+	}
+	sp_air_axial_jet_engine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				has_tech = engines_3
+				OR = {
+					has_tech = advanced_small_airframe
+					has_tech = advanced_medium_airframe
+				}
+			}
+			else = {
+				OR = {
+					has_tech = jet_fighter1
+					has_tech = jet_tactical_bomber1
+				}
+			}	
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_axial_jet_engine
+		}
+	}
+	sp_air_supersonic_jet = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_supersonic_jet
+		}
+	}
+	sp_air_helicopter = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkkjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_helicopter
+		}
+	}
+	###
+	sp_naval_cruiser_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = early_ship_hull_submarine
+			}
+			else = {
+				has_tech = early_submarine
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_cruiser_submarine
+		}
+	}
+	sp_naval_fleet_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = improved_ship_hull_submarine
+			}
+			else = {
+				has_tech = improved_submarine 
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_fleet_submarine
+		}
+	}
+	sp_naval_nuclear_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_nuclear_submarine
+		}
+	}
+	sp_naval_rocket_launching_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_rocket_launching_submarine
+		}
+	}
+	sp_naval_nuclear_missile_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_nuclear_missile_submarine
+		}
+	}
+	sp_naval_nuclear_torpedo = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = modern_ship_torpedo_launcher
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_nuclear_torpedo
+		}
+	}
+	sp_naval_midget_submarine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = early_ship_hull_submarine
+			}
+			else = {
+				has_tech = early_submarine
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_midget_submarine
+		}
+	}
+	sp_naval_aip_engine = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = basic_ship_hull_submarine
+			}
+			else = {
+				has_tech = basic_submarine 
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_aip_engine
+		}
+	}
+	sp_naval_anechoic_tiles = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = basic_ship_hull_submarine
+			}
+			else = {
+				has_tech = basic_submarine 
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_anechoic_tiles
+		}
+	}
+	sp_naval_torpedo_cruiser = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = early_ship_hull_cruiser
+			}
+			else = {
+				has_tech = early_light_cruiser
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_torpedo_cruiser
+		}
+	}
+	sp_naval_super_heavy_battleship = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = { 
+					has_dlc = "Man the Guns"
+					}
+			has_tech = early_ship_hull_heavy
+				
+			}
+			else = {
+				has_tech = early_battleship
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_super_heavy_battleship
+		}
+	}
+	sp_naval_modern_battleship = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = { 
+					has_dlc = "Man the Guns"
+					}
+			has_tech = advanced_ship_hull_heavy
+				
+			}
+			else = {
+				has_tech = advanced_battleship
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_modern_battleship
+		}
+	}
+	sp_naval_modern_carrier = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = advanced_ship_hull_carrier
+			}
+			else = {
+				has_tech = advanced_carrier
+			}
+
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_modern_carrier
+		}
+	}
+	sp_naval_ice_carrier = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = improved_ship_hull_carrier
+			}
+			else = {
+				has_tech = improved_carrier
+			}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_ice_carrier
+		}
+	}
+	sp_naval_underway_replenishment = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			FROM = {
+			OR = {
+				has_tech = base_strike
+				has_tech = fleet_in_being
+			}
+		}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_underway_replenishment
+		}
+	}
+	sp_naval_proximity_fuze = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkhjtsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = improved_radio
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_naval_proximity_fuze
+		}
+	}
+	###
+	sp_nuclear_reactor = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = atomic_research
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_nuclear_reactor
+		}
+	}
+	sp_commercial_nuclear_reactor = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = construction4
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_commercial_nuclear_reactor
+		}
+	}
+	sp_nuclear_engines = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_nuclear_engines
+		}
+	}
+	sp_nuclear_bomb = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_nuclear_bomb
+		}
+	}
+	sp_thermo_nuclear_bomb = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_thermo_nuclear_bomb
+		}
+	}
+	sp_nuclear_warheads = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_nuclear_warheads
+		}
+	}
+	sp_air_radar = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = electronic_mechanical_engineering
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_air_radar
+		}
+	}
+	sp_rockets_flying_bomb = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = experimental_rockets
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rockets_flying_bomb
+		}
+	}
+	sp_rockets_ballistic_missile = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = experimental_rockets
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rockets_ballistic_missile
+		}
+	}
+	sp_rockets_medium_range_ballistic_missile = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rockets_medium_range_ballistic_missile
+		}
+	}
+	sp_rockets_long_range_ballistic_missile = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rockets_long_range_ballistic_missile
+		}
+	}
+	sp_rockets_ground_to_air_missile = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = experimental_rockets
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rockets_ground_to_air_missile
+		}
+	}
+	sp_rocket_interceptor = {
+		cost = 20
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			has_country_flag = zkdzjxgctsxm
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tskykyc_tt
+				check_variable =  { tskykyc > 0 }
+			}
+			has_tech = experimental_rockets
+		}
+		complete_effect = {
+			add_to_variable = { tskykyc = -1 }
+		}
+		remove_effect = {
+			add_to_variable = { tskykyc = 1 }
+			complete_special_project = sp:sp_rocket_interceptor
+		}
+	}
+}

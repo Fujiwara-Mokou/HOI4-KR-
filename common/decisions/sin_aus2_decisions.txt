@@ -1,0 +1,287 @@
+snr_aus2_common_decisions = {
+        
+	
+# ===== 改动：原「王冠统治」系列（塞尔维亚/罗马尼亚/保加利亚/阿尔巴尼亚/希腊/黑山）
+# 已整体转移至保加利亚 snr_bul_decisions.txt；奥地利仅保留下方「加入帝国公约」。
+# 以下 6 条决议已注释停用，原文保留以便恢复。
+snr_join_ger = {
+		icon = generic_prepare_civil_war
+		priority = 200
+		allowed = {
+			
+		}
+		available = {
+			is_ai=no
+		   has_completed_focus = AUS_protector_of_the_balkans
+		}
+		targets = { GER }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		GER = { country_event = austria_foreign_events.4011 }
+        }
+  }
+  
+
+# 	snr_aus_ser = {
+# 		icon = generic_monarchy
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 		   has_completed_focus = AUS_protector_of_the_balkans
+# 		   or = { is_ai = yes
+# 		   SER = { 
+# 		   has_opinion = {
+# 	             target = AUS
+# 	             value > 29
+# 		 }
+# 		}
+#       }
+# 		}
+# 		targets = { SER }
+# 		visible = {
+		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 			puppet = SER
+# 			SER = {
+#             set_cosmetic_tag = SER_king			
+#             add_ideas = snr_eco_control			
+# 			}
+#       }
+#   }
+	
+#     snr_aus_rom = {
+# 		icon = generic_monarchy
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 			is_ai=no
+# 		has_completed_focus = AUS_protector_of_the_balkans
+# 		   or = { is_ai = yes
+# 		   ROM = { 
+# 		   has_opinion = {
+# 	             target = AUS
+# 	             value > 29
+# 				 }
+# 		 }
+#       }
+# 		}
+# 		targets = { ROM }
+# 		visible = {
+		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 			puppet = ROM	
+# 			ROM = {
+# 			set_cosmetic_tag = ROM_king	
+# 		add_ideas = snr_eco_control
+# 		}
+# 		transfer_state = 83
+# 		transfer_state = 76
+# 		transfer_state = 82
+# 		transfer_state = 84
+# 		transfer_state = 875
+# 		transfer_state = 789
+# 		83={ add_core_of = AUS }
+# 		76={ add_core_of = AUS }
+# 		82={ add_core_of = AUS }
+# 		84={ add_core_of = AUS }
+# 		875={ add_core_of = AUS }
+# 		789={ add_core_of = AUS }
+# 	 }
+#   }
+  
+#     snr_aus_bul = {
+# 		icon = generic_monarchy
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 			is_ai=no
+# 		has_completed_focus = AUS_protector_of_the_balkans
+# 		or = { is_ai = yes
+# 		   BUL = { 
+# 		   has_opinion = {
+# 	             target = AUS
+# 	             value > 50
+# 				 }
+# 		 }
+#       }
+# 		}
+# 		targets = { BUL }
+# 		visible = {
+		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 			puppet = BUL
+# 			BUL = {
+#             set_cosmetic_tag = BUL_king					
+# 			add_ideas = snr_eco_control
+# 		}
+# 	}
+#   }
+  
+#       snr_aus_alb = {
+# 		icon = generic_monarchy
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 			is_ai=no
+# 		has_completed_focus = AUS_protector_of_the_balkans
+# 		or = { is_ai = yes
+# 		   ALB = { 
+# 		   has_opinion = {
+# 	             target = AUS
+# 	             value > 50
+# 				 }
+# 		 }
+#       }
+# 		}
+# 		targets = { ALB }
+# 		visible = {
+		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 			puppet = ALB
+# 			ALB = { 
+# 			set_cosmetic_tag = ALB_king		
+# 			add_ideas = snr_eco_control
+# 		}
+# 	}
+#   }
+  
+#         snr_aus_gre = {
+# 		icon = generic_monarchy
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 			is_ai=no
+# 		has_completed_focus = AUS_protector_of_the_balkans
+# 		or = { is_ai = yes
+# 		   GRE = { 
+# 		   has_opinion = {
+# 	             target = AUS
+# 	             value > 50
+# 				 }
+# 		 }
+#       }
+# 		}
+# 		visible = {
+		
+# 		}
+# 		targets = { GRE }
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 			puppet = GRE
+# 		GRE = { 
+# 		set_cosmetic_tag = GRE_king		
+# 		add_ideas = snr_eco_control
+# 		}
+# 	}
+#   }
+ 
+#  snr_aus_mnt = {
+# 		icon = aluminium
+# 		allowed = {
+			
+# 		}
+# 		available = {
+# 			is_ai=no
+# 		   SER = { is_puppet = yes 
+# 		 }
+#       }
+# 	  		targets = { SER }
+# 		visible = {
+		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 30
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+		
+# 		modifier = {
+			
+# 		}
+# 		remove_effect = {
+# 		MNT = {
+#             set_cosmetic_tag = MNT_king				
+# 		    transfer_state = 105
+# 			add_ideas = snr_eco_control
+# 	}
+			
+# 		puppet = MNT
+		
+# 		105 = {
+# 	           add_resource = {
+# 		       type = aluminium
+# 		       amount = 300
+# 	   }
+#   }
+}

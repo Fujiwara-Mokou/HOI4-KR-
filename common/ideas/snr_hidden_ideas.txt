@@ -1,0 +1,37 @@
+ideas = {
+	hidden_ideas = {
+		snr_eco_control = {
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+			}
+		}
+		
+		snr_low_eco_control = {
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				cic_to_overlord_factor = 0.75
+			}
+		}
+		
+		snr_jap_add = {
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+                land_doctrine_cost_factor  = 1
+				experience_gain_army = -1.5
+	}
+	
+}

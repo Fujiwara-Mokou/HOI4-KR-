@@ -1,0 +1,116 @@
+snr_eng2_common_decisions = {  
+	snr_mi6_decision = {
+		icon = SWI_expand_covert_operations
+		allowed = {
+			
+		}
+		available = {
+		   has_completed_focus = ENG_international
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+         add_ideas = snr_mi6_decision_idea
+    }
+ }
+
+	snr_decode_decision = {
+		icon = category_GER_war_planning
+		allowed = {
+			
+		}
+		available = {
+		   has_war_with = GER
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+           add_timed_idea = { idea = snr_decode_idea days = 180 } 
+		   FRA = { add_timed_idea = { idea = snr_decode_idea days = 180 } 
+      }
+	}
+ }  
+  	
+	snr_leaflet_decision = {
+		icon = SWI_dismiss_council
+		allowed = {
+			
+		}
+		available = {
+		   date < 1940.11.1
+		   has_war_with = CAN
+		}
+		visible = {
+		  date < 1940.10.1
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+           CAN = {
+		      add_timed_idea = { idea = snr_leaflet_idea days = 60 } 
+		   	     country_event = {
+				 id = tibet_events.10
+			}
+		} 
+    }
+ }
+ 
+ 	snr_blood_in_sky_decision = {
+		icon = category_eng_organize_the_blackshirts
+		allowed = {
+			
+		}
+		available = {
+		   is_ai = no
+		   has_completed_focus = ENG_republican_air_force
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		   add_ideas = snr_blood_in_sky_idea
+		   FRA = { add_ideas = snr_blood_in_sky_idea }
+		   SRI = { add_ideas = snr_blood_in_sky_idea }
+           
+    }
+ }}

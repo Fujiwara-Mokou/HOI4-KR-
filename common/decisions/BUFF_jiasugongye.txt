@@ -1,0 +1,995 @@
+BUFF_jiasugongye = {
+	### ===== 【已注释】更好游戏体验 - 设置 决议（原第2-16行）=====
+	shezhi_1 = { #打开设置
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		available = {
+			
+        }
+		visible = {
+		    not = { has_country_flag = shezhi_kaiqi }
+		}
+		complete_effect = {
+			set_country_flag = 	shezhi_kaiqi #决议显示
+        }
+	}
+	### ===== 更好游戏体验 - 设置 决议 注释结束 =====
+	weiji_zhanzheng = {
+		icon = USSR_claim_state_4
+		visible = {
+			surrender_progress > 0.1
+          }
+		available = {
+			surrender_progress > 0.4
+		}
+		complete_effect = {
+			add_ideas = buff_weiji1
+		}
+		trigger = {
+		    has_war = yes
+	    } 
+		fire_only_once = yes
+	}
+	Gongyehua_weiji = {
+		icon = SOV_secure_the_administration
+		visible = {
+			OR = {
+				has_stability < 0.25
+				surrender_progress > 0.1
+				}
+          }
+		available = {
+			OR = {
+				has_stability < 0.1
+				surrender_progress > 0.3
+				}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 35
+        modifier = {
+			political_power_gain =  4
+			stability_weekly = 0.06
+			war_support_weekly = 0.06
+		}
+		remove_effect = { 
+			 add_manpower = 55000
+        }
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 14500
+				producer = ROOT
+			}	
+		}	
+	}
+
+	Auto_chengshi = {#地区发展开始
+		icon = generic_construction
+        name = "地区发展"
+        cost = 5
+		fire_only_once = no
+		days_remove = 14
+		allowed = { always = yes }
+		modifier = {
+			civilian_factory_use = 11
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+		    any_owned_state = {
+			    is_core_of = ROOT
+			    is_controlled_by = ROOT    
+				    not = {
+					    has_state_category = megalopolis
+						has_state_category = twelve
+				        }
+		        }
+	        }
+		visible = {
+			num_of_factories > 60
+			not = { has_country_flag = chengshi_auto }
+		    any_owned_state = {
+			    is_core_of = ROOT
+			    is_controlled_by = ROOT    
+			     not = {
+					    has_state_category = megalopolis
+						has_state_category = twelve
+				        }
+		        }
+	        }
+		remove_effect = {
+			set_country_flag = chengshi_auto
+		}
+		remove_effect = {#是否拥有大都市以下地区
+			if = {
+				limit = { 
+					any_state = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = zero
+					has_state_category = zero_island
+					has_state_category = one
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+					has_state_category = four
+					has_state_category = five
+					has_state_category = six
+					has_state_category = seven
+					has_state_category = eight
+					has_state_category = nine
+					has_state_category = ten
+					has_state_category = eleven
+					#上边是kr kx
+					has_state_category = enclave
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = small_island
+					has_state_category = pastoral 
+					has_state_category = rural 
+					has_state_category = town
+					has_state_category = large_town 
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = metropolis 
+				         }
+					}
+				}
+			random_owned_state = {#kx地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = zero
+					has_state_category = zero_island
+					has_state_category = one
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+					has_state_category = four
+					has_state_category = five
+					has_state_category = six
+					has_state_category = seven
+					has_state_category = eight
+				         }
+					}
+					set_state_category = nine
+					add_extra_state_shared_building_slots = 1
+				}
+			random_owned_state = {#kx地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = zero
+					has_state_category = zero_island
+					has_state_category = one
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+					has_state_category = four
+					has_state_category = five
+					has_state_category = six
+					has_state_category = seven
+					has_state_category = eight
+				         }
+					}
+					set_state_category = nine
+					add_extra_state_shared_building_slots = 1
+				}
+			random_owned_state = {
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {#识别城镇以下地区
+					has_state_category = enclave
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = small_island
+					has_state_category = pastoral 
+					has_state_category = rural 
+					has_state_category = town
+					has_state_category = large_town 
+					has_state_category = city
+				         }
+					}
+					set_state_category = large_city
+					add_extra_state_shared_building_slots = 1
+				}
+			random_owned_state = {
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {#识别城镇以下地区
+					has_state_category = enclave
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = small_island
+					has_state_category = pastoral 
+					has_state_category = rural 
+					has_state_category = town
+					has_state_category = large_town 
+					has_state_category = city
+				         }
+					}
+					set_state_category = large_city
+					add_extra_state_shared_building_slots = 1
+				}
+	        }
+			activate_decision = Auto_chengshi_1
+		}
+    }
+
+	no_chengshi_auto = {
+		visible = {
+			has_country_flag = chengshi_auto
+		}
+		complete_effect = {
+			clr_country_flag = chengshi_auto
+		}
+	}
+
+	Auto_chengshi_1 = {#地区发展循环
+		icon = generic_construction
+            name = "地区发展"
+        cost = 5
+		fire_only_once = no
+		days_remove = 14
+		allowed = { always = yes }
+		modifier = {
+			civilian_factory_use = 11
+		}
+		visible = {
+			has_country_flag = chengshi_auto
+	        }
+		cancel_trigger = {
+			not = { has_country_flag = chengshi_auto }
+		}
+		remove_effect = {
+			if = {
+				limit = { 
+					any_state = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					#下边是kr kx
+					has_state_category = zero
+					has_state_category = zero_island
+					has_state_category = one
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+					has_state_category = four
+					has_state_category = five
+					has_state_category = six
+					has_state_category = seven
+					has_state_category = eight
+					has_state_category = nine
+					has_state_category = ten
+					has_state_category = eleven
+					#下边是原版
+					has_state_category = enclave
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = small_island
+					has_state_category = pastoral
+					has_state_category = rural
+					has_state_category = town
+					has_state_category = large_town
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = metropolis
+				        }
+					}
+				}
+			random_owned_state = {#kx地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = zero
+					has_state_category = zero_island
+					has_state_category = one
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+					has_state_category = four
+					has_state_category = five
+					has_state_category = six
+					has_state_category = seven
+					has_state_category = eight
+				         }
+					}
+					set_state_category = nine
+					add_extra_state_shared_building_slots = 1
+				}
+			random_owned_state = {#kx地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = nine
+					has_state_category = ten
+					has_state_category = eleven
+				         }
+					}
+					set_state_category = twelve
+					add_extra_state_shared_building_slots = 2
+				}
+			random_owned_state = {#原版地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = enclave
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = small_island
+					has_state_category = pastoral 
+					has_state_category = rural 
+					has_state_category = town
+					has_state_category = large_town 
+					has_state_category = city
+				         }
+					}
+					set_state_category = large_city
+					add_extra_state_shared_building_slots = 1
+				}
+			random_owned_state = {#原版地区发展
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						OR = {
+					has_state_category = large_city
+					has_state_category = metropolis 
+				         }
+					}
+					set_state_category = megalopolis
+					add_extra_state_shared_building_slots = 2
+				}
+	        }
+			activate_decision = Auto_chengshi_1
+		}
+    }
+
+
+	Gongyehua_chengshi_auto = {
+
+		icon = generic_construction
+
+		allowed = { always = no }
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		visible = {
+			#always = yes
+			not = { has_country_flag = chengshi }
+		}
+
+		fire_only_once = no
+
+		cost = 5
+		days_remove = 30
+		cancel_trigger = {
+			not = { has_country_flag = chengshi_auto }
+		}
+		cancel_effect = {
+			add_political_power = 5
+		}
+		complete_effect = {
+			set_country_flag = chengshi_auto
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			activate_decision = Gongyehua_chengshi_auto
+		}
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+	}
+
+	Gongyehua_gongchang_auto = {
+
+		icon = generic_merge_plant_materiel
+
+		allowed = { always = yes }
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			num_of_factories < 60
+		}
+		visible = {
+			#always = yes
+			num_of_factories < 60
+		}
+
+		fire_only_once = no
+
+		cost = 5
+		days_remove = 60
+		days_re_enable = 0
+		
+		cancel_trigger = {
+			not = { has_idea = gongchang }
+		}
+		cancel_effect = {
+			add_political_power = 5
+		}
+		
+		complete_effect = {
+			add_timed_idea = { idea = gongchang days = 365 }
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+		        }    
+		    }	
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+		        }    
+		    }	
+		}	
+		remove_effect = {
+			activate_decision = Gongyehua_gongchang_auto
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+	}
+
+	Gongyehua_tielu = {
+
+		icon = SWI_no_elected_president
+
+		allowed = { always = yes }
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		fire_only_once = no
+
+		cost = 5
+		days_remove = 365
+
+		modifier = {
+			civilian_factory_use = 5
+			production_speed_supply_node_factor = 3
+			production_speed_rail_way_factor = 1
+		}    
+	}
+
+	
+	Gongyehua_bubing = {
+
+		icon = eng_blackshirt_march
+
+		allowed = { always = yes }
+
+		available = {
+			OR = {
+				has_war_support > 0.4
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_idea = extensive_conscription }
+					NOT = { has_idea = service_by_requirement }
+					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+				}
+				add_ideas = extensive_conscription
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 5
+		days_remove = 365
+		modifier = {
+			minimum_training_level = -0.1
+			training_time_factor = -0.3
+	        monthly_population = 1
+		}    
+	}
+
+	Gongyehua_zhanzheng = {
+
+		icon = generic_military
+
+        allowed = { always = yes }
+
+		available = {
+			OR = {
+				has_war_support > 0.8
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 5
+		days_remove = 365
+
+		modifier = {
+			consumer_goods_factor = -0.2
+			conscription_factor = 0.1
+			production_speed_arms_factory_factor= 0.2
+		}    
+	}
+
+    Gongyehua_jingong = {
+
+		icon = eng_trade_unions_support
+
+		allowed = { always = yes }
+
+		available = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			add_timed_idea = { idea = jingong1 days = 30 }
+		}
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		days_remove = 90
+
+		modifier = {
+			supply_consumption_factor = -0.1
+			local_supplies = 0.5
+			org_loss_when_moving = -0.2
+		}    
+	}
+
+	Gongyehua_lujun = {
+
+		icon = generic_merge_plant_tank
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.3
+		}
+
+		fire_only_once = no
+        visible = {
+			NOT = {
+				has_country_flag = haijun
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = haijun
+		}
+		complete_effect = {
+			set_country_flag = { flag = bujun value = 1 days = 2 }
+			}
+		cost = 10
+		days_remove = 365
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.6
+			industrial_capacity_dockyard = -0.2
+			production_factory_max_efficiency_factor = 0.3
+			production_speed_dockyard_factor = -0.25
+			production_speed_naval_base_factor = -0.25
+			industrial_capacity_factory = 0.25
+			political_power_gain =  -0.1
+		}    
+	}
+	Gongyehua_haijun = {
+
+		icon = generic_merge_plant_ship
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.4
+		}
+       
+		fire_only_once = no
+        visible = {
+			NOT = {
+				has_country_flag = bujun
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = bujun
+		}
+		complete_effect = {
+			set_country_flag = { flag = haijun value = 1 days = 2 }
+			}
+		cost = 100
+		days_remove = 365
+
+		modifier = {
+			industrial_capacity_dockyard = 1.00
+			production_speed_dockyard_factor = 0.25
+			production_speed_naval_base_factor = 0.25
+			industrial_capacity_factory = -0.25
+			production_speed_arms_factory_factor = -0.10
+			production_speed_industrial_complex_factor = -0.10
+			consumer_goods_factor = 0.20
+			political_power_gain =  -0.2
+		}    
+	}
+	keji_jiaoyu = {
+	
+		icon = generic_research
+		available = {
+			AND = {
+				num_of_factories > 60
+				has_manpower > 25000
+				has_stability > 0.5
+			}
+		}
+	
+		visible = {
+			always = yes
+		}
+	
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = { flag = keji value = 1  }
+		}
+		modifier = {
+			conscription_factor = -0.1
+			stability_weekly = 0.001
+			war_support_weekly = -0.001
+			research_speed_factor = 0.1
+		}
+		days_remove = 540
+		
+		remove_effect = { 
+             add_research_slot = 1
+			 add_manpower = 25000
+        }
+		cost = 150
+		complete_effect = {
+			add_manpower = -25000
+		}
+	}
+	keji_pp = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			AND = {
+				has_manpower > 10000
+			}
+		}
+	    visible = {
+				has_country_flag = keji
+		}
+		
+	
+		fire_only_once = yes
+		
+		modifier = {
+			consumer_goods_factor = 0.10
+			political_power_gain = 0.10
+	        political_power_factor = 0.10
+		}
+		days_remove = 180
+			
+		cost = 5
+		
+		complete_effect = {
+			add_manpower = -10000
+			add_stability = 0.025
+		}
+		remove_effect = { 
+			add_ideas = buff_PP 
+			add_manpower = 10000
+        }
+	}
+	keji_gongye = {
+	
+		icon = generic_factory
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+			NOT = { has_country_flag = gongye }
+			has_country_flag = keji
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = { 
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_manpower = -25000
+			add_stability = 0.05
+			add_timed_idea = { idea = buff_gongye days = 365 }
+		}
+		remove_effect = { 
+			set_country_flag = gongye
+			add_ideas = buff_xiaofeipin 
+			add_manpower = 25000
+        }
+	}
+	keji_gongye1 = {
+	
+		icon = generic_factory
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+			has_country_flag = keji
+			has_country_flag = gongye
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = { 
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_manpower = -25000
+			add_stability = 0.05
+			add_timed_idea = { idea = buff_gongye1 days = 365 }
+		}
+		remove_effect = { 
+			add_manpower = 25000
+        }
+	}
+	keji_huopao = {
+	
+		icon = generic_break_treaty
+
+		name = 火炮科技投资
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+			has_country_flag = keji
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = {
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_manpower = -25000
+			add_timed_idea = { idea = buff_huopao days = 365 }
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+		}
+		remove_effect = { 
+			 add_manpower = 25000
+        }
+	}
+	keji_tanks = {
+	
+		icon = generic_tank
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+				has_country_flag = keji
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = { 
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_manpower = -25000
+			add_timed_idea = { idea = buff_tanks days = 365 }
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = armor
+				}
+		}
+		remove_effect = { 
+			 add_manpower = 25000
+        }
+	}
+	keji_naval = {
+	
+		icon = generic_naval
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+				has_country_flag = keji
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = { 
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_manpower = -25000
+			add_timed_idea = { idea = buff_naval days = 365 }
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = naval_equipment
+				}
+		}
+		remove_effect = { 
+			 add_manpower = 25000
+        }
+	}
+	keji_air = {
+	
+		icon = generic_air
+		
+		available = {
+			AND = {
+				has_manpower > 25000
+			}
+		}
+	    visible = {
+				has_country_flag = keji
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+
+		cost = 100
+
+		research_bonus = { 
+			industry_research = 0.3
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_manpower = -25000
+			add_timed_idea = { idea = buff_air days = 365 }
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = air_equipment
+				}
+		}
+		remove_effect = { 
+			 add_manpower = 25000
+        }
+	}
+    BUY_heping = {
+		icon = generic_form_nation
+		visible = { 
+			AND = {
+				has_war = yes
+			}
+		}
+		days_re_enable = 180
+		complete_effect = {
+		every_country = {
+		limit = { has_war_with = ROOT }
+		white_peace = {
+        tag = ROOT
+        message = "休息一下" }}}
+	}
+	
+}
+

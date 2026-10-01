@@ -1,0 +1,169 @@
+sinodc_state_category_up = {
+	#kr
+	if = {
+		limit = {
+			root = {
+				sinodc_compatibility_1 = yes #mod识别
+			}
+		}
+		if = { # zero_island -> one_island
+			limit = {
+				has_state_category = zero_island
+			}
+			set_state_category = one_island
+		}
+		else_if = { # 0 or 1 or wasteland -> 2
+			limit = {
+				or = {
+					has_state_category = zero
+					has_state_category = one
+					has_state_category = wasteland
+				}
+			}
+			set_state_category = two
+		}
+		else_if = { # minor_port -> port
+			limit = {
+				has_state_category = minor_port
+			}
+			set_state_category = port
+		}
+		else_if = { # 2 or 3 -> 4
+			limit = {
+				or = {
+					has_state_category = one_island
+					has_state_category = two
+					has_state_category = three
+				}
+			}
+			set_state_category = four
+		}
+		else_if = { # port -> major_port
+			limit = {
+				has_state_category = port
+			}
+			set_state_category = major_port
+		}
+		else_if = { # 4 or 5 or major_port -> 6
+			limit = {
+				or = {
+					has_state_category = four
+					has_state_category = five
+					has_state_category = major_port
+				}
+			}
+			set_state_category = six
+		}
+		else_if = { # 6 or 7 -> 8
+			limit = {
+				or = {
+					has_state_category = six
+					has_state_category = seven
+				}
+			}
+			set_state_category = eight
+		}
+		else_if = { # 8 or 9 -> 10
+			limit = {
+				or = {
+					has_state_category = eight  
+					has_state_category = nine 
+				}
+			}
+			set_state_category = ten
+		}
+		else_if = { # 10 or 11 -> 12
+			limit = {
+				or = {
+					has_state_category = ten  
+					has_state_category = eleven
+				}			}
+			set_state_category = twelve
+		}
+	}
+	#原版
+	else_if = { # tiny_island -> small_island
+		limit = {
+			has_state_category = tiny_island
+		}
+		set_state_category = small_island
+	}
+	else_if = { # wasteland -> pastoral
+		limit = {
+			has_state_category = wasteland
+		}
+		set_state_category = pastoral
+	}
+	else_if = { # small_island enclave pastoral -> rural
+		limit = {
+			or = {
+				has_state_category = small_island
+				has_state_category = enclave
+				has_state_category = pastoral
+			}
+		}
+		set_state_category = rural
+	}
+	else_if = { # small_island rural -> town
+		limit = {
+			has_state_category = rural
+		}
+		set_state_category = town
+	}
+	else_if = { # town large_town -> city
+		limit = {
+			or = {
+				has_state_category = town
+				has_state_category = large_town
+			}                
+		}
+		set_state_category = city
+	}
+	else_if = { # city -> large_city
+		limit = {
+			has_state_category = city                
+		}
+		set_state_category = large_city 
+	}
+	else_if = { # large_city -> metropolis
+		limit = {
+			has_state_category = large_city                
+		}
+		set_state_category = metropolis
+	}
+	else_if = { # metropolis -> megalopolis
+		limit = {
+			has_state_category = metropolis                
+		}
+		set_state_category = megalopolis
+	}
+}
+sinodc_state_category_up_0 = {
+	if = {
+		limit = {
+			any_owned_state = {
+				is_core_of = ROOT
+				is_controlled_by = ROOT   
+				sinodc_state_category_not_max = yes #地区类型不是最大
+				has_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				sinodc_state_category_not_max = yes #地区类型不是最大
+				has_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+			sinodc_state_category_up = yes
+		}
+	}
+	else = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				sinodc_state_category_not_max = yes #地区类型不是最大
+			}
+			sinodc_state_category_up = yes
+		}
+	}
+}

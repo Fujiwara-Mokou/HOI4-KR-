@@ -1,0 +1,170 @@
+snr_aus_common_decisions = {
+
+	snr_aus_air_decision = {
+		icon = generic_research
+		allowed = {
+			
+		}
+		available = {
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_tech_bonus = {
+	           name = snr_aus_air
+	           bonus = 1.0
+	           uses = 1
+	           category = light_fighter 
+		    }
+	    }
+    }
+
+	snr_aus_air2_decision = {
+		icon = generic_research
+		allowed = {
+			
+		}
+		available = {
+		  or = { 
+			   has_deployed_air_force_size = {
+                    size > 1999
+                    type = cas
+                }
+			   has_deployed_air_force_size = {
+                    size > 1999
+                    type = fighter
+                }
+		    }
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_tech_bonus = {
+	           name = snr_aus_air
+	           bonus = 1.0
+	           uses = 1
+	           category = air_equipment
+		    }
+	    }
+    }		
+	
+	snr_final_strik_of_habsburg_decision = {
+		icon = generic_merge_plant_materiel
+		allowed = {
+			
+		}
+		available = {
+		    has_completed_focus = AUS_aviation_effort
+			or = {
+			   has_war_with = FRA
+			      not = {
+				     country_exists = FRA
+					 }
+			}
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+	   }
+	 }
+	 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+	   }
+	 }
+	 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_buid = yes
+	   }
+	 }
+	 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+	   }
+	 }
+			add_ideas = snr_final_strik_of_habsburg_idea
+		}
+	}
+	
+	snr_phoenix_in_flame_decision = {
+		icon = SWE_set_air_budget
+		allowed = {
+			
+		}
+		available = {
+		   or = {
+			   war_length_with = {
+                 tag = ENG
+                 months > 0
+                }
+			      not = {
+				     country_exists = ENG
+					 }
+			}
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_phoenix_in_flame_idea
+		}
+	}
+ }   

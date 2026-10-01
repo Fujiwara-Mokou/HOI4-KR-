@@ -1,0 +1,415 @@
+####new ideas for the mod####
+
+ideas = {
+	country = {
+		#全力进攻
+		jingong1 = {
+			allowed = {
+				always = no
+			}
+			picture = SOV_kirov
+			name = jingong1
+            modifier = {
+				breakthrough_factor = 0.15
+				army_attack_factor = 0.15
+				land_reinforce_rate = 0.05
+				army_speed_factor = 0.05
+				no_supply_grace = 124
+				war_support_weekly = 0.01
+				}
+            cost = 0
+            removal_cost = -1
+			available = { is_ai = no }
+			traits = { jingong1_t }
+			cancel_if_invalid = no
+            ai_will_do = {
+                factor = 0
+            }
+        }
+	#工业
+		buff_gongye = {
+			name = buff_gongye
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_1
+
+			modifier = {
+			consumer_goods_factor = 0.10
+			production_speed_buildings_factor = 0.05
+            production_speed_industrial_complex_factor = 0.15
+			}
+			
+			research_bonus = {
+				industry = 0.20
+			}
+			
+		}
+		#工业
+		buff_gongye1 = {
+			name = buff_gongye1
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_1
+
+			modifier = {
+			production_speed_buildings_factor = 0.05
+            production_speed_industrial_complex_factor = 0.15
+            production_speed_arms_factory_factor = 0.15
+            production_speed_infrastructure_factor = 0.15
+			}
+			
+			research_bonus = {
+				industry = 0.20
+			}
+			
+		}
+		#核心
+		buff_hexin = {
+			name = buff_hexin
+			allowed = {
+				
+			}
+			removal_cost = -1
+			picture = generic_spy_intel
+			modifier = {
+				resistance_target = -0.15
+				resistance_damage_to_garrison = -0.4
+				compliance_gain = 0.05
+			}
+		}
+
+		buff_shuncong ={
+			removal_cost = -1
+			picture = generic_spy_intel
+			allowed = {
+				
+			}
+			modifier = {
+				political_power_cost = 0.5
+				consumer_goods_factor = 0.4
+				resistance_decay = 0.4
+				resistance_target = -0.15
+				compliance_gain = 0.20
+			}
+		}
+
+		#危机
+		buff_weiji1 = {
+			name = buff_weiji1
+			allowed = {
+
+			}
+			
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_morale_factor = 0.1
+				surrender_limit = 0.2
+				army_core_attack_factor = 0.3
+	            army_core_defence_factor = 0.3
+			}
+			cancel_if_invalid = yes
+		}
+		#坦克
+		buff_huopao = {
+			name = buff_火炮科技投资
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = leningrad_polytechnical_institute
+
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+			
+			research_bonus = {
+				artillery = 0.20
+			}
+		}
+		#坦克
+		buff_tanks = {
+			name = buff_tanks
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+			
+			research_bonus = {
+				armor = 0.20
+			}
+		}
+		#海军
+		buff_naval = {
+			name = buff_naval
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_naval_manufacturer_1 
+
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.20
+			}
+			
+		}
+		#飞机
+		buff_air = {
+			name = buff_air
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_research
+
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+			
+			research_bonus = {
+				air_equipment = 0.20
+			}
+		}
+#政治点
+		buff_PP = {
+			name = buff_PP
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+	            political_power_factor = 0.10
+			}
+		}
+
+#消费品
+		buff_xiaofeipin = {
+			name = buff_xiaofeipin
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = SOV_soviet_railways
+
+			modifier = {
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.2	}
+		}
+
+#人力
+		buff_renli = {
+			name = 人力
+			allowed = {
+				
+			}
+			available = {
+				has_manpower < 520000
+			}
+			removal_cost = -1
+
+			picture = SOV_soviet_railways
+			cancel_if_invalid = yes
+			modifier = {
+				army_org_factor = -0.05
+				weekly_manpower = 1500
+			}
+		}
+
+#工厂
+        gongchang = {
+			name = gongchang
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				stability_weekly  = 0.001
+				conscription_factor = -0.1
+			}
+		}
+			
+		research_plus_h = {
+			name = research_plus_h
+			allowed = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.14
+				conscription_factor = -0.15
+				stability_weekly = 0.001
+				war_support_weekly = -0.001
+			}
+			
+			research_bonus = {
+				#air
+				air_equipment = 0.15
+				
+				#armor
+				armor = 0.15
+				
+				#artillery
+				artillery = 0.15
+				
+				#electronics
+				electronics = 0.15
+				rocketry = 0.15
+				nuclear = 0.15
+				
+				#industry
+				industry = 0.15
+				
+				#naval
+				naval_equipment = 0.15
+				
+				#infantry
+				infantry_weapons = 0.15
+				motorized_equipment = 0.15
+				
+				#support
+				support_tech = 0.15
+			}
+		}
+		
+		zhizao_tanks = {
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			allowed = {
+				
+			}
+			
+			modifier = {
+				license_armor_purchase_cost = -0.25
+			}
+		}
+		
+	}
+	########################################制造商########################################
+	# 武器
+	
+	materiel_manufacturer = { 
+		
+		designer = yes
+		zhizaoshang_wuqi = {
+			picture = leningrad_polytechnical_institute
+
+			
+			allowed = { always = yes }
+			available = {
+				is_ai = no
+			}
+			cost = 150
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+			
+			traits = { modern_equipment_manufacturer }
+			modifier = {
+			conscription = 0.01
+			}
+		}
+		zhizaoshang_wuqi1 = {
+			picture = leningrad_polytechnical_institute
+
+			
+			allowed = { always = yes }
+			available = {
+				is_ai = no
+			}
+			cost = 150
+			research_bonus = {
+				artillery = 0.1
+			}
+			
+			traits = { modern_equipment_manufacturer_1 }
+			modifier = {
+			conscription = 0.01
+			}
+		}
+		zhizaoshang_wuqi2 = {
+			picture = leningrad_polytechnical_institute
+
+			
+			allowed = { always = yes }
+			available = {
+				is_ai = no
+			}
+			cost = 150
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			
+			traits = { modern_equipment_manufacturer_2 }
+			modifier = {
+			conscription = 0.01
+			}
+		}
+		zhizaoshang_wuqi3 = {
+			picture = leningrad_polytechnical_institute
+
+			
+			allowed = { always = yes }
+			available = {
+				is_ai = no
+			}
+			cost = 150
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			
+			traits = { modern_equipment_manufacturer_3 }
+			modifier = {
+			conscription = 0.01
+			}
+		}
+	}
+##################  KX武器制造商   ####################
+}
+####end of new ideas####

@@ -1,0 +1,191 @@
+snr_fra_common_decisions = {
+
+		# -------- 决议：根除德帝国主义 --------
+	snr_fra_root_out_german_imperialism = {
+		icon = generic_prepare_civil_war
+		allowed = {
+
+		}
+		available = {
+			GER = { exists = yes }
+			has_war_with = GER
+			NOT = { has_dynamic_modifier = snr_fra_root_out_german_imperialism_effect }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 365
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+
+		}
+		complete_effect = {
+			add_dynamic_modifier = { modifier = snr_fra_root_out_german_imperialism_effect }
+		}
+		remove_effect = {
+			remove_dynamic_modifier = { modifier = snr_fra_root_out_german_imperialism_effect }
+		}
+	}
+
+		# -------- 决议：殊死防御 --------
+	snr_fra_desperate_defence = {
+		icon = GFX_decision_fortress
+		allowed = {
+
+		}
+		available = {
+			NOT = { has_dynamic_modifier = snr_fra_root_out_german_imperialism_effect }
+			surrender_progress > 0.1
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 365
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+
+		}
+		complete_effect = {
+			add_dynamic_modifier = { modifier = snr_fra_desperate_defence_effect }
+		}
+		remove_effect = {
+			remove_dynamic_modifier = { modifier = snr_fra_desperate_defence_effect }
+		}
+	}
+
+	snr_war_spain_decision = {
+		icon = cat_iberian_summit
+		allowed = {
+			
+		}
+		available = {
+			country_exists = D05
+		    country_exists = D04     
+			D04 = {
+				is_ai = yes
+			}      
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		FRA = {
+		add_to_faction = D04 }
+			declare_war_on = { 
+                target = D05 
+				type = annex_everything
+			}
+            declare_war_on = { 
+                target = SPA
+                type = annex_everything
+			}
+			add_ideas = war_economy
+                D04 = 
+                 { add_ideas = snr_eco_control 
+			    transfer_state = 180
+				transfer_state = 181
+				transfer_state = 112
+				transfer_state = 939
+				transfer_state = 179
+				every_state = {
+				limit = {
+					OR = {
+						state = 180
+						state = 181
+						state = 112
+						state = 939
+						state = 179
+					}
+				}
+			add_core_of = BRA
+			}
+			}
+			112 = {
+	           add_resource = {
+		       type = tungsten
+		       amount = 150
+	        }
+		}
+			939 = {
+	           add_resource = {
+		       type = chromium
+		       amount = 80
+	        }
+		}
+	add_ideas = {
+	   FRA_communard
+}
+	 }
+}
+    
+	snr_war_italy_decision = {
+		icon = category_ITA_missiolinis
+		allowed = {
+			
+		}
+		available = {
+			date > 1937.6.1      
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		FRA = {
+		add_to_faction = SRI }
+			declare_war_on = {
+                target = ITA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIC
+				type = annex_everything
+			}
+                SRI = { declare_war_on = {
+                target = ITA
+				type = annex_everything
+			}
+			           declare_war_on = {
+                target = SIC
+				type = annex_everything
+			}
+				 }
+	        159={ add_core_of = SRI }
+			160={ add_core_of = SRI }
+			759={ add_core_of = SRI }
+			2={ add_core_of = SRI }
+			742={ add_core_of = SRI }
+			117={ add_core_of = SRI }
+			837={ add_core_of = SRI }
+			156={ add_core_of = SRI }
+			115={ add_core_of = SRI }
+			}
+		}
+	}

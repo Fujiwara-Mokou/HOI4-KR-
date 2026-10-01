@@ -1,0 +1,187 @@
+### ===== 【已注释】更好游戏体验 - 设置 决议组 =====
+### 该组依赖 shezhi_1 设置的国家flag shezhi_kaiqi；shezhi_1 已被注释，
+### 故 shezhi_0 及其下 9 个开关（全部开启/工业/武器/科技/核心）一并停用。
+shezhi_0 = {
+	shezhi_2 = { #关闭设置
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+		    has_country_flag = shezhi_kaiqi
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_kaiqi #决议显示
+        }
+	}
+	shezhi_3 = { #全部开启设置
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+			OR = {
+				has_country_flag = shezhi_dakai #全部打开
+		        has_country_flag = shezhi_kaiqi
+	        }  
+		}
+
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_guanbi_hexin #核心决议开启
+			clr_country_flag = 	shezhi_guanbi_keji #科技决议开启
+			clr_country_flag = 	shezhi_guanbi_wuqi #武器决议开启
+			clr_country_flag = 	shezhi_guanbi_gongye #工业决议开启
+			clr_country_flag = 	shezhi_dakai #决议显示
+        }
+	}
+	shezhi_gongye = { #关闭工业决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+		    has_country_flag = shezhi_kaiqi
+	    }
+		visible = {
+	        not = { has_country_flag = shezhi_guanbi_gongye }
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			set_country_flag = 	shezhi_dakai #决议全部开启
+			set_country_flag = 	shezhi_guanbi_gongye #工业决议关闭
+        }
+	}
+	shezhi_gongye1 = { #开启工业决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+			has_country_flag = shezhi_guanbi_gongye
+		    has_country_flag = shezhi_kaiqi
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_guanbi_gongye #工业决议开启
+        }
+	}
+	shezhi_wuqi = { #关闭武器决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+		    has_country_flag = shezhi_kaiqi
+	    }
+		visible = {
+	        not = { has_country_flag = shezhi_guanbi_wuqi }
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			set_country_flag = 	shezhi_guanbi_wuqi #武器决议关闭
+        }
+	}
+	shezhi_wuqi1 = { #开启武器决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+			has_country_flag = shezhi_guanbi_wuqi
+		    has_country_flag = shezhi_kaiqi
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_guanbi_wuqi #武器决议开启
+        }
+	}
+	shezhi_keji = { #关闭科技决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+		    has_country_flag = shezhi_kaiqi
+	    }
+		visible = {
+	        not = { has_country_flag = shezhi_guanbi_keji }
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			set_country_flag = 	shezhi_guanbi_keji #科技决议关闭
+        }
+	}
+	shezhi_keji1 = { #开启科技决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+			has_country_flag = shezhi_guanbi_keji
+		    has_country_flag = shezhi_kaiqi
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_guanbi_keji #科技决议开启
+        }
+	}
+	shezhi_hexin = { #关闭核心决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+		    has_country_flag = shezhi_kaiqi
+	    }
+		visible = {
+	        not = { has_country_flag = shezhi_guanbi_hexin }
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			set_country_flag = 	shezhi_guanbi_hexin #核心决议关闭
+        }
+		complete_effect = {
+			clr_country_flag = ouzhou1
+			clr_country_flag = bieou1
+			clr_country_flag = yazhou1
+			clr_country_flag = yingyu1
+		}
+	}
+	shezhi_hexin1 = { #开启核心决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		visible = {
+			has_country_flag = shezhi_guanbi_hexin
+		    has_country_flag = shezhi_kaiqi
+	    }
+		available = {
+			
+        }
+		
+		complete_effect = {
+			clr_country_flag = 	shezhi_guanbi_hexin #核心决议开启
+        }
+	}
+}
+### ===== 更好游戏体验 - 设置 决议组 注释结束 =====

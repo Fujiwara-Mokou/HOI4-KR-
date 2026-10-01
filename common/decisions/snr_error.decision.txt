@@ -1,0 +1,345 @@
+snr_error_decisions = {
+
+    snr_i_am_decision = {
+		icon = scales
+		allowed = {
+			
+		}
+		available = {
+		}
+		visible = {
+		     NOT = {
+			     any_country = {
+				     has_idea = snr_i_am_idea
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 add_ideas = snr_i_am_idea
+	  }
+	}
+
+	snr_error_decision = {
+		icon = generic_police_action
+		allowed = {
+			
+		}
+		available = {
+		}
+		visible = {
+		    has_idea = snr_i_am_idea
+		}
+		fire_only_once = yes
+   complete_effect = {   
+      every_country = {
+           destroy_ships = {
+                type = ship_hull_submarine
+                count = 114514
+            }
+            add_ideas = snr_error_idea
+        }
+    }
+}
+
+   snr_ger_general_decision = {
+		icon = ger_reichskommissariats
+		allowed = {
+			
+		}
+		available = {
+		}
+		visible = {
+		     has_idea = snr_i_am_idea
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		     every_country = {
+             every_army_leader = {
+             add_attack = 1
+			 gain_xp = 5801
+			 add_trait = { trait = organizer }
+			 add_trait = { trait = infantry_leader }
+			 add_trait = { trait = cavalry_Leader }
+			 add_trait = { trait = trait_engineer }
+			 add_trait = { trait = panzer_leader }
+			 add_trait = { trait = trickster }
+			 add_trait = { trait = ranger }
+			 add_trait = { trait = urban_assault_specialist }
+		    }
+		}
+	  }
+	}
+
+	snr_east_decision = {
+		icon = generic_factory
+		allowed = {
+			
+		}
+		available = {
+		  or = {
+		    and = { 
+			     FRA = {
+				 is_ai = yes
+				}
+				 GER = {
+				 is_ai = no
+				}
+			}
+			and = {
+			     FRA = {
+				 is_ai = no
+				}
+				 GER = {
+				 is_ai = yes
+				}
+		    }
+		  }
+		}		
+		visible = {
+	     has_idea = snr_i_am_idea
+		 date < 1936.6.1
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 1000
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		     RUS = {
+		     random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+			random_owned_controlled_state = {
+		         add_extra_state_shared_building_slots = 2
+				 add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+	            }
+	        }
+		}
+             ENG = {
+			     set_technology = { improved_small_airframe = 1 }
+				 set_technology = { engines_3 =1 }
+	             set_technology = { survivability_studies = 1 }
+				 set_technology = { aa_hmg = 1 }
+				 set_technology = { range_improvements = 1 }
+		  957 = { add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes }	
+		}
+		  136 = { add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes }	
+		}
+		  133 = { add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes }	
+		}
+		  122 = { add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes }	
+		}
+		  120 = { add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes }
+				add_resource = {
+		             type = tungsten
+		             amount = 150
+					}
+				add_resource = {
+		             type = chromium
+		             amount = 80
+					}
+			    }
+            } 
+		   every_state = {
+				limit = {
+					OR = {
+						is_owned_by = RUS
+						is_owned_by = BAT
+						is_owned_by = BLR
+						is_owned_by = UKR
+						is_owned_by = POL
+						is_owned_by = LIT
+						is_owned_by = FIN
+					}
+				}
+			add_dynamic_modifier = {
+					modifier = snr_defence
+				}
+			}			
+					
+		}
+		
+	remove_effect = {
+	     RUS = {
+		 add_tech_bonus = {
+				name = snr_rus_artillery
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+    }
+}
+
+	snr_east_war_decision = {
+		icon = jap_pacific_guardian
+		allowed = {
+			
+		}
+		available = { 
+		  JAP = { 
+			 is_ai = yes
+        }			 
+		  date > 1940.1.1
+		}
+		visible = {
+		  has_idea = snr_i_am_idea
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		  every_state = {
+				limit = {
+						is_owned_by = JAP
+				}
+				add_claim_by = GEA
+			}			
+			GEA = {
+			   annex_country = { target = JAP }
+		}	 	
+	}
+} 	

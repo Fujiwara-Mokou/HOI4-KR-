@@ -1,0 +1,880 @@
+###购买科技###
+BUY_keji = {
+	###新手礼包###
+	BUY_xinshou = {
+		fire_only_once = yes
+	    allowed = { always = yes }
+		complete_effect = {
+			custom_effect_tooltip = xinshou
+			hidden_effect = {
+			set_technology = { early_ship_hull_light = 1 }
+			set_technology = { early_ship_hull_cruiser = 1 }
+			set_technology = { early_ship_hull_submarine = 1 }
+			set_technology = { early_ship_hull_carrier = 1 }
+			set_technology = { early_ship_hull_Heavy = 1 }
+            set_technology = { gwtank_Chassis = 1 }
+			set_technology = { iw_small_Airframe = 1 }
+			set_technology = { iw_Medium_Airframe = 1 }
+			set_technology = { iw_Large_Airframe = 1 }
+		    }
+		}
+	}
+	jiangling = {
+		name = "来点将领"
+	    icon = 
+	    allowed = { always = yes }
+	    visible = { always = yes }
+	    fire_only_once = yes
+	    complete_effect = {
+			custom_effect_tooltip = jiangling
+			create_corps_commander = {
+				name = "曼施坦因"
+				portrait_path = "gfx/leaders/fuzhu/manstein.dds"
+				traits = {  brilliant_strategist  armor_officer engineer_officer bearer_of_artillery  }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "图图"
+				portrait_path = "gfx/leaders/fuzhu/tukhachevsky.dds"
+				traits = { armor_officer brilliant_strategist  harsh_leader bearer_of_artillery peasant_sympathiser  }
+				skill = 1
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "古德里安"
+				portrait_path = "gfx/leaders/fuzhu/Guderian.dds"
+				traits = {  brilliant_strategist  armor_officer trickster panzer_leader  }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "朱可夫"
+				portrait_path = "gfx/leaders/fuzhu/Zhukov.dds"
+				traits = { brilliant_strategist war_hero panzer_leader engineer_officer  }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "大林子"
+				portrait_path = "gfx/leaders/fuzhu/Stalin.dds"
+				traits = { logistics_wizard aggressive_assaulter cavalry_officer harsh_leader  }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+	    }
+	    cost = 0
+	    ai_will_do = {
+	    	factor = 0
+	    }
+	}
+	BUY_Stank_433 = {
+		icon = generic_tank
+		fire_only_once = yes
+		available = {
+			
+		}
+		complete_effect = {
+			set_technology = { Super_heavy_tank_Chassis = 1 }
+		}
+	}
+	###购买小型飞机科技###
+	BUY_feiji_xiaoxing_36 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_air_experience > 30
+		}
+		visible = {
+			has_tech = iw_small_Airframe
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_Small_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_Small_Airframe = 1 }
+			set_technology = { Basic_Carrier_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -30
+		}
+	}
+	BUY_feiji_xiaoxing_40 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_air_experience > 150
+			has_tech = Basic_Small_Airframe
+		}
+		visible = {
+			AND = {
+				has_tech = Basic_Small_Airframe
+				date > 1940.1.1
+				NOT = { has_tech = Improved_Small_Airframe }
+			}
+		}
+		
+		remove_effect = {
+			set_technology = { Improved_Small_Airframe = 1 }
+			set_technology = { Improved_Carrier_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -150
+		}
+	}
+	BUY_feiji_xiaoxing_44 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7
+		available = {
+			has_air_experience > 200
+			has_tech = Improved_Small_Airframe
+		}
+		visible = { 
+			AND = {
+				has_tech = Improved_Small_Airframe
+				date > 1944.1.1 
+				NOT = { has_tech = Advanced_Small_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Advanced_Small_Airframe = 1 }
+			set_technology = { Advanced_Carrier_Airframe = 1 }
+		}	
+		complete_effect = {
+			air_experience = -200
+		}
+	}
+	###购买中型飞机科技###
+	BUY_feiji_zhongxing_36 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_air_experience > 30
+		}
+		visible = {
+			has_tech = iw_Medium_Airframe
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_Medium_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_Medium_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -30
+		}
+	}
+	BUY_feiji_zhongxing_40 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_air_experience > 150
+			has_tech = Basic_Medium_Airframe
+		}
+		visible = { 
+			AND = {
+				has_tech = Basic_Medium_Airframe
+				date > 1940.1.1
+				NOT = { has_tech = Improved_Medium_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Improved_Medium_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -150
+		}
+	}
+	BUY_feiji_zhongxing_44 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7
+		available = {
+			has_air_experience > 200
+			has_tech = Improved_Medium_Airframe
+		}
+		visible = { 
+			AND = {
+				has_tech = Improved_Medium_Airframe
+				date > 1944.1.1 
+				NOT = { has_tech = Advanced_Medium_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Advanced_Medium_Airframe = 1 }
+		}	
+		complete_effect = {
+			air_experience = -200
+		}
+	} 
+	###购买大型飞机科技###
+	BUY_feiji_daxing_36 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_air_experience > 30
+		}
+		visible = {
+			has_tech = iw_Large_Airframe
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_Large_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_Large_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -30
+		}
+	}
+	BUY_feiji_daxing_40 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_air_experience > 150
+			has_tech = Basic_Large_Airframe
+		}
+		visible = { 
+			AND = {
+				has_tech = Basic_Large_Airframe
+				date > 1940.1.1
+				NOT = { has_tech = Improved_Large_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Improved_Large_Airframe = 1 }
+		}
+		complete_effect = {
+			air_experience = -150
+		}
+	}
+	BUY_feiji_daxing_44 = {
+		icon = generic_air
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7
+		available = {
+			has_air_experience > 200
+			has_tech = Improved_Large_Airframe
+		}
+		visible = { 
+			AND = {
+				has_tech = Improved_Large_Airframe
+				date > 1944.1.1 
+				NOT = { has_tech = Advanced_Large_Airframe }
+			}
+		}
+		remove_effect = {
+			set_technology = { Advanced_Large_Airframe = 1 }
+		}	
+		complete_effect = {
+			air_experience = -200
+		}
+	} 
+    ####购买海军科技####
+	BUY_quzhu_36 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 60
+		days_remove = 7	
+		available = {
+			has_navy_experience > 30
+		}
+		visible = {
+			has_tech = early_ship_hull_light
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_ship_hull_light }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_ship_hull_light = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -30
+		}
+	}
+	BUY_quzhu_40 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7	
+		available = {
+			has_navy_experience > 100
+			has_tech = Basic_ship_hull_light
+		}
+		visible = { 
+			AND = {
+				has_tech = Basic_ship_hull_light
+				date > 1940.1.1
+				NOT = { has_tech = improved_ship_hull_light }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_ship_hull_light = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -100
+		}
+	}
+	BUY_quzhu_44 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7	
+		available = {
+			has_navy_experience > 150
+			has_tech = improved_ship_hull_light
+		}
+		visible = { 
+			AND = {
+				has_tech = improved_ship_hull_light
+				date > 1944.1.1
+				NOT = { has_tech = advanced_ship_hull_light }
+			}	
+		}
+		remove_effect = {
+			set_technology = { advanced_ship_hull_light = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -150
+		}
+	}
+	BUY_xunyang_36 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 60
+		days_remove = 7	
+		available = {
+			has_navy_experience > 30
+		}
+		visible = {
+			has_tech = early_ship_hull_cruiser
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = basic_ship_hull_cruiser }
+			}
+		}
+		remove_effect = {
+			set_technology = { basic_ship_hull_cruiser = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -30
+		}
+	}
+	BUY_xunyang_40 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7	
+		available = {
+			has_navy_experience > 100
+			has_tech = basic_ship_hull_cruiser
+		}
+		visible = { 
+			AND = {
+				has_tech = basic_ship_hull_cruiser
+				date > 1940.1.1
+				NOT = { has_tech = improved_ship_hull_cruiser }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_ship_hull_cruiser = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -100
+		}
+	}
+	BUY_xunyang_44 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7	
+		available = {
+			has_navy_experience > 150
+			has_tech = improved_ship_hull_cruiser
+		}
+		visible = { 
+			AND = {
+				has_tech = improved_ship_hull_cruiser
+				date > 1944.1.1
+				NOT = { has_tech = advanced_ship_hull_cruiser }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_ship_hull_cruiser = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -150
+		}
+	}
+	BUY_qianting_36 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7	
+		available = {
+			has_navy_experience > 30
+		}
+		visible = {
+			has_tech = early_ship_hull_submarine
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = basic_ship_hull_submarine }
+			}
+		}
+		remove_effect = {
+			set_technology = { basic_ship_hull_submarine = 1 }
+		}
+		complete_effect = {
+			navy_experience = -30
+		}
+	}
+	BUY_qianting_40 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7	
+		available = {
+			has_navy_experience > 100
+			has_tech = basic_ship_hull_submarine
+		}
+		visible = { 
+			AND = {
+				has_tech = basic_ship_hull_submarine
+				date > 1940.1.1
+				NOT = { has_tech = improved_ship_hull_submarine }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_ship_hull_submarine = 1 }
+		}
+		complete_effect = {
+			navy_experience = -100
+		}
+	}
+	BUY_qianting_44 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7	
+		available = {
+			has_navy_experience > 150
+			has_tech = improved_ship_hull_submarine
+		}
+		visible = { 
+			AND = {
+				has_tech = improved_ship_hull_submarine
+				date > 1944.1.1
+				NOT = { has_tech = advanced_ship_hull_submarine }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_ship_hull_submarine = 1 }
+		}
+		complete_effect = {
+			navy_experience = -150
+		}
+	}
+	BUY_hangmu_36 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7	
+		available = {
+			has_navy_experience > 100
+		}
+		visible = {
+			has_tech = early_ship_hull_carrier
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_ship_hull_carrier }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_ship_hull_carrier = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -100
+		}
+	}
+	BUY_hangmu_40 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7	
+		available = {
+			has_navy_experience > 150
+			has_tech = Basic_ship_hull_carrier
+		}
+		visible = { 
+			AND = {
+				has_tech = Basic_ship_hull_carrier
+				date > 1940.1.1
+				NOT = { has_tech = improved_ship_hull_carrier }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_ship_hull_carrier = 1 }
+		}
+		complete_effect = {
+			navy_experience = -150
+		}	
+	}
+	BUY_hangmu_44 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 300
+		days_remove = 7	
+		available = {
+			has_navy_experience > 200
+			has_tech = improved_ship_hull_carrier
+		}
+		visible = { 
+			AND = {
+				has_tech = improved_ship_hull_carrier
+				date > 1944.1.1
+				NOT = { has_tech = advanced_ship_hull_carrier }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_ship_hull_carrier = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -200
+		}
+	}
+	BUY_zhanlie_36 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7	
+		available = {
+			has_navy_experience > 100
+		}
+		visible = {
+			has_tech = early_ship_hull_Heavy
+			AND = {
+				date > 1936.1.1
+				NOT = { has_tech = Basic_ship_hull_heavy }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_ship_hull_heavy = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -100
+		}
+	}
+	BUY_zhanlie_40 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7	
+		available = {
+			has_navy_experience > 150
+			has_tech = Basic_ship_hull_heavy
+		}
+		visible = { 
+			AND = {
+				has_tech = Basic_ship_hull_heavy
+				date > 1940.1.1
+				NOT = { has_tech = improved_ship_hull_heavy }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_ship_hull_heavy = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -150
+		}
+	}
+	BUY_zhanlie_44 = {
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7	
+		available = {
+			has_navy_experience > 200
+			has_tech = improved_ship_hull_heavy
+		}
+		visible = { 
+			AND = {
+				has_tech = improved_ship_hull_heavy
+				date > 1944.1.1
+				NOT = { has_tech = advanced_ship_hull_heavy }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_ship_hull_heavy = 1 }
+		}	
+		complete_effect = {
+			navy_experience = -200
+		}
+	}
+####坦克科技####
+	BUY_ltank_34 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7
+		available = {
+			has_army_experience > 30
+		}
+		visible = {
+			has_tech = gwtank_Chassis
+			AND = {
+				date > 1934.1.1
+				NOT = { has_tech = basic_light_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { basic_light_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -30
+		}	
+	}
+	BUY_ltank_36 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_army_experience > 60
+			has_tech = basic_light_tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = basic_light_tank_Chassis
+				ate > 1936.1.1
+				NOT = { has_tech = improved_light_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_light_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -60
+		}		
+	}
+	BUY_ltank_41 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_army_experience > 90
+			has_tech = improved_light_tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = improved_light_tank_Chassis
+				date > 1941.1.1
+				NOT = { has_tech = advanced_light_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_light_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -90
+		}		
+	}
+	BUY_mtank_38 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_army_experience > 40
+		}
+		visible = {
+			has_tech = gwtank_Chassis
+			AND = {
+				date > 1938.1.1
+				NOT = { has_tech = Basic_Medium_Tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { Basic_Medium_Tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -40
+		}		
+	}
+	BUY_mtank_40 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_army_experience > 80
+			has_tech = Basic_Medium_Tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = Basic_Medium_Tank_Chassis
+				date > 1940.1.1
+				NOT = { has_tech = improved_Medium_Tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_Medium_Tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -80
+		}		
+	}
+	BUY_mtank_43 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 200
+		days_remove = 7
+		available = {
+			has_army_experience > 120
+			has_tech = improved_Medium_Tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = improved_Medium_Tank_Chassis
+				date > 1943.1.1
+				NOT = { has_tech = advanced_Medium_Tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_Medium_Tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -120
+		}		
+	}
+	BUY_htank_34 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7
+		available = {
+			has_army_experience > 30
+		}
+		visible = {
+			has_tech = gwtank_Chassis
+			AND = {
+				date > 1934.1.1
+				NOT = { has_tech = basic_heavy_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { basic_heavy_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -30
+		}		
+	}
+	BUY_htank_40 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		available = {
+			has_army_experience > 60
+			has_tech = basic_heavy_tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = basic_heavy_tank_Chassis
+				date > 1940.1.1
+				NOT = { has_tech = improved_heavy_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { improved_heavy_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -60
+		}	
+	}
+	BUY_htank_43 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_army_experience > 90
+			has_tech = improved_heavy_tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = improved_heavy_tank_Chassis
+				date > 1943.1.1
+				NOT = { has_tech = advanced_heavy_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { advanced_heavy_tank_Chassis = 1 }
+		}	
+		complete_effect = {
+			army_experience = -90
+		}		
+	}
+    BUY_Stank_43 = {
+		icon = generic_tank
+		fire_only_once = yes
+		cost = 150
+		days_remove = 7
+		available = {
+			has_army_experience > 90
+			has_tech = improved_heavy_tank_Chassis
+		}
+		visible = {
+			AND = {
+				has_tech = improved_heavy_tank_Chassis
+				date > 1943.1.1
+				NOT = { has_tech = Super_heavy_tank_Chassis }
+			}
+		}
+		remove_effect = {
+			set_technology = { Super_heavy_tank_Chassis = 1 }
+		}
+		complete_effect = {
+			army_experience = -90
+		}		
+	}
+
+}
+
+
+

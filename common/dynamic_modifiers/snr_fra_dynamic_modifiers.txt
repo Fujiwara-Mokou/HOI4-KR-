@@ -1,0 +1,29 @@
+# ===== 本文件由改动 4 新增：法国「甘末林计划」下的两条新决议所需动态修正 =====
+
+# 根除德帝国主义：全军 +50% 攻防
+# remove_trigger 实现「三块地被占完即自动移除」，与决议的 365 天到期共同构成双触发
+snr_fra_root_out_german_imperialism_effect = {
+	icon = generic_prepare_civil_war
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		AND = {
+			controls_state = 28
+			controls_state = 42
+			controls_state = 781
+		}
+	}
+	army_attack_factor = 0.5
+	army_defence_factor = 0.5
+}
+
+# 殊死防御：365 天核心领土攻防 +50%
+snr_fra_desperate_defence_effect = {
+	icon = GFX_decision_fortress
+	enable = {
+		always = yes
+	}
+	army_core_attack_factor = 0.5
+	army_core_defence_factor = 0.5
+}

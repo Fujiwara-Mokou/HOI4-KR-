@@ -1,0 +1,155 @@
+snr_sri_common_decisions = {
+	
+	snr_sri_chasseur_decision = {
+		icon = category_generic_mountain_fortification
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = SRI_la_legione_proletaria 
+          }			
+		visible = {
+		    NOT = { has_idea = snr_coastal_defense_idea }
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		    set_technology = { tech_mountaineers2 = 1 }
+			set_technology = { tech_mountaineers3 = 1 }
+            add_ideas = snr_sri_chasseur_idea
+            add_ideas = snr_extreme_revolution_idea			
+          }
+	   }
+	
+	snr_sri_alps_decision = {
+		icon = ITA_italian_east_africa
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = SRI_la_legione_proletaria
+            has_war_with = AUS
+        }			
+		visible = {
+            NOT = { has_idea = snr_coastal_defense_idea }
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+            add_timed_idea = { idea = snr_sri_alps_idea	days = 180 }	
+          }
+	  }
+	  
+	snr_sri_coastal_defense_decision = {
+		icon = generic_coastal_fortification
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = SRI_la_guardia_rossa 
+          }			
+		visible = {
+		    NOT = { has_idea = snr_sri_chasseur_idea }
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+            add_ideas = snr_coastal_defense_idea
+            add_ideas = snr_extreme_revolution_idea				
+          }
+	   }
+
+    snr_barrier_decision = {
+		icon = shield
+		allowed = {
+			
+		}
+		available = {
+            has_completed_focus = SRI_la_guardia_rossa 
+			has_war_with = CAN
+          }			
+		visible = {
+		 NOT = { has_idea = snr_sri_chasseur_idea }
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_valid_state_for_development = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+			}
+           		
+          }
+	   }	   
+	snr_sri_sector_decision = {
+		icon = 1
+		allowed = {
+			
+		}
+		available = {
+ 	          not = { has_idea = SRI_italy_balance_idea }
+			}         
+		visible = {
+		is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+             FRA = { puppet = SRI}		
+             set_cosmetic_tag = SRI_commue
+			}
+			
+		}
+	}
+}

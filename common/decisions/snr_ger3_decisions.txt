@@ -1,0 +1,190 @@
+# ===== 【已注释】德国「研究项目：虎式重型坦克」决议组 =====
+# 原分类已一并注释；保留原文以便随时恢复
+# snr_ger3_common_decisions = {
+# 
+# 	snr_design_drawing_decision = {
+# 		icon = generic_research
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   has_completed_focus = GER_heavy_tanks
+# 		   date > 1940.8.1
+# 		 }
+# 		visible = {
+# 		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 200
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		remove_effect = {
+# 		 set_technology = { engine_tech_4 = 1}
+# 		 set_technology = { advanced_radio = 1}
+# 		
+# 	  }
+#   }
+# 
+# 	snr_main_gun_decision = {
+# 		icon = artillery
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   has_tech = antitank4
+# 		   date > 1941.1.1
+# 		 }
+# 		visible = {
+# 		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 200
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		complete_effect = {
+# 		 set_technology = { antitank5 =1 }
+# 		
+# 	  }
+#   }
+# 
+# 	snr_armor_decision = {
+# 		icon = shield
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   has_tech = basic_heavy_tank_chassis
+# 		   date > 1941.3.1
+# 		 }
+# 		visible = {
+# 		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 200
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		remove_effect = {
+# 		     set_technology = { armor_tech_4 =1 }
+#              set_technology = { advanced_heavy_tank_chassis = 1 }
+# 	  }
+#   }
+#   
+#   	snr_deploy_decision = {
+# 		icon = generic_merge_plant_tank
+# 		allowed = {
+# 			
+# 		}
+# 		available = {
+# 		   has_tech = engine_tech_4
+# 		   has_tech = armor_tech_4
+# 		   has_tech = antitank5
+# 		   date > 1941.12.1
+# 		 }
+# 		visible = {
+# 		
+# 		}
+# 		fire_only_once = yes
+# 		cost = 25
+# 		days_remove = 0
+# 		ai_will_do = {
+# 			factor = 200
+# 		}
+# 		
+# 		modifier = {
+# 			
+# 		}
+# 		remove_effect = {
+# 				add_ideas = snr_armor_idea
+# 		  create_equipment_variant = {
+# 					name = "虎式坦克E型"
+# 					type = heavy_tank_destroyer_chassis_3
+# 					design_team = mio:GER_krupp_tank_organisation
+# 					parent_version = 0
+# 					modules = {
+# 						main_armament_slot = tank_high_velocity_cannon_3
+# 						turret_type_slot = tank_heavy_three_man_tank_turret
+# 						suspension_type_slot = tank_christie_suspension
+# 						armor_type_slot = tank_welded_armor
+# 						engine_type_slot = tank_gasoline_engine
+# 						special_type_slot_1 = tank_radio_3
+# 						special_type_slot_2 = armor_skirts
+# 						special_type_slot_3 = sloped_armor
+# 						special_type_slot_4 = easy_maintenance
+# 					}
+# 					upgrades = {
+# 						tank_nsb_engine_upgrade = 0
+# 						tank_nsb_armor_upgrade = 20
+# 					}
+# 				}
+# 		  division_template = {
+# 			     name = "Panzerkampfwagen Tiger Ausführung E"
+# 				 regiments = {
+# 				     mechanized = { x = 0 y = 0 }
+# 					 mechanized = { x = 0 y = 1 }
+# 					 mechanized = { x = 0 y = 2 }
+# 					 mechanized = { x = 0 y = 3 }
+# 					 mechanized = { x = 1 y = 0 }
+# 					 mechanized = { x = 1 y = 1 }
+# 					 mechanized = { x = 1 y = 2 }
+# 					 heavy_tank_destroyer_brigade = { x = 2 y = 0 }
+# 					 heavy_tank_destroyer_brigade = { x = 2 y = 1 }
+# 					 heavy_tank_destroyer_brigade = { x = 2 y = 2 }
+# 					 heavy_tank_destroyer_brigade = { x = 2 y = 3 }
+# 					 heavy_tank_destroyer_brigade = { x = 2 y = 4 }
+# 					 heavy_tank_destroyer_brigade = { x = 3 y = 0 }
+# 					 heavy_tank_destroyer_brigade = { x = 3 y = 1 }
+# 					 heavy_tank_destroyer_brigade = { x = 3 y = 2 }
+# 					 heavy_tank_destroyer_brigade = { x = 3 y = 3 }
+# 					 heavy_tank_destroyer_brigade = { x = 3 y = 4 }
+# 					 anti_air_brigade = { x = 4 y = 0 }
+# 					 anti_air_brigade = { x = 4 y = 1 }
+# 					}
+# 				 support = {
+# 				     medium_flame_tank { x = 0 y = 0 }
+# 					 armored_signal = { x = 0 y = 1 }
+# 					 field_hospital = { x = 0 y = 2 }
+# 					 logistics_company = { x = 0 y = 3 }
+# 					 assault_engineer = { x = 0 y = 4 }
+# 					 
+# 		         }
+# 		    }
+#             capital_scope = {			
+# 		        custom_override_tooltip = {
+# 					tooltip = {
+# 						localization_key = tooltip_spawn_units
+# 						COUNT = 10
+# 						TYPE = "Panzerkampfwagen Tiger Ausführung E"
+# 					}
+# 					create_unit = { 
+# 						         division = "name = \"Panzerkampfwagen Tiger Ausführung E\" division_template = \"Panzerkampfwagen Tiger Ausführung E\" start_experience_factor = 0.85"
+#                                  owner = GER
+# 								 count = 10
+#                         }
+# 					}
+# 				}
+# 		add_equipment_to_stockpile = {
+# 				type = heavy_tank_destroyer_chassis
+# 				amount = 1500
+# 				producer = GER
+# 			}
+#   }
+# }
+# ===== 注释结束 =====

@@ -1,0 +1,370 @@
+snr_can_common_decisions = {
+
+snr_research_decision = {
+		icon = generic_research
+		allowed = {
+			
+		}
+		available = {
+		    has_completed_focus = CAN_create_isac
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+             add_research_slot_until_five = yes
+		}
+	}
+   
+    snr_gun_decision = {
+		icon = ger_military_buildup
+		allowed = {
+			
+		}
+		available = {
+		    has_completed_focus = CAN_create_isac
+		    date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		276 = { add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes }
+		}
+		739 = { add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes }
+		}
+
+		    set_technology = { support_weapons =1 }
+			set_technology = { support_weapons2 =1 }
+			set_technology = { infantry_weapons2 =1 }
+			set_technology = { improved_infantry_weapons =1}
+		}
+	}
+	
+	snr_royal_engineer_decision = {
+		icon = wrenches
+		allowed = {
+			
+		}
+		available = {
+		    has_completed_focus = CAN_create_isac
+		    date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { tech_engineers2 =1 }
+		}
+	}
+
+
+	snr_seagull_decision = {
+		icon = binoculars
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { tech_recon2 =1 }
+		}
+	}
+
+snr_trainmen_decision = {
+		icon = generic_wreckers
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { tech_maintenance_company =1 }
+	        set_technology = { tech_maintenance_company2 = 1 }
+		}
+	}
+
+snr_frontline_station_decision = {
+		icon = generic_healthcare
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { tech_field_hospital =1 }
+	        set_technology = { tech_field_hospital2 = 1 }
+		}
+	}
+
+snr_recycle_decision = {
+		icon = generic_motorized
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { tech_logistics_company =1 }
+	        set_technology = { tech_logistics_company2 =1 }
+		}
+	}
+
+snr_bofors_decision = {
+		icon = AA_small
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { antiair1 =1 }
+	        set_technology = { antiair2 =1 }
+		}
+	}
+
+snr_6_pounder_decision = {
+		icon = artillery
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { interwar_antitank =1}
+	        set_technology = { antitank1 =1 }
+			set_technology = { antitank2 =1 }
+		}
+	}
+
+snr_A15_decision = {
+		icon = tank
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { basic_medium_tank_chassis =1 }
+		}
+	}
+
+snr_brengun_carrier_decision = {
+		icon = generic_trucks
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { mechanised_infantry =1 }
+		}
+	}
+
+snr_LCT_decision = {
+		icon = SWE_set_navy_budget
+		allowed = {
+		}
+		available = {
+				has_completed_focus = CAN_create_isac
+				date > 1938.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { amphibious_drive =1 }
+			set_technology = { amphibious_mechanized_infantry = 1 }
+			set_technology = { special_forces_marines = 1 }
+			add_ideas = snr_LCT_idea
+		}
+	}
+	
+snr_air_plan_decision = {
+		icon = plane
+		allowed = {
+			
+		}
+		available = {
+		    has_completed_focus = CAN_create_isac
+			has_tech = engines_3
+		    date > 1940.1.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		    set_technology = { engines_4 =1 }
+			add_ideas = snr_air_plan_idea
+		}
+	}

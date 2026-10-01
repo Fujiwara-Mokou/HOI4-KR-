@@ -1,0 +1,74 @@
+##工业化改造
+sinodc_dec_develop_construction = {
+	icon = category_SOV_merge_designers
+	allowed = {
+			
+	}
+	# ===== 改动：工厂总数（民用+军用+船坞）达到 200 后不可用 =====
+	available = {
+		num_of_factories < 200
+	}
+	visible = {
+		# ===== 改动：开放给所有国家；连决议组本身都对 AI 隐藏 =====
+		is_ai = no
+	}
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+				sinodc_state_category_not_max = no
+			}
+		}
+		name = sinodc_tip_arcology_map #地图显示_理想城
+		zoom = 550
+	}
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+				sinodc_state_category_not_max = yes
+				has_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+		}
+		name = sinodc_tip_state_category_upgrade_start_prior_map #地图显示_优先地区改造
+		zoom = 550
+	}
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+				sinodc_state_category_not_max = yes
+				or = {
+					has_state_flag = sinodc_fla_develop_steel #发展铁矿资源
+					has_state_flag = sinodc_fla_develop_tungsten #发展钨矿资源
+					has_state_flag = sinodc_fla_develop_chromium #发展铬矿资源
+					has_state_flag = sinodc_fla_develop_aluminium #发展铝矿资源
+					has_state_flag = sinodc_fla_develop_rubber #发展橡胶资源
+					has_state_flag = sinodc_fla_develop_oil #发展石油资源
+					has_state_flag = sinodc_fla_develop_coal #发展煤炭资源
+				}
+			}
+		}
+		name = sinodc_tip_develop_map #地图显示_发展资源
+		zoom = 550
+	}
+	priority = 8
+}
+
+##工业化改造-设置
+sinodc_dec_set_up = {
+	icon = category_SOV_merge_designers
+	allowed = {
+			
+	}
+	visible = {
+		has_country_flag = sinodc_fla_set_allow
+	}
+	priority = 9
+}

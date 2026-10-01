@@ -1,0 +1,287 @@
+snr_common_decisions = {
+
+	### ===== 【已注释】全面工业化 决议（原第3-36行）=====
+	### 该决议授予理念 snr_total_industrilization_idea（全球建筑槽 +200%），
+	### 已按需求停用；理念定义仍保留在 common/ideas/snr_ideas.txt。
+	snr_total_industrilization_decision = {
+		icon = generic_factory
+		allowed = {
+			
+		}
+		available = {
+		or = { is_major = yes
+		        is_ai = no
+				tag = BRA
+                tag = MEX
+               tag = ARG
+				}
+			or = {
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
+			}
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_total_industrilization_idea
+		}
+	}
+	### ===== 全面工业化 决议 注释结束 =====
+	
+	snr_fuel_refining_decision = {
+		icon = category_generic_prospect_for_resources
+		allowed = {
+			
+		}
+		available = {
+		or = { is_major = yes
+		        is_ai = no
+				tag = BRA
+                tag = MEX
+               tag = ARG				}
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_fuel_refining_idea
+		}
+	}
+	
+	snr_army_officer_school_decision = {
+		icon = category_army_reform
+		allowed = {
+			
+		}
+		available = {
+		or = { is_major = yes
+		        is_ai = no
+				tag = BRA
+               tag = MEX
+               tag = ARG			   }
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_army_officer_school_idea
+		}
+	}
+	
+	snr_training_decision = {
+		icon = eng_blackshirt_march
+		allowed = {
+			
+		}
+		available = {
+		    is_ai = no
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_training_idea
+		}
+	}
+	
+    snr_experience_exchanges_mastery_land = {
+		icon = generic_tank
+		allowed = {
+			always = yes 
+		}
+		available = {
+			is_ai = no 
+			has_army_experience > 100
+		}
+		visible = {
+			always = yes 
+		}
+		cost = 0
+		fire_only_once = no 
+		days_remove = 0
+		complete_effect = {
+			army_experience = -100
+		}
+		complete_effect = {
+			add_mastery = {
+				amount = 150
+				folder = land 
+			}
+		}
+	}
+	snr_experience_exchanges_mastery_navy = {
+		icon = generic_naval
+		allowed = {
+			always = yes 
+		}
+		available = {
+			is_ai = no 
+			has_navy_experience > 100
+		}
+		visible = {
+			always = yes 
+		}
+		cost = 0
+		fire_only_once = no 
+		days_remove = 0
+		complete_effect = {
+			navy_experience = -100
+		}
+		complete_effect = {
+			add_mastery = {
+				amount = 500
+				folder = naval 
+			}
+		}
+	}
+	snr_experience_exchanges_mastery_air = {
+		icon = generic_air
+		allowed = {
+			always = yes 
+		}
+		available = {
+			is_ai = no 
+			has_air_experience > 100
+		}
+		visible = {
+			always = yes 
+		}
+		cost = 0
+		fire_only_once = no 
+		days_remove = 0
+		complete_effect = {
+			air_experience = -100
+		}
+		complete_effect = {
+			add_mastery = {
+				amount = 500
+				folder = air 
+			}
+		}
+	}	
+
+	snr_ger_mo = {
+		icon = scales
+		allowed = {
+			always = yes 
+		}
+		available = {
+		    NOT = {
+				has_country_flag = GER_black_monday_game_active
+			}
+		    has_government = authoritarian_democrat
+			date > 1937.1.1
+		}
+		visible = {
+		    NOT = {
+				has_country_flag = GER_black_monday_game_active
+			}
+			tag = GER
+			has_government = authoritarian_democrat
+		}
+		cost = 0
+		fire_only_once = yes
+		days_remove = 0
+		complete_effect = {
+		 complete_national_focus = GER_red_general
+		 complete_national_focus = GER_kaiser_wilhelm_society
+        }
+	}	
+	
+	snr_ger_mo2 = {
+		icon = scales
+		allowed = {
+			always = yes 
+		}
+		available = {
+		    NOT = {
+				has_country_flag = GER_black_monday_game_active
+			}
+		    has_government = paternal_autocrat
+			date > 1937.1.1
+		}
+		visible = {
+		    NOT = {
+				has_country_flag = GER_black_monday_game_active
+			}
+			has_government = paternal_autocrat
+			tag = GER
+		}
+		cost = 0
+		fire_only_once = yes
+		days_remove = 0
+		complete_effect = {
+		 complete_national_focus = GER_conservative_revolution
+		 complete_national_focus = GER_kaiser_wilhelm_society
+        }
+	}
+	
+	snr_mewengland_decision = {
+		icon = us_flag
+		allowed = {
+			
+		}
+		available = {
+		  date > 1937.6.1
+		}
+		visible = {
+		 tag = NEE
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 annex_country = { target = USA }
+		 annex_country = { target = WCA }
+		 annex_country = { target = APG }
+		 annex_country = { target = ACC }
+		}
+}

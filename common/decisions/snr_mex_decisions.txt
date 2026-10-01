@@ -1,0 +1,502 @@
+snr_mex_common_decisions = {	
+	
+	snr_grandes_ideales_decision = {
+		icon = generic_intelligence_operation
+		allowed = {
+			
+		}
+		available = {
+		NOT = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+		}
+		   has_global_flag = USA_civil_war_begun_flag
+		   has_completed_focus = MEX_military_junta
+		 }
+		visible = {
+		NOT = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+		}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		 add_political_power = 200
+		 add_ideas = snr_grandes_ideales_idea
+		 set_cosmetic_tag = MEX_reich
+		  every_state = {
+				limit = {
+					OR = {
+						is_owned_by = GUA
+						is_owned_by = ELS
+						is_owned_by = HON
+						is_owned_by = NIC
+						is_owned_by = COS
+						is_owned_by = PAN	
+						is_owned_by = CUB
+						is_owned_by = HAI
+						is_owned_by = DOM
+					}
+				}
+				add_core_of = MEX
+			}		 
+		
+	  }
+  }
+  
+	snr_south_texas_decision = {
+		icon = oil
+		allowed = {
+			
+		}
+		available = {
+		   has_global_flag = USA_civil_war_begun_flag
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		transfer_state = 833
+		833 ={ add_core_of = MEX }
+           }
+		}  
+  
+	snr_exile_spain_decision = {
+		icon = eng_blackshirt_march
+		allowed = {
+			
+		}
+		available = {
+		   country_exists = D04 
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		add_manpower = 20000
+		CUB = {
+			CUB_manuel_lopez_migoya = {
+				set_nationality = MEX
+			}
+		}		
+		ECU = {
+			ECU_cabrera_sevilla_gral_luis = {
+				set_nationality = MEX
+			}
+		}		
+		SPA = {
+			SPA_francisco_franco_bahamonde = {
+				set_nationality = MEX
+			}
+		}
+		add_ideas = snr_exile_spain_idea
+           }
+		}
+	
+	snr_guatemala_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   has_global_flag = USA_civil_war_begun_flag
+		 }
+		visible = {
+		
+		}
+		targets = { GUA }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		declare_war_on = { 
+                target = GUA 
+				type = annex_everything
+			}
+		add_ideas = snr_guatemala_idea
+           }
+		}
+
+	snr_salvador_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = GUA }
+		 }
+		visible = {
+		
+		}
+		targets = { ELS }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		declare_war_on = { 
+                target = ELS 
+				type = annex_everything
+			}
+		add_ideas = snr_salvador_idea
+           }
+		}
+
+	snr_honduras_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = ELS }
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		targets = { HON }
+		remove_effect = {
+		declare_war_on = { 
+                target = HON 
+				type = annex_everything
+			}
+		add_ideas = snr_honduras_idea
+           }
+		} 
+			
+	snr_nicaragua_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = HON }
+		 }
+		visible = {
+		
+		}
+		targets = { NIC }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		declare_war_on = { 
+                target = NIC 
+				type = annex_everything
+			}
+		add_ideas = snr_nicaragua_idea
+           }
+	}	
+	
+	snr_costarica_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = NIC }
+		 }
+		visible = {
+		
+		}
+		targets = { COS }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+		}
+		complete_effect = {
+		     GER = {
+		         diplomatic_relation = {
+                 country = COS
+                 relation = guarantee
+                 active = no
+                   }
+		    }
+			 CAN = {
+		         diplomatic_relation = {
+                 country = COS
+                 relation = guarantee
+                 active = no
+                   }
+		    }
+			PAN = { 
+		     leave_faction = yes 
+			} 
+        }				
+		remove_effect = {
+		declare_war_on = { 
+                target = COS 
+				type = annex_everything
+			}
+		add_ideas = snr_costarica_idea
+         }
+	}
+
+	snr_panama_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = COS }
+		 }
+		visible = {
+		
+		}
+		targets = { PAN }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+		  PAN = { 
+		     leave_faction = yes 
+			} 
+		CAN = {
+		         diplomatic_relation = {
+                 country = PAN
+                 relation = guarantee
+                 active = no
+                   }
+		    }
+		}
+		remove_effect = {
+		declare_war_on = { 
+                target = PAN 
+				type = annex_everything
+			}
+		add_ideas = snr_panama_idea
+           }
+	 }
+	
+	snr_cuba_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = PAN }
+		 }
+		visible = {
+		
+		}
+		targets = { CUB }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+		  CUB = { 
+		     leave_faction = yes 
+			} 
+		}		
+		remove_effect = {
+		declare_war_on = { 
+                target = CUB 
+				type = annex_everything
+			}
+		add_ideas = snr_cuba_idea
+           }
+	}	
+
+	snr_ayiti_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = CUB }
+		 }
+		visible = {
+		
+		}
+		targets = { HAI }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+		  HAI = { 
+		     leave_faction = yes 
+			} 
+		}		
+		remove_effect = {
+		declare_war_on = { 
+                target = HAI 
+				type = annex_everything
+			}
+		add_ideas = snr_ayiti_idea
+           }
+	} 
+
+	snr_dominicana_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   NOT = { country_exists = HAI }
+		 }
+		visible = {
+		
+		}
+		targets = { DOM }
+		fire_only_once = yes
+		cost = 15
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+		  DOM = { 
+		     leave_faction = yes 
+			} 
+		}		
+		remove_effect = {
+		declare_war_on = { 
+                target = DOM 
+				type = annex_everything
+			}
+		add_ideas = snr_dominicana_idea
+           }
+	}
+
+	snr_be_reborn_decision = {
+		icon = continent_north_america
+		allowed = {
+			
+		}
+		available = {
+		   has_idea = snr_grandes_ideales_idea
+		   NOT = { country_exists = DOM }
+		 }
+		visible = {
+		     NOT = {
+			     has_government = totalist
+			     has_government = syndicalist
+			     has_government = radical_socialist
+            }			
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		remove_effect = {
+		set_cosmetic_tag = MEX_empire
+		277 = { add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+		   }
+		478 = { add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+		   }
+		  every_state = {
+				limit = {
+					OR = {
+						is_owned_by = D04
+						is_owned_by = D05
+						is_owned_by = SPA
+					}
+				}
+				add_claim_by = MEX
+			}		   
+		} 
+}		

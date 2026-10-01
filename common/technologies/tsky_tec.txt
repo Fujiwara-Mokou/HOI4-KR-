@@ -1,0 +1,548 @@
+technologies = {
+
+	sp_land_flamethrower_tank = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			flamethrower 
+		}
+
+		enable_equipment_modules = {
+			lc_flamethrower_turret
+		}
+
+		enable_subunits = { 
+			light_flame_tank
+			medium_flame_tank
+			heavy_flame_tank
+		}
+	}
+	sp_land_military_engineering_vehicles = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			armored_support_vehicle_1
+		}
+
+		enable_subunits = {
+			assault_engineer
+		}
+	}
+	sp_land_land_cruiser = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			land_cruiser
+		}
+
+		enable_equipments = {
+			land_cruiser_chassis_1
+		}
+
+		enable_equipments = {
+			land_cruiser_equipment_1
+		}
+
+		enable_equipment_modules = {
+			lc_heavy_naval_guns
+			#lc_super_heavy_railway_gun #SP: SH RWG
+			#lc_high_impact_obliterator_cannon #SP Tech: Obliterator Cannon
+			#lc_heavy_anti_air_platform #Tech: AA III (last AA tech)
+			lc_medium_naval_guns
+			#lc_hull_mounted_railway_gun #Tech: RWG
+			lc_super_heavy_howitzer
+			#lc_heavy_high_velocity_cannons #Tech: AT III (Last AT tech)
+			#lc_heavy_anti_air_battery #Tech: AA II (Second AA eq. tech)
+			#lc_medium_cannon_turret #Tech: Arty II (Second Arty eq. Tech)
+			#lc_assault_gun #Tech: Arty II (Second Arty eq. Tech)
+			#lc_high_velocity_cannon_turret #Tech: AT I (First AT Tech)
+			#lc_light_anti_air_battery #Tech: AA I (First AA Tech)
+			#lc_flamethrower_turret #SP: Flamethrower Tank
+			#lc_rocket_launcher #Tech: Rocket Arty I (First Rocket Arty Tech)
+			#lc_radio_1 #Tech: Radio I
+			#lc_radio_2 #Tech: Radio II
+			#lc_radio_3 #Tech: Radio III
+			#lc_command_center #SP Tech: Armored Signal Company
+			#lc_radar #SP: Radar
+			lc_aircraft_catapult
+			#lc_helipad #SP: Helicopter
+			#lc_armored_skirts #Tech: Tank Armor III
+			#lc_bunker_emplacement #Tech: Improved Forts (II)
+			#lc_obstacle_clearance_gear #Tech: Engineers II
+			lc_internal_fuel_tanks
+			lc_internal_ammunition_compartments
+			lc_wet_ammunition_storage
+			lc_smoke_generators
+			lc_stabilizers
+		}
+	}
+	sp_land_super_heavy_howitzer = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			super_heavy_artillery
+		}
+
+		enable_equipments = {
+			super_heavy_artillery_equipment_1
+		}
+	}
+	sp_land_self_propelled_super_heavy_howitzer = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			self_propelled_super_heavy_artillery
+		}
+
+		enable_equipments = {
+			self_propelled_super_heavy_artillery_equipment_1
+		}
+	}
+	sp_land_super_heavy_railway_gun = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			super_heavy_railway_gun_equipment_1
+		}
+
+		enable_subunits = {
+			super_heavy_railway_gun
+		}
+
+		enable_equipment_modules = {
+			lc_super_heavy_railway_gun
+		}
+	}
+	sp_land_multi_charge_large_caliber_gun = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+
+	}
+	sp_land_stronghold_network = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_air_bouncing_bomb = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_air_earthshaker_bomb = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			earthshaker_bomb_release
+		}
+	}
+	sp_air_intercontinental_bomber = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			strat_bomber_intercontinental_equipment_1
+		}
+	}
+	sp_air_mothership_aircraft = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			mothership_equipment_0
+		}
+	}
+	sp_air_jet_engine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			jet_engine_1x
+			jet_engine_2x
+			jet_engine_3x
+			jet_engine_4x
+			jet_engine_6x
+		}
+		
+		enable_equipment_modules = {
+			tank_gas_turbine_engine
+		}
+	}
+	sp_air_axial_jet_engine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			jet_engine_axial_1x
+			jet_engine_axial_2x
+			jet_engine_axial_3x
+			jet_engine_axial_4x
+			jet_engine_axial_6x
+		}
+	}
+	sp_air_supersonic_jet = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			small_plane_airframe_5 
+		}
+
+		enable_equipments = {
+			supersonic_fighter_equipment_1 
+		}	
+	}
+	sp_air_helicopter = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			helicopter_equipment_1 
+		}
+
+		enable_subunits = { 
+			helicopter_brigade
+		}
+
+		enable_equipment_modules = {
+			lc_helipad #Module for Land Cruiser
+		}
+	}
+	sp_naval_cruiser_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {	
+			ship_hull_cruiser_submarine
+		}
+		enable_equipments = {	
+			cruiser_submarine
+		}
+	}
+	sp_naval_fleet_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {	
+			ship_hull_fleet_submarine
+		}
+		enable_equipments = {	
+			fleet_submarine
+		}		
+	}
+	sp_naval_nuclear_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ship_hull_nuclear_submarine
+		}
+		enable_equipments = {
+			nuclear_submarine
+		}
+	}
+	sp_naval_rocket_launching_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			rocket_submarine
+		}
+
+		enable_equipment_modules = {
+			sub_missile_launcher
+		}
+	}
+	sp_naval_nuclear_missile_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			nuclear_missile_submarine
+		}
+		enable_equipment_modules = {
+			slbm_launcher
+		}
+	}
+	sp_naval_nuclear_torpedo = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			ship_torpedo_sub_nuclear
+		}
+	}
+	sp_naval_midget_submarine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {	
+			ship_hull_midget_submarine
+		}
+		enable_equipments = {	
+			midget_submarine
+		}
+	}
+	sp_naval_aip_engine = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			 ship_engine_sub_aip_1
+		}
+	}
+	sp_naval_anechoic_tiles = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {	
+			ship_anechoic_tile
+		}
+	}
+	sp_naval_torpedo_cruiser = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {	
+			ship_hull_torpedo_cruiser
+		}	
+			
+
+		enable_equipments = {	
+				torpedo_cruiser			
+			}	
+	}
+	sp_naval_super_heavy_battleship = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ship_hull_super_heavy_1
+		}
+		enable_equipments = {
+			SH_battleship_1
+		}
+
+		enable_equipment_modules = {		
+			ship_armor_shbb
+		}
+	}
+	sp_naval_modern_battleship = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {	
+				ship_hull_heavy_modern
+		}
+		enable_equipments = {	
+				modern_battleship
+		}
+	}
+	sp_naval_modern_carrier = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ship_hull_carrier_modern
+		}
+
+		enable_equipments = {
+			modern_carrier
+		}
+	}
+	sp_naval_ice_carrier = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ship_hull_mega_carrier
+		}
+		enable_equipments = {
+			mega_carrier
+		}
+
+		enable_equipment_modules = {		
+			big_ship_deck_space
+			ship_armor_ice_carrier_deck_1
+		}	
+	}
+	sp_naval_underway_replenishment = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_naval_proximity_fuze = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_nuclear_reactor = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_commercial_nuclear_reactor = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_nuclear_engines = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			sub_ship_nuclear_engine_1
+			heavy_ship_nuclear_engine_1
+			carrier_ship_nuclear_engine_1
+		}
+	}
+	sp_nuclear_bomb = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_thermo_nuclear_bomb = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	sp_nuclear_warheads = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			nuclear_missile_equipment_1
+		}
+	}
+	sp_air_radar = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			lc_radar
+		}
+
+		enable_equipment_modules = {
+			ship_radar_1
+		}
+	}
+	sp_rockets_flying_bomb = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			guided_missile_equipment_1
+		}
+	}
+	sp_rockets_ballistic_missile = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ballistic_missile_equipment_1
+		}
+		enable_equipments = {
+			guided_missile_equipment_2
+		}
+	}
+	sp_rockets_medium_range_ballistic_missile = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			ballistic_missile_equipment_2
+		}
+		enable_equipments = {
+			guided_missile_equipment_3
+		}
+	}
+	sp_rockets_long_range_ballistic_missile = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			#ballistic_missile_equipment_3
+			nuclear_missile_equipment_2
+		}
+	}
+	sp_rockets_ground_to_air_missile = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			sam_missile_equipment_1
+		}
+	}
+	sp_rocket_interceptor = { 
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			rocket_interceptor_equipment_1
+		}
+		enable_equipment_modules = {
+			rocket_engine_1
+		}
+	}
+
+}

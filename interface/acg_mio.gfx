@@ -1,0 +1,137 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_sys_springfield_armory"
+		textureFile = "gfx/interface/ideas/sys_springfield_armory.png"
+	}
+	spriteType = {
+		name = "GFX_idea_sys_organisation_ba_haruna"
+		textureFile = "gfx/interface/ideas/sys_organisation_ba_haruna.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sys_star_train_organisation"
+		textureFile = "gfx/interface/ideas/sys_star_train_organisation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_sys_tirpitz_organisation"
+		textureFile = "gfx/interface/ideas/sys_tirpitz_organisation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sys_wows_organisation"
+		textureFile = "gfx/interface/ideas/sys_wows_organisation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_sys_sys_organisation"
+		textureFile = "gfx/interface/ideas/sys_sys_organisation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sys_ultravision_organisation"
+		textureFile = "gfx/interface/ideas/sys_ultravision_organisation.png"
+	}
+
+
+
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_generic_mio_generic_mio_department_icon_ship_heavy_cruiser_ship"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ship_heavy_cruiser_ship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_dd_torpedo_launcher"
+		texturefile = "gfx/interface/technologies/dd_torpedo_launcher.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sys_specialization_land"
+		texturefile = "gfx/interface/technologies/specialization_land.png"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_sys_specialization_naval"
+		texturefile = "gfx/interface/technologies/specialization_naval.png"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_sys_specialization_air"
+		texturefile = "gfx/interface/technologies/specialization_air.png"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_sys_specialization_nuclear"
+		texturefile = "gfx/interface/technologies/specialization_nuclear.png"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket_production"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket_production.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket_technology"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket_technology.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket_line_efficiency"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket_line_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket_conversion"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket_conversion.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_rocket_materials"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_rocket_materials.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_motorized_rocket_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_production"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_motorized_rocket_equipment_production.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_technology"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_motorized_rocket_equipment_technology.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_line_efficiency"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_motorized_rocket_equipment_line_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_engine"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_motorized_rocket_equipment_engine.dds"
+	}
+
+	}

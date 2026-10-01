@@ -1,0 +1,190 @@
+snr_ger2_common_decisions = {
+	snr_propaganda_machine_decision = {
+		icon = generic_civil_support
+		allowed = {
+			
+		}
+		available = {
+		   threat > 0.1
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+				country_event = {
+				id = germany_events.54
+			}
+		   add_ideas = snr_propaganda_machine_idea
+        } 
+    }		
+
+	snr_sector_asia_decision = {
+		icon = hand_grab
+		allowed = {
+			
+		}
+		available = {
+		   JAP = { has_completed_focus = JAP_rising_sun }
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+		846 = { add_core_of = GER }
+		963 = { add_core_of = GER }
+           transfer_state = 846
+		   transfer_state = 963
+	  }
+  }
+	
+snr_break_dam_decision = {
+		icon = hol_drain_water_lines
+		allowed = {
+			
+		}
+		available = {
+		   has_war_with = FRA
+		   or = { 
+		      28 = {
+                not = {is_controlled_by = ger }
+            }
+		      BEL = { has_capitulated = yes
+		    }
+		  }
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 781
+						state = 42
+						state = 28
+						state = 51
+						state = 55
+						state = 780
+						state = 57
+						state = 50
+						state = 54
+					}
+				}
+			add_dynamic_modifier = {
+					modifier = GER_warter
+					days = 120
+				}
+			}
+		   
+		   FRA = { add_timed_idea = { idea = snr_break_dam2_idea  days = 120 }
+		   ENG = { add_timed_idea = { idea = snr_break_dam2_idea days = 120 } }
+      }
+	  add_timed_idea = { idea = snr_break_dam_idea  days = 120 }
+            every_country = { 
+			   news_event = {
+				id = tibet_events.49
+				}
+			}
+         }
+  }  
+  
+    snr_syndicalism_down_dicision = {
+		icon = category_SOV_civil_war
+		allowed = {
+			
+		}
+		available = {
+		   has_war_with = FRA
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+		add_ideas = snr_syndicalism_down_idea
+	  }
+	 }
+	 
+
+    snr_seig_dicision = {
+		icon = hol_radio_oranje
+		allowed = {
+			
+		}
+		available = {
+		   or = {
+		         surrender_progress > 0.25
+		         POL = { has_capitulated = yes
+		        }
+		    }
+		 }
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = { 
+          every_owned_state = {
+        		add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes 
+						province = {
+							all_provinces = yes
+						} 
+               }						
+	       }
+		add_timed_idea = { idea = snr_seig_idea days = 60 }
+
+		}
+	 }
+	 
+  	
+      }

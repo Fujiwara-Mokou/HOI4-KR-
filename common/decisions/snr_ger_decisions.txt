@@ -1,0 +1,62 @@
+snr_ger1_common_decisions = { 
+
+	snr_war_of_totalization_decision = {
+		icon = soldierly_discipline
+		allowed = {
+			
+		}
+		available = {
+			date > 1940.8.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_ideas = snr_war_of_totalization_idea
+		}
+	}
+	
+	
+	
+	snr_expand_information_department_decision = {
+		icon = SWI_expand_covert_operations
+		allowed = {
+			
+		}
+		available = {
+			date > 1941.6.1
+		}
+		visible = {
+		
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 120
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_timed_idea = {
+			      idea = snr_expand_information_department_idea
+			      days = 60
+		    }
+		}
+	}
+	
+
+	
+}

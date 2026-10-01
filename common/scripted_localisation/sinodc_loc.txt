@@ -1,0 +1,99 @@
+#增加政治点pp
+defined_text = {
+    name = sinodc_dec_set_up_desc01
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_pp_ai_all #允许所有ai
+        }
+        localization_key = sinodc_dec_set_up_desc1 
+    }
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_pp_ai_only_subject #仅允许附属国ai
+        }
+        localization_key = sinodc_dec_set_up_desc2 
+    }
+    text = {
+        localization_key = sinodc_dec_set_up_desc3 
+    }
+}
+
+#建造建筑
+defined_text = {
+    name = sinodc_dec_set_up_desc02
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_factory_ai_all #允许所有ai
+        }
+        localization_key = sinodc_dec_set_up_desc1
+    }
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_factory_ai_only_subject #仅允许附属国ai
+        }
+        localization_key = sinodc_dec_set_up_desc2
+    }
+    text = {
+        localization_key = sinodc_dec_set_up_desc3
+    }
+}
+
+#发展人口
+defined_text = {
+    name = sinodc_dec_set_up_desc03
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_mp_ai_all #允许所有ai
+        }
+        localization_key = sinodc_dec_set_up_desc1
+    }
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_mp_ai_only_subject #仅允许附属国ai
+        }
+        localization_key = sinodc_dec_set_up_desc2
+    }
+    text = {
+        localization_key = sinodc_dec_set_up_desc3
+    }
+}
+
+#发展资源
+defined_text = {
+    name = sinodc_dec_set_up_desc04
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_resources_ai_all #允许所有ai
+        }
+        localization_key = sinodc_dec_set_up_desc1
+    }
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_resources_ai_only_subject #仅允许附属国ai
+        }
+        localization_key = sinodc_dec_set_up_desc2
+    }
+    text = {
+        localization_key = sinodc_dec_set_up_desc3
+    }
+}
+
+#地区改造
+defined_text = {
+    name = sinodc_dec_set_up_desc05
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_type_ai_all #允许所有ai
+        }
+        localization_key = sinodc_dec_set_up_desc1
+    }
+    text = {
+        trigger = {
+            has_global_flag = sinodc_fla_type_ai_only_subject #仅允许附属国ai
+        }
+        localization_key = sinodc_dec_set_up_desc2
+    }
+    text = {
+        localization_key = sinodc_dec_set_up_desc3
+    }
+}

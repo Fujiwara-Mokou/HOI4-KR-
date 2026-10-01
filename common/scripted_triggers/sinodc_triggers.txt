@@ -1,0 +1,68 @@
+sinodc_compatibility_1 = {
+	or = {
+		any_country = {
+			has_country_flag = welcome_to_adorable_heart #识别钢铁萌心
+		}
+		has_global_flag = sinodc_fla_has_mod_kr #识别KR
+	}
+}
+sinodc_state_category_allow_up = { #允许使用地区改造，有地区可以改
+	if = {
+		limit = {
+			sinodc_compatibility_1 = yes #mod识别
+		}
+		any_owned_state = {
+			is_core_of = ROOT
+			is_controlled_by = ROOT   
+			not = {
+				has_state_category = twelve 
+			}
+		}
+	}
+	else = {
+		any_owned_state = {
+			is_core_of = ROOT
+			is_controlled_by = ROOT    
+			not = {
+				has_state_category = megalopolis 
+			}
+		}
+	}
+}
+sinodc_state_category_cannot_up = { #不能使用地区改造
+	if = {
+		limit = {
+			sinodc_compatibility_1 = yes #mod识别
+		}
+		all_controlled_state = {
+			or = {
+				not = {
+					is_core_of = root
+				}
+				not = {
+					is_owned_by = root
+				}
+				has_state_category = twelve
+			}
+		} 
+	}
+	else = {
+		all_controlled_state = {
+			or = {
+				not = {
+					is_core_of = root
+				}
+				not = {
+					is_owned_by = root
+				}
+				has_state_category = megalopolis
+			}
+		} 
+	}
+}
+sinodc_state_category_not_max = { #地区类型不是最大
+	not = {
+		has_state_category = twelve
+		has_state_category = megalopolis
+	}
+}

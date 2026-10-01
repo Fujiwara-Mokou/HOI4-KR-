@@ -1,0 +1,3406 @@
+# 全局标记示例：（默认不允许ai使用）
+# 允许所有ai ：sinodc_fla_xxx_ai_all
+# 允许玩家附属国：sinodc_fla_xxx_ai_only_subject
+sinodc_dec_set_up = { #工业化改造_设置 set
+	sinodc_dec_set_allow_not = { #关闭设置
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_set_allow #打开设置
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_set_allow #打开设置
+        }
+	}
+	sinodc_dec_set_allow_pp1 = { #增加政治点_允许所有ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_pp_ai_all
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_pp_ai_all
+			clr_global_flag = sinodc_fla_pp_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_pp2 = { #增加政治点_允许玩家附属国使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_pp_ai_only_subject
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_pp_ai_only_subject
+			clr_global_flag = sinodc_fla_pp_ai_all
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_pp3 = { #增加政治点_不允许ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			or = {
+				has_global_flag = sinodc_fla_pp_ai_all
+				has_global_flag = sinodc_fla_pp_ai_only_subject
+			}
+		}
+		complete_effect = {
+			clr_global_flag = sinodc_fla_pp_ai_all
+			clr_global_flag = sinodc_fla_pp_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_factory1 = { #建造建筑_允许所有ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_factory_ai_all
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_factory_ai_all
+			clr_global_flag = sinodc_fla_factory_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_factory2 = { #建造建筑_允许玩家附属国使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_factory_ai_only_subject
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_factory_ai_only_subject
+			clr_global_flag = sinodc_fla_factory_ai_all
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_factory3 = { #建造建筑_不允许ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			or = {
+				has_global_flag = sinodc_fla_factory_ai_all
+				has_global_flag = sinodc_fla_factory_ai_only_subject
+			}
+		}
+		complete_effect = {
+			clr_global_flag = sinodc_fla_factory_ai_all
+			clr_global_flag = sinodc_fla_factory_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}	
+	sinodc_dec_set_allow_mp1 = { #发展人口_允许所有ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_mp_ai_all
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_mp_ai_all
+			clr_global_flag = sinodc_fla_mp_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_mp2 = { #发展人口_允许玩家附属国使用
+		icon = generic_decision 
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_mp_ai_only_subject
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_mp_ai_only_subject
+			clr_global_flag = sinodc_fla_mp_ai_all
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_mp3 = { #发展人口_不允许ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			or = {
+				has_global_flag = sinodc_fla_mp_ai_all
+				has_global_flag = sinodc_fla_mp_ai_only_subject
+			}
+		}
+		complete_effect = {
+			clr_global_flag = sinodc_fla_mp_ai_all
+			clr_global_flag = sinodc_fla_mp_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_resources1 = { #发展资源_允许所有ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_resources_ai_all
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_resources_ai_all
+			clr_global_flag = sinodc_fla_resources_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_resources2 = { #发展资源_允许玩家附属国使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_resources_ai_only_subject
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_resources_ai_only_subject
+			clr_global_flag = sinodc_fla_resources_ai_all
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_resources3 = { #发展资源_不允许ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			or = {
+				has_global_flag = sinodc_fla_resources_ai_all
+				has_global_flag = sinodc_fla_resources_ai_only_subject
+			}
+		}
+		complete_effect = {
+			clr_global_flag = sinodc_fla_resources_ai_all
+			clr_global_flag = sinodc_fla_resources_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_type1 = { #地区改造_允许所有ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_type_ai_all
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_type_ai_all
+			clr_global_flag = sinodc_fla_type_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_type2 = { #地区改造_允许玩家附属国使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			not = {
+				has_global_flag = sinodc_fla_type_ai_only_subject
+			}
+		}
+		complete_effect = {
+			set_global_flag = sinodc_fla_type_ai_only_subject
+			clr_global_flag = sinodc_fla_type_ai_all
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_set_allow_type3 = { #地区改造_不允许ai使用
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			or = {
+				has_global_flag = sinodc_fla_type_ai_all
+				has_global_flag = sinodc_fla_type_ai_only_subject
+			}
+		}
+		complete_effect = {
+			clr_global_flag = sinodc_fla_type_ai_all
+			clr_global_flag = sinodc_fla_type_ai_only_subject
+        }
+		complete_effect = {  
+			
+		}
+	}
+}
+sinodc_dec_develop_construction = { #工业化改造
+	sinodc_test = {
+		priority = 8
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 10
+				tooltip = sinodc_tip_variable_dcp_add
+			}  
+			add_to_variable = { 
+				variable_dcp_max = 10
+			} 
+		}
+		complete_effect = {  
+			if = {
+				limit = {
+					check_variable = { SNL_var_days_test > 0 } #调试_决议时间1
+				}
+				clear_variable = SNL_var_days_test #调试_决议时间1
+			}
+			else = {
+				set_variable = { SNL_var_days_test = 1 } #调试_决议时间1
+			}
+		}
+	}
+	sinodc_dec_develop_construction_start = { #开启工业化改造
+		icon = generic_decision
+		fire_only_once = yes
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+				
+		}
+		complete_effect = {
+			set_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			set_country_flag = sinodc_fla_decisions_show #显示决议
+			if = {
+				limit = {
+					is_ai = no
+				}
+				country_event = { id = sinodc_event.1 }
+				add_political_power = 20
+			}
+			add_to_variable = { 
+				variable_dcp = 5
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 5
+			}  
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_decisions_show = { #显示决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			not = { has_country_flag = sinodc_fla_decisions_show #决议显示
+			}
+		}
+		complete_effect = {
+			set_country_flag = sinodc_fla_decisions_show #决议显示
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_decisions_hidden = { #隐藏决议
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+		}
+		complete_effect = {
+			clr_country_flag = 	sinodc_fla_decisions_show #决议显示
+        }
+	}
+	sinodc_dec_set_allow = { #打开设置
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag 
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_set_allow #打开设置
+			}
+		}
+		complete_effect = {
+			set_country_flag = sinodc_fla_set_allow #打开设置
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_resources_optional = { #自选资源改造
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag 
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			set_country_flag = sinodc_fla_decisions_optional #自选显示
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_resources_optional_not = { #关闭自选资源改造
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_decisions_optional #自选显示
+        }
+	}
+	sinodc_dec_prior_optional = { #优先地区改造显示
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag 
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+			}
+		}
+		complete_effect = {
+			set_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+        }
+		complete_effect = {  
+			
+		}
+	}
+	sinodc_dec_prior_optional_not = { #关闭优先地区改造显示
+		icon = generic_decision
+		fire_only_once = no
+		days_remove = SNL_var_days_test?1
+		priority = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+        }
+	}
+####################################################################################################
+####################################################################################################
+##工厂 build factory
+####################################################################################################
+####################################################################################################
+	sinodc_dec_add_pp_start = { #开始增加政治点
+		icon = generic_form_nation
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1 #检查可用工厂数量
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_add_pp_start } #开始增加pp
+		}
+		complete_effect = {
+            add_to_variable = { 
+				variable_dcp = -2
+				tooltip = sinodc_tip_variable_dcp_occupy #减少改造点
+			}    
+			add_dynamic_modifier = { modifier = sinodc_dym_add_pp }
+			set_country_flag = sinodc_fla_add_pp_start #开始增加pp
+			activate_mission = sinodc_dec_add_pp #激活增加pp的任务
+        }
+	} 
+	sinodc_dec_add_pp_stop = { #停止增加政治点
+		icon = generic_form_nation
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_add_pp_start #开始增加pp
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_add_pp_start #开始增加pp
+        }
+	}
+	sinodc_dec_add_pp = { #增加政治点
+		icon = generic_form_nation
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_add_pp_start #开始增加pp
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = { #取消任务的条件
+			not = { has_country_flag = sinodc_fla_add_pp_start } #开始增加pp
+		}
+		timeout_effect = { #过期时触发的效果
+			add_political_power = 20
+			activate_mission = sinodc_dec_add_pp #重新激活任务
+		}
+		cancel_effect = { #取消时的效果
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_add_pp }
+		}
+	}
+	sinodc_dec_add_mp_start = { #开始促进人口发展
+		icon = generic_military
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_add_mp_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier = sinodc_dym_add_mp }
+			set_country_flag = sinodc_fla_add_mp_start
+			activate_mission = sinodc_dec_add_mp
+        }
+	} 
+	sinodc_dec_add_mp_stop = { #停止促进人口发展
+		icon = generic_military
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_add_mp_start 
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_add_mp_start
+        }
+	}	
+	sinodc_dec_add_mp = { #促进人口发展
+		icon = generic_military
+		fire_only_once = no
+		is_good = yes                  
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_add_mp_start
+		}                                    	
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			not = { has_country_flag = sinodc_fla_add_mp_start }
+		}
+		timeout_effect = { 
+			add_manpower = 10000
+			activate_mission = sinodc_dec_add_mp 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_add_mp }
+		}
+	}
+	sinodc_dec_build_infrastructure_start = { #开始建设基础设施
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 5
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+				infrastructure < 5
+            }
+        }
+		visible = {		
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_infrastructure_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier = sinodc_dym_build_infrastructure }
+			set_country_flag = sinodc_fla_build_infrastructure_start
+			activate_mission = sinodc_dec_build_infrastructure
+        }
+	} 
+	sinodc_dec_build_infrastructure_stop = { #停止建设基础设施
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_infrastructure_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_infrastructure_start
+        }
+	}
+	sinodc_dec_build_infrastructure = { #建设基础设施
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_infrastructure_start
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_infrastructure_start }
+            	all_controlled_state = {
+					or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = infrastructure size < 1 }
+					}
+           		}
+			}
+		}
+		timeout_effect = {                
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_infrastructure 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_infrastructure }
+			clr_country_flag = sinodc_fla_build_infrastructure_start
+		}
+	}
+	sinodc_dec_build_industrial_complex_start_0 = { #开始建设民用工厂_低效模式
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_5 #x/5
+				check_variable = { variable_dcp > 4 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = industrial_complex size > 0 }
+            }
+        }
+		visible = {		
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_industrial_complex_start_0 }
+			num_of_civilian_factories_available_for_projects < 10
+			not = { has_country_flag = sinodc_fla_build_industrial_complex_0_ban } #禁止低效
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -5 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier = sinodc_dym_build_industrial_complex_0 }
+			set_country_flag = sinodc_fla_build_industrial_complex_start_0
+			activate_mission = sinodc_dec_build_industrial_complex_0
+        }
+	} 
+	sinodc_dec_build_industrial_complex_stop_0 = { #停止建设民用工厂_低效模式
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_industrial_complex_start_0
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_industrial_complex_start_0
+        }
+	}
+	sinodc_dec_build_industrial_complex_0 = { #建设民用工厂_低效模式
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?60
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_industrial_complex_start_0
+		}                                    
+		available = {   
+			always = no
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_industrial_complex_start_0 }
+            	all_controlled_state = {
+					or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = industrial_complex size < 1 }
+					}
+           		}
+			}
+		}
+		timeout_effect = {            
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					free_building_slots = { building = industrial_complex size > 0 }
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_industrial_complex_0
+			if = {
+				limit = {
+					num_of_civilian_factories_available_for_projects > 8
+				}
+				set_country_flag = sinodc_fla_build_industrial_complex_0_ban #禁止低效
+				clr_country_flag = sinodc_fla_build_industrial_complex_start_0
+				add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_occupy }    
+				add_dynamic_modifier = { modifier = sinodc_dym_build_industrial_complex }
+				set_country_flag = sinodc_fla_build_industrial_complex_start
+				activate_mission = sinodc_dec_build_industrial_complex
+			} 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 5 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_industrial_complex_0 }
+			clr_country_flag = sinodc_fla_build_industrial_complex_start_0
+		}
+	}
+	sinodc_dec_build_industrial_complex_start = { #开始建设民用工厂
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 9
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = industrial_complex size > 0 }
+            }
+        }
+		visible = {		
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_industrial_complex_start }
+			or = {
+				num_of_civilian_factories_available_for_projects > 9
+				has_country_flag = sinodc_fla_build_industrial_complex_0_ban #禁止低效
+			}
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_build_industrial_complex }
+			set_country_flag = sinodc_fla_build_industrial_complex_0_ban #禁止低效
+			set_country_flag = sinodc_fla_build_industrial_complex_start
+			activate_mission = sinodc_dec_build_industrial_complex
+        }
+	} 
+	sinodc_dec_build_industrial_complex_stop = { #停止建设民用工厂
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_industrial_complex_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_industrial_complex_start
+		}
+	}
+	sinodc_dec_build_industrial_complex = { #建设民用工厂
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_industrial_complex_start
+		}                                    
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_industrial_complex_start }
+            	all_controlled_state = {
+					or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = industrial_complex size < 1 }
+					}
+           		}
+			}
+		}
+		timeout_effect = {              
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					free_building_slots = { building = industrial_complex size > 0 }
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_industrial_complex 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_industrial_complex }
+			clr_country_flag = sinodc_fla_build_industrial_complex_start  
+		}
+	}
+	sinodc_dec_build_arms_factory_start = { #开始建设军用工厂
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 6
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}  
+            any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = arms_factory size > 0 }
+            }      
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_arms_factory_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier =sinodc_dym_build_arms_factory }
+			set_country_flag = sinodc_fla_build_arms_factory_start
+			activate_mission = sinodc_dec_build_arms_factory
+        }
+	} 
+	sinodc_dec_build_arms_factory_stop = { #停止建设军用工厂
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_arms_factory_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_arms_factory_start
+		}
+	}
+	sinodc_dec_build_arms_factory = { #建设军用工厂
+		icon = generic_factory
+		fire_only_once = no
+		priority = 5
+		is_good = yes
+		days_mission_timeout = SNL_var_days_test?19 
+		activation = {                         
+			has_country_flag = sinodc_fla_build_arms_factory_start
+		}
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_arms_factory_start }
+            	all_controlled_state = {
+					or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = arms_factory size < 1 }
+					} 
+           		}
+			}
+		}
+		timeout_effect = {               
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					free_building_slots = { building = arms_factory size > 0 }
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_arms_factory 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_arms_factory }
+			clr_country_flag = sinodc_fla_build_arms_factory_start  
+		}
+	}
+	sinodc_dec_build_dockyard_start = { #开始建设海军船坞
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		} 
+		available = {
+            num_of_civilian_factories_available_for_projects > 5
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = dockyard size > 0 }
+            }
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_dockyard_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier =sinodc_dym_build_dockyard }
+			set_country_flag = sinodc_fla_build_dockyard_start
+			activate_mission = sinodc_dec_build_dockyard
+        }
+	} 
+	sinodc_dec_build_dockyard_stop = { #停止建设海军船坞
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_dockyard_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_dockyard_start
+		}
+	}
+	sinodc_dec_build_dockyard = { #建设海军船坞
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_dockyard_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_dockyard_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = dockyard size < 1 }
+					}
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					free_building_slots = { building = dockyard size > 0 }
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_dockyard 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_dockyard }
+			clr_country_flag = sinodc_fla_build_dockyard_start  
+		}
+	}
+	sinodc_dec_build_air_start = { #开始建设空军基地
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 3
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = air_base size > 0 }
+            }
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_air_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier =sinodc_dym_build_air }
+			set_country_flag = sinodc_fla_build_air_start
+			activate_mission = sinodc_dec_build_air
+        }
+	} 
+	sinodc_dec_build_air_stop = { #停止建设空军基地
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_air_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_air_start
+		}
+	}
+	sinodc_dec_build_air = { #建设空军基地
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_air_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_air_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = air_base size < 1 }
+					}
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT 
+					free_building_slots = { building = air_base size > 0 }
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_air 
+		}
+		cancel_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_release
+			} 
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_air }
+			clr_country_flag = sinodc_fla_build_air_start  
+		}
+	}
+	sinodc_dec_build_antiair_start = { #开始建设防空火炮
+		icon = generic_factory
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 5
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                free_building_slots = { building = anti_air_building size > 0 }
+            }
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_build_antiair_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier =sinodc_dym_build_antiair }
+			set_country_flag = sinodc_fla_build_antiair_start
+			activate_mission = sinodc_dec_build_antiair
+        }
+	} 
+	sinodc_dec_build_antiair_stop = { #停止建设防空火炮
+		icon = generic_factory
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_build_antiair_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_build_antiair_start
+		}
+	}
+	sinodc_dec_build_antiair = { #建设防空火炮
+		icon = generic_factory
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_build_antiair_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_build_antiair_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						free_building_slots = { building = anti_air_building size < 1 }
+					}    
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = { building = anti_air_building size > 0 }
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes 
+				}
+			}
+			activate_mission = sinodc_dec_build_antiair 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_build_antiair }
+			clr_country_flag = sinodc_fla_build_antiair_start  
+		}
+	}
+####################################################################################################
+####################################################################################################
+##资源 develop resources
+####################################################################################################
+####################################################################################################
+	sinodc_dec_develop_steel_start = { #开始发展铁矿资源
+		icon = GFX_decision_steel
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_steel_start } #开始发展铁矿资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_steel }
+			set_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_steel #发展铁矿资源 
+			}
+			activate_mission = sinodc_dec_develop_steel
+		}
+	}	
+	sinodc_dec_develop_steel_stop = { #停止发展铁矿资源
+		icon = GFX_decision_steel
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源
+		}
+	}
+	sinodc_dec_develop_steel = { #发展铁矿资源
+		icon = GFX_decision_steel
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_steel_start } #开始发展铁矿资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = steel amount > 20 }
+				}
+			}
+		}
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_steel
+				}
+				add_resource = { type = steel amount = 10 } 
+			}
+			activate_mission = sinodc_dec_develop_steel 
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_steel
+				}
+				clr_state_flag = sinodc_fla_develop_steel
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_steel }
+			clr_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源  
+		}
+	}
+	sinodc_dec_develop_steel_start_optional = { #开始发展铁矿资源_自选
+		icon = GFX_decision_steel
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_steel_start } #开始发展铁矿资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_steel }
+			set_country_flag = sinodc_fla_develop_steel_start #开始发展铁矿资源
+			from = { set_state_flag = sinodc_fla_develop_steel } #发展铁矿资源 
+			activate_mission = sinodc_dec_develop_steel
+		}
+	}
+	sinodc_dec_develop_tungsten_start = { #开始发展钨矿资源
+		icon = GFX_decision_tungsten
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_tungsten_start } #开始发展钨矿资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_tungsten }
+			set_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_tungsten #发展钨矿资源 
+			}
+			activate_mission = sinodc_dec_develop_tungsten
+		}
+	}	
+	sinodc_dec_develop_tungsten_stop = { #停止发展钨矿资源
+		icon = GFX_decision_tungsten
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源
+		}
+	}
+	sinodc_dec_develop_tungsten = { #发展钨矿资源
+		icon = GFX_decision_tungsten
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_tungsten_start } #开始发展钨矿资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = tungsten amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_tungsten
+				}
+				add_resource = { type = tungsten amount = 5 } 
+			}
+			activate_mission = sinodc_dec_develop_tungsten
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_tungsten
+				}
+				clr_state_flag = sinodc_fla_develop_tungsten
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_tungsten }
+			clr_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源  
+		}
+	}
+	sinodc_dec_develop_tungsten_start_optional = { #开始发展钨矿资源_自选
+		icon = GFX_decision_tungsten
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_tungsten_start } #开始发展钨矿资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier = sinodc_dym_develop_tungsten }
+			set_country_flag = sinodc_fla_develop_tungsten_start #开始发展钨矿资源
+			from = { set_state_flag = sinodc_fla_develop_tungsten } #发展钨矿资源 
+			activate_mission = sinodc_dec_develop_tungsten
+		}
+	}
+	sinodc_dec_develop_chromium_start = { #开始发展铬矿资源
+		icon = GFX_decision_chromium
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_chromium_start } #开始发展铬矿资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_chromium }
+			set_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_chromium #发展铬矿资源 
+			}
+			activate_mission = sinodc_dec_develop_chromium
+		}
+	}	
+	sinodc_dec_develop_chromium_stop = { #停止发展铬矿资源
+		icon = GFX_decision_chromium
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源
+		}
+	}
+	sinodc_dec_develop_chromium = { #发展铬矿资源
+		icon = GFX_decision_chromium
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_chromium_start } #开始发展铬矿资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = chromium amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_chromium
+				}
+				add_resource = { type = chromium amount = 5 } 
+			}
+			activate_mission = sinodc_dec_develop_chromium
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_chromium
+				}
+				clr_state_flag = sinodc_fla_develop_chromium
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_chromium }
+			clr_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源  
+		}
+	}
+	sinodc_dec_develop_chromium_start_optional = { #开始发展铬矿资源_自选
+		icon = GFX_decision_chromium
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_chromium_start } #开始发展铬矿资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_chromium }
+			set_country_flag = sinodc_fla_develop_chromium_start #开始发展铬矿资源
+			from = { set_state_flag = sinodc_fla_develop_chromium } #发展铬矿资源
+			activate_mission = sinodc_dec_develop_chromium
+		}
+	}	
+	sinodc_dec_develop_aluminium_start = { #开始发展铝矿资源
+		icon = GFX_decision_aluminium
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_aluminium_start } #开始发展铝矿资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_aluminium }
+			set_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_aluminium #发展铝矿资源 
+			}
+			activate_mission = sinodc_dec_develop_aluminium
+		}
+	}	
+	sinodc_dec_develop_aluminium_stop = { #停止发展铝矿资源
+		icon = GFX_decision_aluminium
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {    
+        }
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源
+		}
+	}
+	sinodc_dec_develop_aluminium = { #发展铝矿资源
+		icon = GFX_decision_aluminium
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_aluminium_start } #开始发展铝矿资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = aluminium amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_aluminium
+				}
+				add_resource = { type = aluminium amount = 5 } 
+			}
+			activate_mission = sinodc_dec_develop_aluminium
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_aluminium
+				}
+				clr_state_flag = sinodc_fla_develop_aluminium
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_aluminium }
+			clr_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源  
+		}
+	}
+	sinodc_dec_develop_aluminium_start_optional = { #开始发展铝矿资源_自选
+		icon = GFX_decision_aluminium
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_aluminium_start } #开始发展铝矿资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_aluminium }
+			set_country_flag = sinodc_fla_develop_aluminium_start #开始发展铝矿资源
+			from = { set_state_flag = sinodc_fla_develop_aluminium } #发展铝矿资源
+			activate_mission = sinodc_dec_develop_aluminium
+		}
+	}
+	sinodc_dec_develop_rubber_start = { #开始发展橡胶资源
+		icon = GFX_decision_rubber
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_rubber_start } #开始发展橡胶资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_rubber }
+			set_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_rubber #发展橡胶资源 
+			}
+			activate_mission = sinodc_dec_develop_rubber
+		}
+	}	
+	sinodc_dec_develop_rubber_stop = { #停止发展橡胶资源
+		icon = GFX_decision_rubber
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+        }
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源
+		}
+	}
+	sinodc_dec_develop_rubber = { #发展橡胶资源
+		icon = GFX_decision_rubber
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_rubber_start } #开始发展橡胶资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = rubber amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_rubber
+				}
+				add_resource = { type = rubber amount = 5 } 
+			}
+			activate_mission = sinodc_dec_develop_rubber
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_rubber
+				}
+				clr_state_flag = sinodc_fla_develop_rubber
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_rubber }
+			clr_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源  
+		}
+	}
+	sinodc_dec_develop_rubber_start_optional = { #开始发展橡胶资源_自选
+		icon = GFX_decision_rubber
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_rubber_start } #开始发展橡胶资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_rubber }
+			set_country_flag = sinodc_fla_develop_rubber_start #开始发展橡胶资源
+			from = { set_state_flag = sinodc_fla_develop_rubber } #发展橡胶资源
+			activate_mission = sinodc_dec_develop_rubber
+		}
+	}	
+	sinodc_dec_develop_oil_start = { #开始发展石油资源
+		icon = GFX_decision_oil
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_oil_start } #开始发展石油资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_oil }
+			set_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_oil #发展石油资源 
+			}
+			activate_mission = sinodc_dec_develop_oil
+		}
+	}	
+	sinodc_dec_develop_oil_stop = { #停止发展石油资源
+		icon = GFX_decision_oil
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源
+		}
+	}
+	sinodc_dec_develop_oil = { #发展石油资源
+		icon = GFX_decision_oil
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_oil_start } #开始发展石油资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = oil amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_oil
+				}
+				add_resource = { type = oil amount = 5 }
+			}
+			activate_mission = sinodc_dec_develop_oil
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_oil
+				}
+				clr_state_flag = sinodc_fla_develop_oil
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_oil }
+			clr_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源  
+		}
+	}
+	sinodc_dec_develop_oil_start_optional = { #开始发展石油资源_自选
+		icon = GFX_decision_oil
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_oil_start } #开始发展石油资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_oil }
+			set_country_flag = sinodc_fla_develop_oil_start #开始发展石油资源
+			from = { set_state_flag = sinodc_fla_develop_oil } #发展石油资源
+			activate_mission = sinodc_dec_develop_oil
+		}
+	}	
+	sinodc_dec_develop_coal_start = { #开始发展煤炭资源
+		icon = GFX_decision_coal
+		cost = 10
+		fire_only_once = no
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_coal_start } #开始发展煤炭资源
+			not = { has_country_flag = sinodc_fla_decisions_optional } #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_coal }
+			set_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源
+			random_state = { #随机一个省份设置标记
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				set_state_flag = sinodc_fla_develop_coal #发展煤炭资源 
+			}
+			activate_mission = sinodc_dec_develop_coal
+		}
+	}	
+	sinodc_dec_develop_coal_stop = { #停止发展煤炭资源
+		icon = GFX_decision_coal
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源
+		}
+	}
+	sinodc_dec_develop_coal = { #发展煤炭资源
+		icon = GFX_decision_coal
+		fire_only_once = no
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_develop_coal_start } #开始发展煤炭资源
+				and = {
+					is_ai = yes
+					has_resources_in_country = { resource = coal amount > 20 }
+				}
+			}
+		}
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		timeout_effect = { 
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_coal
+				}
+				add_resource = { type = coal amount = 5 }
+			}
+			activate_mission = sinodc_dec_develop_coal
+		}
+		cancel_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = sinodc_fla_develop_coal
+				}
+				clr_state_flag = sinodc_fla_develop_coal
+			}
+			add_to_variable = { variable_dcp = 1 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_develop_coal }
+			clr_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源  
+		}
+	}
+	sinodc_dec_develop_coal_start_optional = { #开始发展煤炭资源_自选
+		icon = GFX_decision_coal
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_1 #x/1
+				check_variable = { variable_dcp > 0 } #检查改造点数量
+			}
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_develop_coal_start } #开始发展煤炭资源
+			has_country_flag = sinodc_fla_decisions_optional #自选显示
+		}
+		complete_effect = {
+			add_to_variable = { variable_dcp = -1 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_develop_coal }
+			set_country_flag = sinodc_fla_develop_coal_start #开始发展煤炭资源
+			from = { set_state_flag = sinodc_fla_develop_coal } #发展煤炭资源
+			activate_mission = sinodc_dec_develop_coal
+		}
+	}	
+####################################################################################################
+####################################################################################################
+##地区改造 state_category_upgrade
+####################################################################################################
+####################################################################################################
+	sinodc_dec_state_category_upgrade_prior = { #优先
+		icon = generic_electricity
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				sinodc_state_category_not_max = yes
+				not = {
+					has_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+				}
+			}
+		}
+		available = {
+			
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+		}
+		complete_effect = {
+			from = { set_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+		}
+	}	
+	sinodc_dec_state_category_upgrade_prior_stop = { #停止优先
+		# icon = generic_electricity
+		cost = 10
+		fire_only_once = no
+		state_target = yes
+		on_map_mode = map_only 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				sinodc_state_category_not_max = yes
+				has_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+		}
+		available = {
+			
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_prior_optional #优先地区改造显示
+		}
+		complete_effect = {
+			from = {
+				clr_state_flag = sinodc_fla_state_category_upgrade_start_prior #开始地区改造_优先
+			}
+		}
+	}
+	sinodc_dec_state_category_upgrade_start_0 = { #开始地区改造_低效模式
+		icon = generic_electricity
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_5 #x/5
+				check_variable = { variable_dcp > 4 } #检查改造点数量
+			}
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_state_category_upgrade_start_0 } #开始地区改造
+			not = { has_country_flag = sinodc_fla_state_category_upgrade_start_0_ban } #禁止低效
+			num_of_civilian_factories_available_for_projects < 10
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -5 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_state_category_upgrade_0 }
+			set_country_flag = sinodc_fla_state_category_upgrade_start_0 #开始地区改造
+			activate_mission = sinodc_dec_state_category_upgrade_0
+        }
+	} 
+	sinodc_dec_state_category_upgrade_stop_0 = { #停止地区改造_低效模式
+		icon = generic_electricity
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_state_category_upgrade_start_0 #开始地区改造
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_0 #开始地区改造
+        }
+	}
+	sinodc_dec_state_category_upgrade_0 = { #地区改造_低效模式
+		icon = generic_electricity
+		fire_only_once = no
+		is_good = yes                   
+		days_mission_timeout = SNL_var_days_test?60
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_state_category_upgrade_start_0 #开始地区改造
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_state_category_upgrade_start_0 } #开始地区改造
+				sinodc_state_category_cannot_up = yes #不能使用地区改造
+				num_of_civilian_factories_available_for_projects > 9
+			}
+		}
+		timeout_effect = { 
+			sinodc_state_category_up_0 = yes #地区改造
+			activate_mission = sinodc_dec_state_category_upgrade_0
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 5 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_state_category_upgrade_0 }
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_0 #开始地区改造  
+		}
+	}
+	sinodc_dec_state_category_upgrade_start = { #开始地区改造I
+		icon = generic_electricity
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_state_category_upgrade_start } #开始地区改造
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_state_category_upgrade }
+			set_country_flag = sinodc_fla_state_category_upgrade_start #开始地区改造
+			set_country_flag = sinodc_fla_state_category_upgrade_start_0_ban #禁止低效
+			activate_mission = sinodc_dec_state_category_upgrade
+        }
+	} 
+	sinodc_dec_state_category_upgrade_stop = { #停止地区改造I
+		icon = generic_electricity
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_state_category_upgrade_start #开始地区改造
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_state_category_upgrade_start #开始地区改造
+		}
+	}
+	sinodc_dec_state_category_upgrade = { #地区改造I
+		icon = generic_electricity
+		fire_only_once = no
+		is_good = yes                   
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_state_category_upgrade_start #开始地区改造
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_state_category_upgrade_start } #开始地区改造
+				sinodc_state_category_cannot_up = yes #不能使用地区改造
+			}
+		}
+		timeout_effect = { 
+			sinodc_state_category_up_0 = yes #地区改造
+			activate_mission = sinodc_dec_state_category_upgrade 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_state_category_upgrade }
+			clr_country_flag = sinodc_fla_state_category_upgrade_start #开始地区改造  
+		}
+	}
+	sinodc_dec_state_category_upgrade_start_2 = { #开始地区改造II
+		icon = generic_electricity
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_state_category_upgrade_start_2 } #开始地区改造
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_state_category_upgrade_2 }
+			set_country_flag = sinodc_fla_state_category_upgrade_start_2 #开始地区改造
+			set_country_flag = sinodc_fla_state_category_upgrade_start_0_ban #禁止低效
+			activate_mission = sinodc_dec_state_category_upgrade_2
+        }
+	} 
+	sinodc_dec_state_category_upgrade_stop_2 = { #停止地区改造II
+		icon = generic_electricity
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_state_category_upgrade_start_2 #开始地区改造
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_2 #开始地区改造
+		}
+	}
+	sinodc_dec_state_category_upgrade_2 = { #地区改造II
+		icon = generic_electricity
+		fire_only_once = no
+		is_good = yes                   
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_state_category_upgrade_start_2 #开始地区改造
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_state_category_upgrade_start_2 } #开始地区改造
+				sinodc_state_category_cannot_up = yes #不能使用地区改造
+			}
+		}
+		timeout_effect = { 
+			sinodc_state_category_up_0 = yes #地区改造
+			activate_mission = sinodc_dec_state_category_upgrade_2
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_state_category_upgrade_2 }
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_2 #开始地区改造
+		}
+	}
+	sinodc_dec_state_category_upgrade_start_3 = { #开始地区改造III
+		icon = generic_electricity
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_state_category_upgrade_start_3 } #开始地区改造
+			sinodc_state_category_allow_up = yes #允许使用地区改造，有地区可以改
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy }    
+			add_dynamic_modifier = { modifier =sinodc_dym_state_category_upgrade_3 }
+			set_country_flag = sinodc_fla_state_category_upgrade_start_3 #开始地区改造
+			set_country_flag = sinodc_fla_state_category_upgrade_start_0_ban #禁止低效
+			activate_mission = sinodc_dec_state_category_upgrade_3
+        }
+	} 
+	sinodc_dec_state_category_upgrade_stop_3 = { #停止地区改造III
+		icon = generic_electricity
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_state_category_upgrade_start_3 #开始地区改造
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_3 #开始地区改造
+		}
+	}
+	sinodc_dec_state_category_upgrade_3 = { #地区改造III
+		icon = generic_electricity
+		fire_only_once = no
+		is_good = yes                   
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_state_category_upgrade_start_3 #开始地区改造
+		}                                    
+		available = {   
+			always = no                        
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_state_category_upgrade_start_3 } #开始地区改造
+				sinodc_state_category_cannot_up = yes #不能使用地区改造
+			}
+		}
+		timeout_effect = { 
+			sinodc_state_category_up_0 = yes #地区改造
+			activate_mission = sinodc_dec_state_category_upgrade_3
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release } 
+			remove_dynamic_modifier = { modifier = sinodc_dym_state_category_upgrade_3 }
+			clr_country_flag = sinodc_fla_state_category_upgrade_start_3 #开始地区改造
+		}
+	}
+####################################################################################################
+####################################################################################################
+##合并工厂 merging factory
+####################################################################################################
+####################################################################################################
+	sinodc_dec_merging_industrial_complex_start = { #开始合并工厂_民用工厂
+		icon = generic_merge_plant_materiel
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 3
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                industrial_complex > 1
+            } 
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_merging_industrial_complex_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier = sinodc_dym_merging_industrial_complex }
+			set_country_flag = sinodc_fla_merging_industrial_complex_start
+			activate_mission = sinodc_dec_merging_industrial_complex
+        }
+	} 
+	sinodc_dec_merging_industrial_complex_stop = { #停止合并工厂_民用工厂
+		icon = generic_merge_plant_materiel
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_merging_industrial_complex_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_merging_industrial_complex_start
+		}
+	}
+	sinodc_dec_merging_industrial_complex = { #合并工厂_民用工厂
+		icon = generic_merge_plant_materiel
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_merging_industrial_complex_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_merging_industrial_complex_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						industrial_complex < 2
+					}    
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = { type = industrial_complex level = 2 }
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
+			activate_mission = sinodc_dec_merging_industrial_complex 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_merging_industrial_complex }
+			clr_country_flag = sinodc_fla_merging_industrial_complex_start  
+		}
+	}
+	sinodc_dec_merging_arms_factory_start = { #开始合并工厂_军用工厂
+		icon = generic_merge_plant_materiel
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 3
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                arms_factory > 1
+            } 
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_merging_arms_factory_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier = sinodc_dym_merging_arms_factory }
+			set_country_flag = sinodc_fla_merging_arms_factory_start
+			activate_mission = sinodc_dec_merging_arms_factory
+        }
+	} 
+	sinodc_dec_merging_arms_factory_stop = { #停止合并工厂_军用工厂
+		icon = generic_merge_plant_materiel
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_merging_arms_factory_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_merging_arms_factory_start
+		}
+	}
+	sinodc_dec_merging_arms_factory = { #合并工厂_军用工厂
+		icon = generic_merge_plant_materiel
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_merging_arms_factory_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_merging_arms_factory_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						arms_factory < 2
+					}    
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					arms_factory > 1
+				}
+				remove_building = { type = arms_factory level = 2 }
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			activate_mission = sinodc_dec_merging_arms_factory 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_merging_arms_factory }
+			clr_country_flag = sinodc_fla_merging_arms_factory_start  
+		}
+	}
+	sinodc_dec_merging_dockyard_start = { #开始合并工厂_海军船坞
+		icon = generic_merge_plant_materiel
+		cost = 10
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+            num_of_civilian_factories_available_for_projects > 3
+			custom_trigger_tooltip = {
+				tooltip = sinodc_tip_dcp_2 #x/2
+				check_variable = { variable_dcp > 1 } #检查改造点数量
+			}
+			any_owned_state = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT   
+                dockyard > 1
+            }
+        }
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			not = { has_country_flag = sinodc_fla_merging_dockyard_start }
+		}
+		complete_effect = {
+            add_to_variable = { variable_dcp = -2 tooltip = sinodc_tip_variable_dcp_occupy } 
+			add_dynamic_modifier = { modifier = sinodc_dym_merging_dockyard }
+			set_country_flag = sinodc_fla_merging_dockyard_start
+			activate_mission = sinodc_dec_merging_dockyard
+        }
+	} 
+	sinodc_dec_merging_dockyard_stop = { #停止合并工厂_海军船坞
+		icon = generic_merge_plant_materiel
+		days_remove = SNL_var_days_test?1
+		fire_only_once = no 
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = sinodc_fla_decisions_show #决议显示
+			has_country_flag = sinodc_fla_merging_dockyard_start
+		}
+		complete_effect = {
+			clr_country_flag = sinodc_fla_merging_dockyard_start
+		}
+	}
+	sinodc_dec_merging_dockyard = { #合并工厂_海军船坞
+		icon = generic_merge_plant_materiel
+		fire_only_once = no
+		is_good = yes                    
+		days_mission_timeout = SNL_var_days_test?19 
+		priority = 5
+		activation = {                         
+			has_country_flag = sinodc_fla_merging_dockyard_start
+		}                                   
+		available = {   
+			always = no                         
+		}
+		cancel_trigger = {
+			or = {
+				not = { has_country_flag = sinodc_fla_merging_dockyard_start }
+            	all_controlled_state = {
+            	    or = {
+						not = { is_core_of = root }
+						not = { is_owned_by = root }
+						dockyard < 2
+					}    
+           		}
+			}
+		}
+		timeout_effect = {             
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+					dockyard > 1
+				}
+				remove_building = { type = dockyard level = 2 }
+			}
+			add_offsite_building = { type = dockyard level = 2 }
+			activate_mission = sinodc_dec_merging_dockyard 
+		}
+		cancel_effect = {
+			add_to_variable = { variable_dcp = 2 tooltip = sinodc_tip_variable_dcp_release }  
+			remove_dynamic_modifier = { modifier = sinodc_dym_merging_dockyard }
+			clr_country_flag = sinodc_fla_merging_dockyard_start  
+		}
+	}
+}
+####################################################################################################
+####################################################################################################
+##提升改造点 add dcp_max
+####################################################################################################
+####################################################################################################
+sinodc_dec_develop_construction = { #提升改造点
+	##科研提升改造能力LV1
+	sinodc_dec_dcp_promote_technology1 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			amount_research_slots > 2
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			amount_research_slots > 2
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			}     
+		}
+	} 
+	##科研提升改造能力LV2
+	sinodc_dec_dcp_promote_technology2 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			amount_research_slots > 3
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			amount_research_slots > 3
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			}   
+		}
+	} 
+	##科研提升改造能力LVmax
+	sinodc_dec_dcp_promote_technology3 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			amount_research_slots > 4
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			amount_research_slots > 4
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##获得科技组：§Y天顶星§!
+	sinodc_dec_dcp_promote_technology4 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			amount_research_slots > 5
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			amount_research_slots > 5
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV1
+	sinodc_dec_dcp_promote_manpower1 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 100000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 100000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV2
+	sinodc_dec_dcp_promote_manpower2 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 500000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 500000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV3
+	sinodc_dec_dcp_promote_manpower3 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 1000000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 1000000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV4
+	sinodc_dec_dcp_promote_manpower4 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 5000000
+		}
+		visible = {
+			
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 5000000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV5
+	sinodc_dec_dcp_promote_manpower5 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 10000000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 10000000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##人力提升改造能力LV6
+	sinodc_dec_dcp_promote_manpower6 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 50000000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 50000000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##怎么不枪毙你呢？
+	sinodc_dec_dcp_promote_manpower7 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			has_manpower > 100000000
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			has_manpower > 100000000
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##民用工厂提升改造能力LV1
+	sinodc_dec_dcp_promote_industrial_complex1 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 19
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 19
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##民用工厂提升改造能力LV2
+	sinodc_dec_dcp_promote_industrial_complex2 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 39
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 39
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##民用工厂提升改造能力LV3
+	sinodc_dec_dcp_promote_industrial_complex3 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 79
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 79
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##民用工厂提升改造能力LV4
+	sinodc_dec_dcp_promote_industrial_complex4 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 159
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 159
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##民用工厂提升改造能力LVmax
+	sinodc_dec_dcp_promote_industrial_complex5 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 319
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 319
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 
+	##很可以了 地球已经没人比你更强了
+	sinodc_dec_dcp_promote_industrial_complex6 = {
+		icon = generic_decision
+		fire_only_once = yes
+		available = {
+			industrial_complex > 639
+		}
+		visible = {
+			has_country_flag = sinodc_fla_develop_construction_start #开启决议的flag
+			industrial_complex > 639
+		}
+		priority = 6
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = { 
+				variable_dcp = 1
+				tooltip = sinodc_tip_variable_dcp_add
+			}   
+			add_to_variable = { 
+				variable_dcp_max = 1
+			} 
+		}
+	} 	
+}

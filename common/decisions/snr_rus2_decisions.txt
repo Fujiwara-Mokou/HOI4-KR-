@@ -1,0 +1,192 @@
+snr_rus2_common_decisions = {
+
+	rus_order_34_decision = {
+		icon = generic_form_nation
+		allowed = {
+		}
+		available = {		
+		}
+		visible = {
+		    not = { has_idea = rus_order_34_idea }			
+            not = { has_idea = rus_order_20_idea }
+			not = { has_idea = rus_order_7_idea }
+			not = { has_idea = rus_order_101_idea}
+			not = { has_idea = rus_order_69_idea }
+			not = { has_idea = rus_order_1_idea }
+			not = { has_idea = rus_order_81_idea }
+			not = { has_idea = rus_order_147_idea }
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_timed_idea = { idea = rus_order_34_idea days = 90 } 
+		}
+		remove_effect = {
+		    log = "[GetLogRoot]: Decision complete RUS_fund_propaganda_efforts"
+			set_temp_variable = { RUS_anger_change = -1 }
+			RUS_change_popular_anger = yes
+	 }
+}
+
+	rus_order_20_decision = {
+		icon = ger_mefo_bills
+		allowed = {
+			
+		}
+		available = {	
+		}
+		visible = {
+            not = { has_idea = rus_order_34_idea }			
+            not = { has_idea = rus_order_20_idea }
+			not = { has_idea = rus_order_7_idea }
+			not = { has_idea = rus_order_101_idea}
+			not = { has_idea = rus_order_69_idea }
+			not = { has_idea = rus_order_1_idea }
+			not = { has_idea = rus_order_81_idea }
+			not = { has_idea = rus_order_147_idea }		
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_timed_idea = { idea = rus_order_20_idea days = 90 } 
+		}
+		remove_effect = {
+		    log = "[GetLogRoot]: Decision complete RUS_court_the_military"
+			set_temp_variable = { RUS_anger_change = -1 }
+			RUS_change_military_anger = yes
+			set_temp_variable = { ideology_change_var = 25 }
+            change_ruling_party_popularity = yes
+	   }
+	}
+
+	rus_order_7_decision = {
+		icon = generic_factory
+		allowed = {
+			
+		}
+		available = {	
+		}
+		visible = {
+            not = { has_idea = rus_order_34_idea }			
+            not = { has_idea = rus_order_20_idea }
+			not = { has_idea = rus_order_7_idea }
+			not = { has_idea = rus_order_101_idea}
+			not = { has_idea = rus_order_69_idea }
+			not = { has_idea = rus_order_1_idea }
+			not = { has_idea = rus_order_81_idea }
+			not = { has_idea = rus_order_147_idea }		
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {		
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+		 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+	   }
+	 }
+	}
+   }
+
+	rus_order_101_decision = {
+		icon = ger_military_buildup
+		allowed = {
+			
+		}
+		available = {			
+		}
+		visible = {
+            not = { has_idea = rus_order_34_idea }			
+            not = { has_idea = rus_order_20_idea }
+			not = { has_idea = rus_order_7_idea }
+			not = { has_idea = rus_order_101_idea}
+			not = { has_idea = rus_order_69_idea }
+			not = { has_idea = rus_order_1_idea }
+			not = { has_idea = rus_order_81_idea }
+			not = { has_idea = rus_order_147_idea }		
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_timed_idea = { idea = rus_order_101_idea days = 90 }
+		}
+		remove_effect = {
+		 random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+	   }
+	 }
+	}
+   }
+   
+	 
+   	rus_order_147_decision = {
+		icon = generic_intelligence_operation
+		allowed = {
+			
+		}
+		available = {
+		}
+		visible = {
+            not = { has_idea = rus_order_34_idea }			
+            not = { has_idea = rus_order_20_idea }
+			not = { has_idea = rus_order_7_idea }
+			not = { has_idea = rus_order_101_idea}
+			not = { has_idea = rus_order_69_idea }
+			not = { has_idea = rus_order_1_idea }
+			not = { has_idea = rus_order_81_idea }
+			not = { has_idea = rus_order_147_idea }			
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 90
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_timed_idea = { idea = rus_order_147_idea days = 90 }
+		}
+	 }
